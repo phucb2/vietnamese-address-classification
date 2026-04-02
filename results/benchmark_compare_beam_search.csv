@@ -1,0 +1,1001 @@
+query,expected_street_id,expected_street,expected_ward_id,expected_ward,expected_province_id,expected_province,noise,pred_street_id,pred_street,pred_ward_id,pred_ward,pred_province_id,pred_province,street_correct,ward_correct,province_correct,solution_id
+"hòa bìnhh, xã yên th ế, tinh bắc ninh",A148,Hòa Bình,22103032,Xã Yên Thế,223,Tỉnh Bắc Ninh,typo,A148,Hòa Bình,22103032,Xã Yên Thế,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"phan duong ăng lưu, xã minh ch âu, th ành ph ố hà nội",A382,Phan Đăng Lưu,10151079,Xã Minh Châu,101,Thành phố Hà Nội,abbr,,,10151079,Xã Minh Châu,101,Thành phố Hà Nội,False,True,True,beam_search
+"ph ườn hà an, tinh qu ảng ninh",,,22525012,Phường Hà An,225,Tỉnh Quảng Ninh,typo,,,22525012,Phường Hà An,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"tr ịnh ho à d ức, ph ường ô môn, tp cần th ơ",A519,Trịnh Hoài Đức,81505010,Phường Ô Môn,815,Tp Cần Thơ,abbr|typo,,,81505010,Phường Ô Môn,815,Tp Cần Thơ,False,True,True,beam_search
+"ch ấn hưng, xã tuy ph ước duong ông, tinh gia lai",A063,Chấn Hưng,50719034,Xã Tuy Phước Đông,603,Tỉnh Gia Lai,abbr,A063,Chấn Hưng,,,603,Tỉnh Gia Lai,True,False,True,beam_search
+"tháivănlung,phườngdiênhồng,tinhgialai",A450,Thái Văn Lung,60301061,Phường Diên Hồng,603,Tỉnh Gia Lai,abbr|no-space,A450,Thái Văn Lung,60301061,Phường Diên Hồng,603,Tỉnh Gia Lai,True,True,True,beam_search
+"kimbiên,xãtânthành,,tinhlâmdồng",A191,Kim Biên,71509080,Xã Tân Thành,703,Tỉnh Lâm Đồng,abbr|typo|no-space,A191,Kim Biên,71509080,Xã Tân Thành,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"duong ào duy từ, xã gia hanh, tinh hà tĩnh",A086,Đào Duy Từ,40511036,Xã Gia Hanh,405,Tỉnh Hà Tĩnh,abbr,,,40511036,Xã Gia Hanh,405,Tỉnh Hà Tĩnh,False,True,True,beam_search
+"vnh nam,xã pắc ta,tinh lai ch âu",A549,Vĩnh Nam,30211005,Xã Pắc Ta,302,Tỉnh Lai Châu,abbr|typo|tight-comma,A549,Vĩnh Nam,30211005,Xã Pắc Ta,302,Tỉnh Lai Châu,True,True,True,beam_search
+"bà huy ện thanh quan, xã thanh sơn, tinh ninh bình",A018,Bà Huyện Thanh Quan,11705013,Xã Thanh Sơn,117,Tỉnh Ninh Bình,clean,A018,Bà Huyện Thanh Quan,11705013,Xã Thanh Sơn,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"ng ô gia tự, xã gi ồng tr ôm, tinh vĩnh long",A266,Ngô Gia Tự,81109112,Xã Giồng Trôm,809,Tỉnh Vĩnh Long,clean,A266,Ngô Gia Tự,81109112,Xã Giồng Trôm,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"bình tây,xã vạn an,tinh nngh ệ an",A035,Bình Tây,40335046,Xã Vạn An,403,Tỉnh Nghệ An,abbr|typo|tight-comma,A035,Bình Tây,40335046,Xã Vạn An,403,Tỉnh Nghệ An,True,True,True,beam_search
+"sôngd uong áy,ph ường vinh ph ú,tinh ngh ệ an",A419,Sông Đáy,40301119,Phường Vinh Phú,403,Tỉnh Nghệ An,typo|tight-comma,,,40301119,Phường Vinh Phú,403,Tỉnh Nghệ An,False,True,True,beam_search
+"cách mạng th áng tám,xã tùng bá,tinh tuy ên quang",A053,Cách Mạng Tháng Tám,20115088,Xã Tùng Bá,211,Tỉnh Tuyên Quang,abbr|tight-comma,A053,Cách Mạng Tháng Tám,20115088,Xã Tùng Bá,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"xãbảonhai,tihlàocai",,,20509081,Xã Bảo Nhai,205,Tỉnh Lào Cai,typo|no-space,,,20509081,Xã Bảo Nhai,205,Tỉnh Lào Cai,True,True,True,beam_search
+"tr ương qquy ền, xã qu ốc oai, th ành ph ố hà nội",A524,Trương Quyền,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,typo,A524,Trương Quyền,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,True,True,True,beam_search
+"ph ó d. ức ch ính,xã bình ssơn,tinh ninh bình",A401,Phó Đức Chính,11111036,Xã Bình Sơn,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A401,Phó Đức Chính,11111036,Xã Bình Sơn,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"gio an, xã thanh oai, th ành ph ố h nội",A120,Gio An,10141061,Xã Thanh Oai,101,Thành phố Hà Nội,abbr|typo,A120,Gio An,10141061,Xã Thanh Oai,101,Thành phố Hà Nội,True,True,True,beam_search
+"duong  ất th ánh, xã gia hội, tinh lào cai",A093,Đất Thánh,21315012,Xã Gia Hội,205,Tỉnh Lào Cai,abbr|typo,,,21315012,Xã Gia Hội,205,Tỉnh Lào Cai,False,True,True,beam_search
+"lê qu ý duong ôn, xã mư ờng gii ôn, tinh sơn la",A213,Lê Quý Đôn,30303018,Xã Mường Giôn,303,Tỉnh Sơn La,abbr|typo,,,30303018,Xã Mường Giôn,303,Tỉnh Sơn La,False,True,True,beam_search
+"xóm chi ếu, ph ường kim long ,th ành ph ố hu ế",A562,Xóm Chiếu,41119008,Phường Kim Long,411,Thành phố Huế,abbr|typo,A562,Xóm Chiếu,41119008,Phường Kim Long,411,Thành phố Huế,True,True,True,beam_search
+"học lạc, xã văn bàn, tinh ào cai",A158,Học Lạc,20519070,Xã Văn Bàn,205,Tỉnh Lào Cai,abbr|typo,A158,Học Lạc,20519070,Xã Văn Bàn,205,Tỉnh Lào Cai,True,True,True,beam_search
+"duong ặc khu th ổ ch âu,tinh an giiang",,,81321102,Đặc khu Thổ Châu,805,Tỉnh An Giang,abbr|typo|tight-comma,,,,,,,True,False,False,beam_search
+"chumạnhtrinh,xãtràlinh,t.pduongànẵng",A066,Chu Mạnh Trinh,50329042,Xã Trà Linh,501,Tp Đà Nẵng,abbr|typo|no-space,A066,Chu Mạnh Trinh,20311047,Xã Trà Lĩnh,203,Tỉnh Cao Bằng,True,False,False,beam_search
+"th ống nh ất,xã ngh ĩa mai,tinh ngh ệ an",A459,Thống Nhất,40313054,Xã Nghĩa Mai,403,Tỉnh Nghệ An,abbr|tight-comma,A459,Thống Nhất,40313054,Xã Nghĩa Mai,403,Tỉnh Nghệ An,True,True,True,beam_search
+"tân tti ến, xã yên minh, tinh tuy ên quang",A445,Tân Tiến,20107065,Xã Yên Minh,211,Tỉnh Tuyên Quang,abbr|typo,A445,Tân Tiến,20107065,Xã Yên Minh,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"lê tr ọng tấn, xã thanh bình, tinh ninhh bình",A219,Lê Trọng Tấn,11109039,Xã Thanh Bình,117,Tỉnh Ninh Bình,abbr|typo,A219,Lê Trọng Tấn,70903087,Xã Thạnh Bình,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"tr ần vnă ki ểu, xã tân quang, tinh tuy ên quang",A512,Trần Văn Kiểu,20119096,Xã Tân Quang,211,Tỉnh Tuyên Quang,abbr|typo,,,20119096,Xã Tân Quang,211,Tỉnh Tuyên Quang,False,True,True,beam_search
+"tây th ạnh, xã nam duong ồng, tinh nih bình",A447,Tây Thạnh,11309051,Xã Nam Đồng,117,Tỉnh Ninh Bình,abbr|typo,A447,Tây Thạnh,,,,,True,False,False,beam_search
+"tn th ất thi ệp, xã con cu ông, tinh ngh ệ an",A471,Tôn Thất Thiệp,40321007,Xã Con Cuông,403,Tỉnh Nghệ An,abbr|typo,A471,Tôn Thất Thiệp,40321007,Xã Con Cuông,403,Tỉnh Nghệ An,True,True,True,beam_search
+"lê quang sung,xã nghi ư ơng,t.p hải ph òng",A211,Lê Quang Sung,10317034,Xã Nghi Dương,103,Tp Hải Phòng,abbr|typo|tight-comma,A211,Lê Quang Sung,10317034,Xã Nghi Dương,103,Tp Hải Phòng,True,True,True,beam_search
+"yên th ế,xã duong ồng vvi ệt,tinh bắc ninh",A570,Yên Thế,22101050,Xã Đồng Việt,223,Tỉnh Bắc Ninh,typo|tight-comma,A570,Yên Thế,,,223,Tỉnh Bắc Ninh,True,False,True,beam_search
+"30 th áng 4, ã can lộc, tinh hà tĩnh",A012,30 Tháng 4,40511034,Xã Can Lộc,405,Tỉnh Hà Tĩnh,abbr|typo,A012,30 Tháng 4,40511034,Xã Can Lộc,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"dg. ồng nai, xã tr ườg long, tp cần th ơ",A114,Đồng Nai,81529019,Xã Trường Long,815,Tp Cần Thơ,abbr|typo,A114,Đồng Nai,81529019,Xã Trường Long,815,Tp Cần Thơ,True,True,True,beam_search
+"qu ốc lộ 22, xã nh ơn tr ạch,tinh duong ồng nai",A417,Quốc Lộ 22,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,abbr|typo,A417,Quốc Lộ 22,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tựdo,xãsơkỳ,tinhquảngngãi",A536,Tự Do,50513042,Xã Sơn Kỳ,505,Tỉnh Quảng Ngãi,typo|no-space,A536,Tự Do,50513042,Xã Sơn Kỳ,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"duong ông hồ, ph ường th ủy xu ân, th ành pph ố hu ế",A108,Đông Hồ,41101007,Phường Thủy Xuân,411,Thành phố Huế,abbr|typo,,,41101007,Phường Thủy Xuân,411,Thành phố Huế,False,True,True,beam_search
+"30 th nág 4,xã bình yên,tinh th ái nguy ên",A012,30 Tháng 4,21505042,Xã Bình Yên,215,Tỉnh Thái Nguyên,abbr|typo|tight-comma,A126,Hải Nguyên,21505042,Xã Bình Yên,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"duongỗngọcthạnh,xãthuậnhạnh,tinhlâmduongồng",A117,Đỗ Ngọc Thạnh,60609112,Xã Thuận Hạnh,703,Tỉnh Lâm Đồng,typo|no-space,,,60609112,Xã Thuận Hạnh,703,Tỉnh Lâm Đồng,False,True,True,beam_search
+"xã tam giang, tinh duong ắk lắk",,,60507034,Xã Tam Giang,605,Tỉnh Đắk Lắk,clean,,,60507034,Xã Tam Giang,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tânkhaai,xãchiềngla,tinhsơnla",A436,Tân Khai,30307021,Xã Chiềng La,303,Tỉnh Sơn La,abbr|typo|tight-comma|no-space,A436,Tân Khai,30307021,Xã Chiềng La,303,Tỉnh Sơn La,True,True,True,beam_search
+"namquốccang,xãcổdongô,thànhphốhànội",A259,Nam Quốc Cang,10151082,Xã Cổ Đô,101,Thành phố Hà Nội,typo|no-space,A259,Nam Quốc Cang,10151082,Xã Cổ Đô,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn cảnh ch ân, xã ph ú trung, tinh duong ồng ni",A278,Nguyễn Cảnh Chân,70716076,Xã Phú Trung,713,Tỉnh Đồng Nai,typo,A278,Nguyễn Cảnh Chân,70716076,Xã Phú Trung,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"thu ận ki ều, xã ti ên đi ền, tin hhà tĩnh",A460,Thuận Kiều,40505042,Xã Tiên Điền,405,Tỉnh Hà Tĩnh,abbr|typo,A460,Thuận Kiều,40505042,Xã Tiên Điền,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"tr ần lực, ph ường  hư ơng tr à, th ành ph ố hu ế",A491,Trần Lực,41107011,Phường Hương Trà,411,Thành phố Huế,abbr|typo,A491,Trần Lực,41107011,Phường Hương Trà,411,Thành phố Huế,True,True,True,beam_search
+"xã tri ệu vi ệt vư ơng, tinh hưng  yên",,,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,abbr|typo,,,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"xã qu ảng ph ú, tinh duon gắk lắk",,,60513020,Xã Quảng Phú,605,Tỉnh Đắk Lắk,abbr|typo,,,60513020,Xã Quảng Phú,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"bác ái,xã ba vì,th nàh ph ố hà nội",A015,Bác Ái,10151085,Xã Ba Vì,101,Thành phố Hà Nội,abbr|typo|tight-comma,A015,Bác Ái,10151085,Xã Ba Vì,101,Thành phố Hà Nội,True,True,True,beam_search
+"xã tri ệuu bình, tinh qu ảng tr ị",,,40911070,Xã Triệu Bình,409,Tỉnh Quảng Trị,abbr|typo,,,40911070,Xã Triệu Bình,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"trầnvănquang,xãmỹduongứctây,tinhduongồngtháp",A514,Trần Văn Quang,80713018,Xã Mỹ Đức Tây,803,Tỉnh Đồng Tháp,typo|no-space,A514,Trần Văn Quang,,,,,True,False,False,beam_search
+"ho àng hoa th ám, ph ường bình d ức, inh an giang",A152,Hoàng Hoa Thám,80501003,Phường Bình Đức,805,Tỉnh An Giang,abbr|typo,A152,Hoàng Hoa Thám,80501003,Phường Bình Đức,805,Tỉnh An Giang,True,True,True,beam_search
+"ph ường từ sơn, tinh bắcc ninh",,,22313063,Phường Từ Sơn,223,Tỉnh Bắc Ninh,abbr|typo,,,22313063,Phường Từ Sơn,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"cô giang, xã lộc th ành, tinh dg ồng nai",A071,Cô Giang,70705060,Xã Lộc Thành,713,Tỉnh Đồng Nai,abbr,A071,Cô Giang,70705060,Xã Lộc Thành,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"học lạc,ph ường mnóg cái 3,tinh qu ảng ninh",A158,Học Lạc,22509051,Phường Móng Cái 3,225,Tỉnh Quảng Ninh,abbr|typo|tight-comma,A158,Học Lạc,22509051,Phường Móng Cái 3,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"nh ật le, phường tam kỳ, thanh pho duong à nẵng",A357,Nhật Le,50301023,Phường Tam Kỳ,501,Tp Đà Nẵng,abbr|typo,A357,Nhật Le,50301023,Phường Tam Kỳ,501,Tp Đà Nẵng,True,True,True,beam_search
+"th ích qu ảng dg ức, xã ng ũ hi ệp, tinh dg ồng th áp",A456,Thích Quảng Đức,80709025,Xã Ngũ Hiệp,803,Tỉnh Đồng Tháp,abbr,,,80709025,Xã Ngũ Hiệp,803,Tỉnh Đồng Tháp,False,True,True,beam_search
+"tú xư ơng, xã qu  ảng tr ạch, tinh qu ảng tr ị",A533,Tú Xương,40707021,Xã Quảng Trạch,409,Tỉnh Quảng Trị,abbr|typo,A533,Tú Xương,40707021,Xã Quảng Trạch,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"duong ỗ ng ọc th ạnh,ph ường lê duong ại hành,tanh pho hải ph òng",A117,Đỗ Ngọc Thạnh,10703065,Phường Lê Đại Hành,103,Tp Hải Phòng,typo|tight-comma,,,,,103,Tp Hải Phòng,False,False,True,beam_search
+"ba gia, xã lóng phi êng, tinh sơn la",A011,Ba Gia,30317048,Xã Lóng Phiêng,303,Tỉnh Sơn La,abbr,A011,Ba Gia,30317048,Xã Lóng Phiêng,303,Tỉnh Sơn La,True,True,True,beam_search
+"ph ùg hưng, ph ường li ên ho à, tinh qu ảng ninh",A409,Phùng Hưng,22525014,Phường Liên Hoà,225,Tỉnh Quảng Ninh,typo,A185,Hưng Phú,22525014,Phường Liên Hoà,225,Tỉnh Quảng Ninh,False,True,True,beam_search
+"nhậ t le, xã tây sơn, tinh duong ắk lắk",A357,Nhật Le,50909093,Xã Tây Sơn,605,Tỉnh Đắk Lắk,abbr|typo,A357,Nhật Le,50715037,Xã Tây Sơn,603,Tỉnh Gia Lai,True,False,False,beam_search
+"tr ần nh ật du ật, xã yên ch âu, tinh sơn la",A497,Trần Nhật Duật,30317046,Xã Yên Châu,303,Tỉnh Sơn La,abbr,A497,Trần Nhật Duật,30317046,Xã Yên Châu,303,Tỉnh Sơn La,True,True,True,beam_search
+"dg ề th ám, xã xu ân tín, tinh thanh óha",A095,Đề Thám,40137078,Xã Xuân Tín,401,Tỉnh Thanh Hóa,abbr|typo,A095,Đề Thám,40137078,Xã Xuân Tín,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"cao d. ạt, xã bom bo, tinh d. ồngnai",A049,Cao Đạt,70707088,Xã Bom Bo,713,Tỉnh Đồng Nai,abbr|typo,A049,Cao Đạt,70707088,Xã Bom Bo,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tô hi ến th ành, xã tân nhu ận g ông, tinh dg ồng th áp",A466,Tô Hiến Thành,80321101,Xã Tân Nhuận Đông,803,Tỉnh Đồng Tháp,abbr|typo,A466,Tô Hiến Thành,,,,,True,False,False,beam_search
+"calmette, xã lâm thao, tinh bắc ninh",A047,Calmette,22311096,Xã Lâm Thao,223,Tỉnh Bắc Ninh,abbr,A047,Calmette,22311096,Xã Lâm Thao,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn bỉnh khi êm, xã tân ph ú, tinh duong ồn gnai",A277,Nguyễn Bỉnh Khiêm,71303046,Xã Tân Phú,713,Tỉnh Đồng Nai,abbr|typo,A277,Nguyễn Bỉnh Khiêm,70905081,Xã Tân Phú,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"văn th ân, xã mư ờn gmìn, tinh thanh hóa",A544,Văn Thân,40111110,Xã Mường Mìn,401,Tỉnh Thanh Hóa,typo,A544,Văn Thân,40111110,Xã Mường Mìn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"tổnglung,xãtânthanh,tinhninhbìh",A474,Tổng Lung,11109038,Xã Tân Thanh,117,Tỉnh Ninh Bình,typo|tight-comma|no-space,A474,Tổng Lung,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"nguyy ễn ph úc chu, xã hư ớng lập, tinh qu ảng tr ị",A311,Nguyễn Phúc Chu,40915054,Xã Hướng Lập,409,Tỉnh Quảng Trị,typo,A311,Nguyễn Phúc Chu,40915054,Xã Hướng Lập,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"hoàngminhgiám,duongặckhuhoàgsa,thanhphoduongànẵng",A153,Hoàng Minh Giám,50113016,Đặc khu Hoàng Sa,501,Tp Đà Nẵng,abbr|typo|no-space,A153,Hoàng Minh Giám,,,,,True,False,False,beam_search
+"nguy ễn th ái học, xã hồng ch u, thanh pho hải ph òng",A317,Nguyễn Thái Học,10723105,Xã Hồng Châu,103,Tp Hải Phòng,abbr|typo,A317,Nguyễn Thái Học,10723105,Xã Hồng Châu,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn ng ọc nh ật, xã yên kh ánh, tinh ninh bình",A306,Nguyễn Ngọc Nhật,11713015,Xã Yên Khánh,117,Tỉnh Ninh Bình,abbr,A306,Nguyễn Ngọc Nhật,11713015,Xã Yên Khánh,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguyễnduydương,xãduongạhuoai2,tinhlâmduongồng",A286,Nguyễn Duy Dương,70317043,Xã Đạ Huoai 2,703,Tỉnh Lâm Đồng,abbr|no-space,A286,Nguyễn Duy Dương,,,,,True,False,False,beam_search
+"tôn dg àn, xã cốc lầu, tinh lào ai",A467,Tôn Đàn,20509080,Xã Cốc Lầu,205,Tỉnh Lào Cai,abbr|typo,A467,Tôn Đàn,20509080,Xã Cốc Lầu,205,Tỉnh Lào Cai,True,True,True,beam_search
+"xã mư ờng lèo, tinh sơn al",,,30321075,Xã Mường Lèo,303,Tỉnh Sơn La,abbr|typo,,,30321075,Xã Mường Lèo,303,Tỉnh Sơn La,True,True,True,beam_search
+"ph ườờng tân phong,tinh lai ch âu",,,30202013,Phường Tân Phong,302,Tỉnh Lai Châu,abbr|typo|tight-comma,,,30202013,Phường Tân Phong,302,Tỉnh Lai Châu,True,True,True,beam_search
+"xã pà vầy sủ,tinh uy ên quang",,,20117120,Xã Pà Vầy Sủ,211,Tỉnh Tuyên Quang,abbr|typo|tight-comma,,,20117120,Xã Pà Vầy Sủ,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"ph ạmm văn d ạt, ph ường ph ú thu ận, tp hồ ch í minh",A377,Phạm Văn Đạt,70113081,Phường Phú Thuận,701,Tp Hồ Chí Minh,abbr|typo,A377,Phạm Văn Đạt,70113081,Phường Phú Thuận,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"ph ạm vi ết ch áánh, xã cô tô, tinh an giang",A379,Phạm Viết Chánh,80515036,Xã Cô Tô,805,Tỉnh An Giang,typo,,,80515036,Xã Cô Tô,805,Tỉnh An Giang,False,True,True,beam_search
+"ph ạm hữu ch í, ph ường tân ti ến, tinh bắc ninh",A369,Phạm Hữu Chí,22101056,Phường Tân Tiến,223,Tỉnh Bắc Ninh,abbr,A369,Phạm Hữu Chí,22101056,Phường Tân Tiến,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"lý th ái tổ,xã th ượng long,tnih ph ú th ọ",A241,Lý Thái Tổ,21715062,Xã Thượng Long,217,Tỉnh Phú Thọ,typo|tight-comma,A241,Lý Thái Tổ,21715062,Xã Thượng Long,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"lêthịhồngggấm,xãcáttiên2,tinhlâmduongồng",A217,Lê Thị Hồng Gấm,70317049,Xã Cát Tiên 2,703,Tỉnh Lâm Đồng,typo|no-space,A217,Lê Thị Hồng Gấm,70317049,Xã Cát Tiên 2,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"duong ồng đen, xã ta hồng, tinh ph ú th ọ",A112,Đồng Đen,21909093,Xã Tam Hồng,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,21909093,Xã Tam Hồng,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"tnâ trang, xã xu ân ho à, tinh thanh hóa",A446,Tân Trang,40137074,Xã Xuân Hoà,401,Tỉnh Thanh Hóa,abbr|typo,A446,Tân Trang,40137074,Xã Xuân Hoà,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nơ trang long, ph ường kỳ lừừa, tinh lạng sơn",A361,Nơ Trang Long,20913064,Phường Kỳ Lừa,209,Tỉnh Lạng Sơn,typo,A361,Nơ Trang Long,20913064,Phường Kỳ Lừa,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"bà tri ệu, ph ường d an, tp hồ ch í minh",A021,Bà Triệu,71109029,Phường Dĩ An,701,Tp Hồ Chí Minh,abbr|typo,A021,Bà Triệu,71109029,Phường Dĩ An,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"lê tr ực, xã ph ước an, tinh duong ồng ai",A220,Lê Trực,71317010,Xã Phước An,713,Tỉnh Đồng Nai,abbr|typo,A220,Lê Trực,71317010,Xã Phước An,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"ph ú hòa, xã xu ân tr ường, tinh cao bằng",A404,Phú Hòa,20303015,Xã Xuân Trường,203,Tỉnh Cao Bằng,abbr,A404,Phú Hòa,20303015,Xã Xuân Trường,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"bạch vn, ph ường ph ước long, t.p hồ ch í minh",A024,Bạch Vân,70145139,Phường Phước Long,701,Tp Hồ Chí Minh,abbr|typo,A024,Bạch Vân,70145139,Phường Phước Long,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tuy lý vư ơng, xã qu ảng ho à, tinh lâm duong ồng",A531,Tuy Lý Vương,60615122,Xã Quảng Hoà,703,Tỉnh Lâm Đồng,clean,A531,Tuy Lý Vương,60615122,Xã Quảng Hoà,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"xãn g ọc hồi, th ành ph ố hà nội",,,10123051,Xã Ngọc Hồi,101,Thành phố Hà Nội,abbr|typo,,,10123051,Xã Ngọc Hồi,101,Thành phố Hà Nội,True,True,True,beam_search
+"tânhòadông,xãanhdũng,tinhkhánhòa",A433,Tân Hòa Đông,70503061,Xã Anh Dũng,511,Tỉnh Khánh Hòa,abbr|typo|tight-comma|no-space,A433,Tân Hòa Đông,70503061,Xã Anh Dũng,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"dg ồng xo ài, xã gia lộc, thanh ph ohải ph òng",A115,Đồng Xoài,10713091,Xã Gia Lộc,103,Tp Hải Phòng,abbr|typo,A115,Đồng Xoài,10713091,Xã Gia Lộc,103,Tp Hải Phòng,True,True,True,beam_search
+"xa lộ hà nội,xã duong ồng lộc,tinhh hà tĩnh",A561,Xa Lộ Hà Nội,40511039,Xã Đồng Lộc,405,Tỉnh Hà Tĩnh,abbr|typo|tight-comma,A561,Xa Lộ Hà Nội,,,,,True,False,False,beam_search
+"lư ơng ng ọc quy ến, xã ho ằng sơn, tinh thanh hóa",A234,Lương Ngọc Quyến,40143043,Xã Hoằng Sơn,401,Tỉnh Thanh Hóa,abbr,A234,Lương Ngọc Quyến,40143043,Xã Hoằng Sơn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"duong ồ sơn, xã sơn udong ông, tinh ph ú th ọ",A111,Đồ Sơn,21903076,Xã Sơn Đông,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,,,217,Tỉnh Phú Thọ,False,False,True,beam_search
+"ph ường cẩm lệ,thanh ph oduong à nẵng",,,50115011,Phường Cẩm Lệ,501,Tp Đà Nẵng,typo|tight-comma,,,50115011,Phường Cẩm Lệ,501,Tp Đà Nẵng,True,True,True,beam_search
+"tân  khai, xã hậu lộc, tinh thanh hóa",A436,Tân Khai,40139029,Xã Hậu Lộc,401,Tỉnh Thanh Hóa,abbr|typo,A436,Tân Khai,40139029,Xã Hậu Lộc,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"lêê dg. ại hành, xã dg. ạ tẻh 3, tinh lâm dg. ồng",A203,Lê Đại Hành,70317047,Xã Đạ Tẻh 3,703,Tỉnh Lâm Đồng,abbr|typo,A203,Lê Đại Hành,70317047,Xã Đạ Tẻh 3,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"bạch duong ằng, ph ường duong ống đa, th ành ph ố hà nội",A022,Bạch Đằng,10109009,Phường Đống Đa,101,Thành phố Hà Nội,abbr,,,,,101,Thành phố Hà Nội,False,False,True,beam_search
+"cửu long,xã ti ên yên,tinh tuy ên quang",A075,Cửu Long,20118104,Xã Tiên Yên,211,Tỉnh Tuyên Quang,abbr|tight-comma,A075,Cửu Long,20118104,Xã Tiên Yên,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"ch ấn hưng, xã tri ệu bình, inh qu ảng tr ị",A063,Chấn Hưng,40911070,Xã Triệu Bình,409,Tỉnh Quảng Trị,abbr|typo,A063,Chấn Hưng,40911070,Xã Triệu Bình,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"ho àng hoa th ám, xã q uảng ch ính, tinh thanh hóa",A152,Hoàng Hoa Thám,40149052,Xã Quảng Chính,401,Tỉnh Thanh Hóa,abbr|typo,A152,Hoàng Hoa Thám,40149052,Xã Quảng Chính,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"hạnh th ông, xã duong ức hu ệ, tinh tây ninh",A134,Hạnh Thông,80113027,Xã Đức Huệ,709,Tỉnh Tây Ninh,abbr,A134,Hạnh Thông,,,709,Tỉnh Tây Ninh,True,False,True,beam_search
+"xã yên bình, tinh th ái nguy n",,,20713063,Xã Yên Bình,215,Tỉnh Thái Nguyên,abbr|typo,,,20921049,Xã Yên Bình,209,Tỉnh Lạng Sơn,True,False,False,beam_search
+"sông th ương, xã ninh sơn, tinh kkh ánh hòa",A422,Sông Thương,70503059,Xã Ninh Sơn,511,Tỉnh Khánh Hòa,abbr|typo,A422,Sông Thương,70503059,Xã Ninh Sơn,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"sưvạnhạnh,xãtânthạnh,tnihduongồngtháp",A424,Sư Vạn Hạnh,80311075,Xã Tân Thạnh,803,Tỉnh Đồng Tháp,abbr|typo|no-space,A424,Sư Vạn Hạnh,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"xã dg. ịnh th ành,, tinh cà mau",,,82111051,Xã Định Thành,823,Tỉnh Cà Mau,abbr|typo,,,82111051,Xã Định Thành,823,Tỉnh Cà Mau,True,True,True,beam_search
+"dântrí,phườngnôngtrang,tinhphúthọ",A079,Dân Trí,21701002,Phường Nông Trang,217,Tỉnh Phú Thọ,abbr|typo|no-space,A079,Dân Trí,21701002,Phường Nông Trang,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"duongộclập,xãnậmsỏ,tinhalichâu",A116,Độc Lập,30211006,Xã Nậm Sỏ,302,Tỉnh Lai Châu,abbr|typo|no-space,,,30211006,Xã Nậm Sỏ,302,Tỉnh Lai Châu,False,True,True,beam_search
+"tôn th ất thuy ết, xã kh ánh khh ê, tinh lạng sơn",A472,Tôn Thất Thuyết,20913027,Xã Khánh Khê,209,Tỉnh Lạng Sơn,abbr|typo,A472,Tôn Thất Thuyết,20913027,Xã Khánh Khê,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"rạchầuchông,phườnglêthanhnghị,tphảiphòng",A418,Rạch Cầu Chông,10701052,Phường Lê Thanh Nghị,103,Tp Hải Phòng,abbr|typo|tight-comma|no-space,A418,Rạch Cầu Chông,10701052,Phường Lê Thanh Nghị,103,Tp Hải Phòng,True,True,True,beam_search
+"ph ường ph ương li ệt,th  ành ph ố hà nội",,,10111024,Phường Phương Liệt,101,Thành phố Hà Nội,abbr|typo|tight-comma,,,10111024,Phường Phương Liệt,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn hnồg, xã gia ph úc, thanh pho hải ph òng",A272,Nguyễn Hồng,10713093,Xã Gia Phúc,103,Tp Hải Phòng,typo,A118,Gia Phú,10713093,Xã Gia Phúc,103,Tp Hải Phòng,False,True,True,beam_search
+"nguy ễn tư ờng tam,xã vĩnh phong, tinh an giang",A340,Nguyễn Tường Tam,81319057,Xã Vĩnh Phong,805,Tỉnh An Giang,abbr|typo|tight-comma,A340,Nguyễn Tường Tam,81319057,Xã Vĩnh Phong,805,Tỉnh An Giang,True,True,True,beam_search
+"ph ường cầu thia, tinh loà cai",,,21303010,Phường Cầu Thia,205,Tỉnh Lào Cai,abbr|typo,,,21303010,Phường Cầu Thia,205,Tỉnh Lào Cai,True,True,True,beam_search
+"bàtriệu,xãanlạc,tinhbắcninh",A021,Bà Triệu,22113006,Xã An Lạc,223,Tỉnh Bắc Ninh,abbr|typo|no-space,A021,Bà Triệu,22113006,Xã An Lạc,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"xã ch ợ duong ồn, tinh tth ái nguy ên",,,20707071,Xã Chợ Đồn,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,,,,,False,False,False,beam_search
+"hu ỳnh kh ương ninh, xã ea ri êng, tinh duong ắk lắk",A174,Huỳnh Khương Ninh,60517048,Xã Ea Riêng,605,Tỉnh Đắk Lắk,abbr,A174,Huỳnh Khương Ninh,60517048,Xã Ea Riêng,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tô hi ến th ành, xã su ối dầu, tinh kh ánh hòa",A466,Tô Hiến Thành,51117030,Xã Suối Dầu,511,Tỉnh Khánh Hòa,clean,A466,Tô Hiến Thành,51117030,Xã Suối Dầu,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"nugyễnthịthập,xãhươngkhê,tinhhàtĩnh",A327,Nguyễn Thị Thập,40517061,Xã Hương Khê,405,Tỉnh Hà Tĩnh,typo|no-space,A327,Nguyễn Thị Thập,40517061,Xã Hương Khê,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"xã tân ph ước hưng, thanh pho cần th ơ",,,81608057,Xã Tân Phước Hưng,815,Tp Cần Thơ,abbr,A411,Phước Hưng,81608057,Xã Tân Phước Hưng,815,Tp Cần Thơ,False,True,True,beam_search
+"ph ạm ng ũ lão,ph ường ki ến hưng,th ành ph ố hànội",A371,Phạm Ngũ Lão,10127047,Phường Kiến Hưng,101,Thành phố Hà Nội,abbr|typo|tight-comma,A371,Phạm Ngũ Lão,10127047,Phường Kiến Hưng,101,Thành phố Hà Nội,True,True,True,beam_search
+"huy ền to ại, xã yên bình, tinh lạng sơn",A170,Huyền Toại,20921049,Xã Yên Bình,209,Tỉnh Lạng Sơn,clean,A170,Huyền Toại,20921049,Xã Yên Bình,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"hải guy ên,ph ường ninh xá,tinh bắc ninh",A126,Hải Nguyên,22309072,Phường Ninh Xá,223,Tỉnh Bắc Ninh,abbr|typo|tight-comma,A126,Hải Nguyên,22309072,Phường Ninh Xá,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn văn d. ậu,  ph ường ch í linh, tp hải ph òng",A346,Nguyễn Văn Đậu,10703061,Phường Chí Linh,103,Tp Hải Phòng,abbr|typo,A346,Nguyễn Văn Đậu,10703061,Phường Chí Linh,103,Tp Hải Phòng,True,True,True,beam_search
+"đaonguyênphổ,xãbìnhthành,tinhtâyninh",A087,Đao Nguyên Phổ,80111017,Xã Bình Thành,709,Tỉnh Tây Ninh,abbr|typo|no-space,A087,Đao Nguyên Phổ,80111017,Xã Bình Thành,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"đao nguy ên ph ổ, xã hải th ịnh, tnh ninh bình",A087,Đao Nguyên Phổ,11319083,Xã Hải Thịnh,117,Tỉnh Ninh Bình,abbr|typo,A087,Đao Nguyên Phổ,11319083,Xã Hải Thịnh,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn trungng ạn, xã ph ụ dực, tinh hưng yên",A338,Nguyễn Trung Ngạn,11503071,Xã Phụ Dực,109,Tỉnh Hưng Yên,abbr|typo,A338,Nguyễn Trung Ngạn,11503071,Xã Phụ Dực,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"núi th ành, xã pờ tó, tinh gia  lai",A360,Núi Thành,60320104,Xã Pờ Tó,603,Tỉnh Gia Lai,abbr|typo,A360,Núi Thành,60320104,Xã Pờ Tó,603,Tỉnh Gia Lai,True,True,True,beam_search
+"lê quang kim,xã ô lâm,tinh an giang",A210,Lê Quang Kim,80515035,Xã Ô Lâm,805,Tỉnh An Giang,abbr|tight-comma,A210,Lê Quang Kim,80515035,Xã Ô Lâm,805,Tỉnh An Giang,True,True,True,beam_search
+"gi ải ph óóng,xã duong ạ tẻh 3,tinh lâm duong ồng",A119,Giải Phóng,70317047,Xã Đạ Tẻh 3,703,Tỉnh Lâm Đồng,abbr|typo|tight-comma,A119,Giải Phóng,,,,,True,False,False,beam_search
+"cầuxéo,phườnghoànhbồ,tinhquảngninh",A058,Cầu Xéo,22501023,Phường Hoành Bồ,225,Tỉnh Quảng Ninh,abbr|typo|no-space,A058,Cầu Xéo,22501023,Phường Hoành Bồ,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"nguyễnthịminhkhai,xãvĩnhthah,tinhcàmau",A323,Nguyễn Thị Minh Khai,82109061,Xã Vĩnh Thanh,823,Tỉnh Cà Mau,abbr|typo|tight-comma|no-space,A323,Nguyễn Thị Minh Khai,82109061,Xã Vĩnh Thanh,823,Tỉnh Cà Mau,True,True,True,beam_search
+"đo àn c bửu, xã ya  ly, tinh qu ảng ng ãi",A102,Đoàn C.Bửu,60113085,Xã Ya Ly,505,Tỉnh Quảng Ngãi,abbr|typo,A102,Đoàn C.Bửu,60113085,Xã Ya Ly,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"hàm tử, xã ia tôr,tinh gia lai",A131,Hàm Tử,60317074,Xã Ia Tôr,603,Tỉnh Gia Lai,abbr|typo,A131,Hàm Tử,60317074,Xã Ia Tôr,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xãhạlang,tinhaobằng",,,20319054,Xã Hạ Lang,203,Tỉnh Cao Bằng,abbr|typo|tight-comma|no-space,,,20319054,Xã Hạ Lang,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"dg ất mới, xã tân ho à, tthanh pho cần th ơ",A094,Đất Mới,81603047,Xã Tân Hoà,815,Tp Cần Thơ,abbr|typo,A432,Tân Hóa,81603047,Xã Tân Hoà,815,Tp Cần Thơ,False,True,True,beam_search
+"tân hòa duong ôông, xã kr ông búk, tinh duong ắk lắk",A433,Tân Hòa Đông,60539025,Xã Krông Búk,605,Tỉnh Đắk Lắk,typo,A432,Tân Hóa,60539025,Xã Krông Búk,605,Tỉnh Đắk Lắk,False,True,True,beam_search
+"ph ù dg ổng thi ên vư ơng, ph ường ph ú nhu ận t.p hồ ch í minh",A408,Phù Đổng Thiên Vương,70131117,Phường Phú Nhuận,701,Tp Hồ Chí Minh,abbr|typo,A145,Hiền Vương,70131117,Phường Phú Nhuận,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"hồng hà, ph ường d. ông ninh ho à, tinh kh ánh haò",A167,Hồng Hà,51105013,Phường Đông Ninh Hoà,511,Tỉnh Khánh Hòa,abbr|typo,A167,Hồng Hà,51105013,Phường Đông Ninh Hoà,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tr ịnh th ị nghi, xã ba bể,tinh th ái nguy ên",A520,Trịnh Thị Nghi,20703058,Xã Ba Bể,215,Tỉnh Thái Nguyên,typo,A520,Trịnh Thị Nghi,20703058,Xã Ba Bể,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"nguy ễn huy lư ợng, xã long hải, thannh pho hồ ch í minh",A294,Nguyễn Huy Lượng,71712024,Xã Long Hải,701,Tp Hồ Chí Minh,typo,A294,Nguyễn Huy Lượng,71712024,Xã Long Hải,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"nguy ễn an ninh, xã ch âu ơsn, tinh lạng sơn",A273,Nguyễn An Ninh,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,abbr|typo,A273,Nguyễn An Ninh,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"nguy ễn ph ạm tu ân,xã mỹ an,tinh tây ninh",A309,Nguyễn Phạm Tuân,80119022,Xã Mỹ An,709,Tỉnh Tây Ninh,abbr|tight-comma,A309,Nguyễn Phạm Tuân,80119022,Xã Mỹ An,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"hồng hà, ph ườngâ u lâu, tinh lào cai",A167,Hồng Hà,21301040,Phường Âu Lâu,205,Tỉnh Lào Cai,abbr|typo,A167,Hồng Hà,21301040,Phường Âu Lâu,205,Tỉnh Lào Cai,True,True,True,beam_search
+"xã mỹ tịnh an, tihn duong ồng th áp",,,80711040,Xã Mỹ Tịnh An,803,Tỉnh Đồng Tháp,abbr|typo,,,80711040,Xã Mỹ Tịnh An,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"xã nam d. ồng, tinh ninh bnìh",,,11309051,Xã Nam Đồng,117,Tỉnh Ninh Bình,abbr|typo,,,11309051,Xã Nam Đồng,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"kinhdươngvương,phườngkỳỳsơn,tinhphúthọ",A192,Kinh Dương Vương,30501146,Phường Kỳ Sơn,217,Tỉnh Phú Thọ,typo|no-space,A192,Kinh Dương Vương,30501146,Phường Kỳ Sơn,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tr ần não, ph ường bình thu ận,t inh lâm duong ồng",A494,Trần Não,71501052,Phường Bình Thuận,703,Tỉnh Lâm Đồng,abbr|typo,A494,Trần Não,21101051,Phường Bình Thuận,211,Tỉnh Tuyên Quang,True,False,False,beam_search
+"tân trang, xã xu ân duong ông, tinh duong ồng nai",A446,Tân Trang,71311033,Xã Xuân Đông,713,Tỉnh Đồng Nai,clean,A446,Tân Trang,,,,,True,False,False,beam_search
+"nguy ễn thi ện thu ật, xã nam tu ấn, tinh cao bằng",A329,Nguyễn Thiện Thuật,20315031,Xã Nam Tuấn,203,Tỉnh Cao Bằng,abbr,A329,Nguyễn Thiện Thuật,20315031,Xã Nam Tuấn,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"ông ích khi ê,m xã hi ếu ph ụng, tinh vĩnh long",A363,Ông Ích Khiêm,80913018,Xã Hiếu Phụng,809,Tỉnh Vĩnh Long,typo,A363,Ông Ích Khiêm,,,809,Tỉnh Vĩnh Long,True,False,True,beam_search
+"lêvănhưu,phườngnguyễnduognạinăng,t.phảiphòng",A222,Lê Văn Hưu,10709067,Phường Nguyễn Đại Năng,103,Tp Hải Phòng,abbr|typo|tight-comma|no-space,A222,Lê Văn Hưu,,,103,Tp Hải Phòng,True,False,True,beam_search
+"tr ần qu ý cap,xã tân an,tinh duong ồng nai",A505,Trần Quý Cap,71307049,Xã Tân An,713,Tỉnh Đồng Nai,abbr|tight-comma,A505,Trần Quý Cap,71307049,Xã Tân An,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"nguy ễ ki ệm, xã tân kỳ, tinh ngh ệ an",A301,Nguyễn Kiệm,40319088,Xã Tân Kỳ,403,Tỉnh Nghệ An,abbr|typo,A301,Nguyễn Kiệm,40319088,Xã Tân Kỳ,403,Tỉnh Nghệ An,True,True,True,beam_search
+"thi ên ph ước, xã duong ông lộc, tinh ngh ệ an",A458,Thiên Phước,40333060,Xã Đông Lộc,403,Tỉnh Nghệ An,abbr,A458,Thiên Phước,,,403,Tỉnh Nghệ An,True,False,True,beam_search
+"xã xu ân mai, th ành ph ố hà nội",,,10153075,Xã Xuân Mai,101,Thành phố Hà Nội,clean,,,10153075,Xã Xuân Mai,101,Thành phố Hà Nội,True,True,True,beam_search
+"xã an lạc th ôn,t.p cần th ơ",,,81903074,Xã An Lạc Thôn,815,Tp Cần Thơ,abbr|tight-comma,,,81903074,Xã An Lạc Thôn,815,Tp Cần Thơ,True,True,True,beam_search
+"xã ph ước tr à, thanh pho duong à nẵng",,,50319089,Xã Phước Trà,501,Tp Đà Nẵng,abbr,,,50319089,Xã Phước Trà,501,Tp Đà Nẵng,True,True,True,beam_search
+"thi sách, xã sính ph ình, tinh đi ện bi ên",A455,Thi Sách,30113018,Xã Sính Phình,301,Tỉnh Điện Biên,abbr,A455,Thi Sách,30113018,Xã Sính Phình,301,Tỉnh Điện Biên,True,True,True,beam_search
+"nguy ễn văn nguy ễn, xã lư ơng sơn, tinh ngh ệ an",A353,Nguyễn Văn Nguyễn,40329026,Xã Lương Sơn,403,Tỉnh Nghệ An,clean,A353,Nguyễn Văn Nguyễn,40329026,Xã Lương Sơn,403,Tỉnh Nghệ An,True,True,True,beam_search
+"sư ơng nguy ệt ánh, ph ường xóm chi ếu, thanh pho hồ ch í minh",A423,Sương Nguyệt Ánh,70107070,Phường Xóm Chiếu,701,Tp Hồ Chí Minh,abbr,A423,Sương Nguyệt Ánh,70107070,Phường Xóm Chiếu,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"dạ nam, x ãtả lèng, tinh lai ch âu",A076,Dạ Nam,30205011,Xã Tả Lèng,302,Tỉnh Lai Châu,typo,A076,Dạ Nam,30205011,Xã Tả Lèng,302,Tỉnh Lai Châu,True,True,True,beam_search
+"lý ch ính th ắng, xã a lư ới 4, th ành ph ố hu ế",A238,Lý Chính Thắng,41115038,Xã A Lưới 4,411,Thành phố Huế,abbr,A238,Lý Chính Thắng,41115038,Xã A Lưới 4,411,Thành phố Huế,True,True,True,beam_search
+"ph ùng kh ắc khoan,xã ngh ĩa trunng,tinh duong ồng nai",A410,Phùng Khắc Khoan,70707084,Xã Nghĩa Trung,713,Tỉnh Đồng Nai,abbr|typo|tight-comma,A410,Phùng Khắc Khoan,70707084,Xã Nghĩa Trung,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tinh lộ 14,, xã vĩnh ho à, thanh pho hải ph òng",A463,Tỉnh Lộ 14,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,abbr|typo,A463,Tỉnh Lộ 14,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,True,True,True,beam_search
+"nguyễnbátòng,phườgthuậnhưng,thanhphocầnthơ",A275,Nguyễn Bá Tòng,81503015,Phường Thuận Hưng,815,Tp Cần Thơ,abbr|typo|no-space,A275,Nguyễn Bá Tòng,81503015,Phường Thuận Hưng,815,Tp Cần Thơ,True,True,True,beam_search
+"nguy ễn trung tr ực,xã tổng cọt,tinh cao bằg",A339,Nguyễn Trung Trực,20305030,Xã Tổng Cọt,203,Tỉnh Cao Bằng,abbr|typo|tight-comma,A339,Nguyễn Trung Trực,20305030,Xã Tổng Cọt,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"lê văn hưu, xã đan ph ượng, th ành ph ố hà nội",A222,Lê Văn Hưu,10133106,Xã Đan Phượng,101,Thành phố Hà Nội,clean,A222,Lê Văn Hưu,10133106,Xã Đan Phượng,101,Thành phố Hà Nội,True,True,True,beam_search
+"ph ường ch ợ lớn, thanh pho hồ chí minh",,,70109075,Phường Chợ Lớn,701,Tp Hồ Chí Minh,abbr|typo,A065,Chợ Lớn,70109075,Phường Chợ Lớn,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"đo àn nh ữ hải,xã mai hoa,tinh hà ĩtnh",A103,Đoàn Nhữ Hải,40521059,Xã Mai Hoa,405,Tỉnh Hà Tĩnh,abbr|typo|tight-comma,A103,Đoàn Nhữ Hải,40521059,Xã Mai Hoa,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"xóm củi, xã hy cư ơng, tinh phú  th ọ",A563,Xóm Củi,21701005,Xã Hy Cương,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,21701005,Xã Hy Cương,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"qu ốc lộ 22, xã kho ái ch âu, tinh hưng yên",A417,Quốc Lộ 22,10905024,Xã Khoái Châu,109,Tỉnh Hưng Yên,abbr,A417,Quốc Lộ 22,10905024,Xã Khoái Châu,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"bàu cát,xã songkh ủa,tinh sơn la",A029,Bàu Cát,30323013,Xã Song Khủa,303,Tỉnh Sơn La,abbr|typo|tight-comma,A029,Bàu Cát,30323013,Xã Song Khủa,303,Tỉnh Sơn La,True,True,True,beam_search
+"mê linh,xã sơn tây th ượng,tin hqu ảng ng ãi",A255,Mê Linh,50511044,Xã Sơn Tây Thượng,505,Tỉnh Quảng Ngãi,abbr|typo|tight-comma,A255,Mê Linh,50511044,Xã Sơn Tây Thượng,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"tr ần xu ân so ạn, xã th ần kh ê, tinh hưng yên",A516,Trần Xuân Soạn,11505077,Xã Thần Khê,109,Tỉnh Hưng Yên,abbr,A516,Trần Xuân Soạn,11505077,Xã Thần Khê,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"xãchưpăh,tinhgiaai",,,60307066,Xã Chư Păh,603,Tỉnh Gia Lai,abbr|typo|no-space,,,60307066,Xã Chư Păh,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tái thi ết, ph ường mư ờng lay, tinh đi ện bi ên",A425,Tái Thiết,30103004,Phường Mường Lay,301,Tỉnh Điện Biên,abbr,A425,Tái Thiết,30103004,Phường Mường Lay,301,Tỉnh Điện Biên,True,True,True,beam_search
+"âucơ,xãphướchữu,tinhkhánhhòa",A006,Âu Cơ,70507048,Xã Phước Hữu,511,Tỉnh Khánh Hòa,abbr|no-space,A006,Âu Cơ,70507048,Xã Phước Hữu,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"ph ạm hồng th ái, xã cát ti ên 3, tinh lâm duong ồng",A368,Phạm Hồng Thái,70317050,Xã Cát Tiên 3,703,Tỉnh Lâm Đồng,abbr,A368,Phạm Hồng Thái,70317050,Xã Cát Tiên 3,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"xã an kh ánh,  tp hải ph òng",,,10315026,Xã An Khánh,103,Tp Hải Phòng,abbr|typo,,,10315026,Xã An Khánh,103,Tp Hải Phòng,True,True,True,beam_search
+"xã ch í minh, tp hải ph òng",,,10715098,Xã Chí Minh,103,Tp Hải Phòng,abbr,,,10715098,Xã Chí Minh,103,Tp Hải Phòng,True,True,True,beam_search
+"hồ hảo hớn, xã ti ên th ủy, tinh vĩnh long",A161,Hồ Hảo Hớn,81103084,Xã Tiên Thủy,809,Tỉnh Vĩnh Long,abbr,A161,Hồ Hảo Hớn,81103084,Xã Tiên Thủy,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"út tịch, ãx ph ú lâm, tinh an giang",A542,Út Tịch,80509022,Xã Phú Lâm,805,Tỉnh An Giang,typo,A542,Út Tịch,80509022,Xã Phú Lâm,805,Tỉnh An Giang,True,True,True,beam_search
+"lý nam duong ế,xã thanh yên, tinh đi ện bi ên",A240,Lý Nam Đế,30117007,Xã Thanh Yên,301,Tỉnh Điện Biên,typo,,,30117007,Xã Thanh Yên,301,Tỉnh Điện Biên,False,True,True,beam_search
+"bùi minh tr ực, ph ường tân hưng,  t.p hải ph òng",A042,Bùi Minh Trực,10701056,Phường Tân Hưng,103,Tp Hải Phòng,abbr|typo,A042,Bùi Minh Trực,10701056,Phường Tân Hưng,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn bá tòng, duong ặc khu lý sơn, tinh qu ảngg ng ãi",A275,Nguyễn Bá Tòng,50503056,Đặc khu Lý Sơn,505,Tỉnh Quảng Ngãi,abbr|typo,A275,Nguyễn Bá Tòng,,,,,True,False,False,beam_search
+"nguy ễn văn duong ậu, xã ea păl, ttinh duong ắk lắk",A346,Nguyễn Văn Đậu,60515046,Xã Ea Păl,605,Tỉnh Đắk Lắk,typo,,,60515046,Xã Ea Păl,605,Tỉnh Đắk Lắk,False,True,True,beam_search
+"dư ơng bá tr ạc, xã tuy an dduong ông, tinh duong ắk lắk",A081,Dương Bá Trạc,50907081,Xã Tuy An Đông,605,Tỉnh Đắk Lắk,abbr|typo,A081,Dương Bá Trạc,,,,,True,False,False,beam_search
+"đo àn nh ữ hải, xã ia đal,, tinh qu ảng ng ãi",A103,Đoàn Nhữ Hải,60114096,Xã Ia Đal,505,Tỉnh Quảng Ngãi,abbr|typo,A103,Đoàn Nhữ Hải,60114096,Xã Ia Đal,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"ng ô nh ân tịnh, ph ường tây hi ếu, tinh ngh ệ  an",A267,Ngô Nhân Tịnh,40314096,Phường Tây Hiếu,403,Tỉnh Nghệ An,abbr|typo,A267,Ngô Nhân Tịnh,40314096,Phường Tây Hiếu,403,Tỉnh Nghệ An,True,True,True,beam_search
+"xãgòcôngduongông,tinhdungồngtháp",,,80717051,Xã Gò Công Đông,803,Tỉnh Đồng Tháp,abbr|typo|no-space,A121,Gò Công,,,,,False,False,False,beam_search
+"hu ỳnh văn bánh, xãbắc bình, tinh lâm d. ồng",A182,Huỳnh Văn Bánh,71505065,Xã Bắc Bình,703,Tỉnh Lâm Đồng,abbr|typo,A182,Huỳnh Văn Bánh,71505065,Xã Bắc Bình,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"thi ên hộ dư ơng, xã tân ch âu, inh ngh ệ an",A457,Thiên Hộ Dương,40325017,Xã Tân Châu,403,Tỉnh Nghệ An,abbr|typo,A457,Thiên Hộ Dương,70905080,Xã Tân Châu,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"tự lập, xã ng hĩa sơn, tinh ninh bình",A537,Tự Lập,11317093,Xã Nghĩa Sơn,117,Tỉnh Ninh Bình,typo,A537,Tự Lập,11317093,Xã Nghĩa Sơn,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn văn nghi,xã duong ình phong,tinh caob ằng",A352,Nguyễn Văn Nghi,20311052,Xã Đình Phong,203,Tỉnh Cao Bằng,abbr|typo|tight-comma,A352,Nguyễn Văn Nghi,,,203,Tỉnh Cao Bằng,True,False,True,beam_search
+"trịnhhoàiduongứ,cxãgiaoninh,tinhninhbình",A519,Trịnh Hoài Đức,11315090,Xã Giao Ninh,117,Tỉnh Ninh Bình,abbr|typo|no-space,,,11315090,Xã Giao Ninh,117,Tỉnh Ninh Bình,False,True,True,beam_search
+"nguy ễn d ình ch ính,xã ph ú ho à d ông,thanh pho hồ cch í minh",A289,Nguyễn Đình Chính,70135156,Xã Phú Hoà Đông,701,Tp Hồ Chí Minh,abbr|typo|tight-comma,A289,Nguyễn Đình Chính,,,,,True,False,False,beam_search
+"ch âu văn li êm, xã ea ly, tinh duong kắ lắk",A061,Châu Văn Liêm,50913095,Xã Ea Ly,605,Tỉnh Đắk Lắk,abbr|typo,A061,Châu Văn Liêm,50913095,Xã Ea Ly,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"nguy ễn dg ình chi, xã nam tr ực, tinh ninh bình",A287,Nguyễn Đình Chi,11309049,Xã Nam Trực,117,Tỉnh Ninh Bình,abbr,A284,Nguyễn Du,11309049,Xã Nam Trực,117,Tỉnh Ninh Bình,False,True,True,beam_search
+"ph ạm hồng th ái, xã d. ồng kỳ, tinh bắc ninh",A368,Phạm Hồng Thái,22103034,Xã Đồng Kỳ,223,Tỉnh Bắc Ninh,abbr,A368,Phạm Hồng Thái,22103034,Xã Đồng Kỳ,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"tr ần lực, ph ưường ho ài nh ơn nam, tinh gia lai",A491,Trần Lực,50705017,Phường Hoài Nhơn Nam,603,Tỉnh Gia Lai,typo,A491,Trần Lực,,,603,Tỉnh Gia Lai,True,False,True,beam_search
+"xã qu ảng hà, tinh qu ảngg ninh",,,22511040,Xã Quảng Hà,225,Tỉnh Quảng Ninh,abbr|typo,,,22511040,Xã Quảng Hà,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"qu ốc lộ 13, xã kim ng ân,  tinh qu ảng tr ị",A416,Quốc Lộ 13,40713041,Xã Kim Ngân,409,Tỉnh Quảng Trị,abbr|typo,A416,Quốc Lộ 13,40713041,Xã Kim Ngân,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"th ạch th ịthanh, xã mỹ thu ận, tinh an giang",A448,Thạch Thị Thanh,81305086,Xã Mỹ Thuận,805,Tỉnh An Giang,abbr|typo,A448,Thạch Thị Thanh,81305086,Xã Mỹ Thuận,805,Tỉnh An Giang,True,True,True,beam_search
+"tôn th ất tùng, xãã hư ơng cần, tinh ph ú th ọ",A473,Tôn Thất Tùng,21719052,Xã Hương Cần,217,Tỉnh Phú Thọ,typo,A473,Tôn Thất Tùng,21719052,Xã Hương Cần,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tân ph ước, xã ph ùng nguy ên, tinh ph ú th ọ",A439,Tân Phước,21721008,Xã Phùng Nguyên,217,Tỉnh Phú Thọ,abbr,A439,Tân Phước,21721008,Xã Phùng Nguyên,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"phan kh ắc bính,xã duong ức ho à, tinh tây ninh",A387,Phan Khắc Bính,80115034,Xã Đức Hoà,709,Tỉnh Tây Ninh,abbr|typo,A387,Phan Khắc Bính,,,709,Tỉnh Tây Ninh,True,False,True,beam_search
+"nguy ễn súy, xã tủa ch ùa, tihn đi ện bi ên",A314,Nguyễn Súy,30113016,Xã Tủa Chùa,301,Tỉnh Điện Biên,abbr|typo,A314,Nguyễn Súy,30113016,Xã Tủa Chùa,301,Tỉnh Điện Biên,True,True,True,beam_search
+"cây tr àm, xã vĩnh hải, thanh pho hải ph òng",A055,Cây Tràm,10321044,Xã Vĩnh Hải,103,Tp Hải Phòng,clean,A055,Cây Tràm,10321044,Xã Vĩnh Hải,103,Tp Hải Phòng,True,True,True,beam_search
+"tinh lộ 14, ph ường sôg tr í, tinh hà tĩnh",A463,Tỉnh Lộ 14,40520001,Phường Sông Trí,405,Tỉnh Hà Tĩnh,typo,A463,Tỉnh Lộ 14,40520001,Phường Sông Trí,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"chùaphậtán,xãbìnhkhê,tinhgiali",A068,Chùa Phật Án,50715038,Xã Bình Khê,603,Tỉnh Gia Lai,abbr|typo|no-space,A068,Chùa Phật Án,50715038,Xã Bình Khê,603,Tỉnh Gia Lai,True,True,True,beam_search
+"nguy ễn th ị di ệu, ph ường tân uy ên, thanh pho hồ ch í minh",A321,Nguyễn Thị Diệu,71105042,Phường Tân Uyên,701,Tp Hồ Chí Minh,clean,A321,Nguyễn Thị Diệu,71105042,Phường Tân Uyên,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"xã bình yê,tinh th ái nguy ên",,,21505042,Xã Bình Yên,215,Tỉnh Thái Nguyên,abbr|typo|tight-comma,A126,Hải Nguyên,21505042,Xã Bình Yên,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"hồtùngmậu,xãvĩnhtrụ,tinhninhbình",A163,Hồ Tùng Mậu,11107045,Xã Vĩnh Trụ,117,Tỉnh Ninh Bình,abbr|typo|no-space,A163,Hồ Tùng Mậu,11107045,Xã Vĩnh Trụ,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"ho àng văn th ụ, xã bằng th ành, tinh tth ái nguy ên",A156,Hoàng Văn Thụ,20704055,Xã Bằng Thành,215,Tỉnh Thái Nguyên,abbr|typo,A156,Hoàng Văn Thụ,20704055,Xã Bằng Thành,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"nguy ễn tr ãi, ph ườnng quy nh ơn nam, tinh gia lai",A334,Nguyễn Trãi,50701004,Phường Quy Nhơn Nam,603,Tỉnh Gia Lai,typo,A334,Nguyễn Trãi,50701004,Phường Quy Nhơn Nam,603,Tỉnh Gia Lai,True,True,True,beam_search
+"lãnh binh th ăng, xã ph ước sơn, tinh duong ồng nai",A198,Lãnh Binh Thăng,70707083,Xã Phước Sơn,713,Tỉnh Đồng Nai,abbr,A198,Lãnh Binh Thăng,70707083,Xã Phước Sơn,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"duong ồng kh ởi, xã hư ớớng ph ùng, tinh qu ảng tr ị",A113,Đồng Khởi,40915055,Xã Hướng Phùng,409,Tỉnh Quảng Trị,abbr|typo,,,40915055,Xã Hướng Phùng,409,Tỉnh Quảng Trị,False,True,True,beam_search
+"dg.ộcập,xãlamthành,tinhnghệan",A116,Độc Lập,40337033,Xã Lam Thành,403,Tỉnh Nghệ An,abbr|typo|no-space,,,40337033,Xã Lam Thành,403,Tỉnh Nghệ An,False,True,True,beam_search
+"nguy ễ nthi ện thu ật, xã lạc sơn, tinh ph ú th ọ",A329,Nguyễn Thiện Thuật,30515117,Xã Lạc Sơn,217,Tỉnh Phú Thọ,abbr|typo,A329,Nguyễn Thiện Thuật,30515117,Xã Lạc Sơn,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"huy ền tr ân công ch úa, xã bích hào, tinh ngh ệ an",A171,Huyền Trân Công Chúa,40331104,Xã Bích Hào,403,Tỉnh Nghệ An,abbr,A171,Huyền Trân Công Chúa,40331104,Xã Bích Hào,403,Tỉnh Nghệ An,True,True,True,beam_search
+"ngguyễnphikhanh,xãlinhsơn,tinhthanhhóa",A310,Nguyễn Phi Khanh,40117115,Xã Linh Sơn,401,Tỉnh Thanh Hóa,abbr|typo|no-space,A310,Nguyễn Phi Khanh,40117115,Xã Linh Sơn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nguy ễn văn lu ông, xã sin su ối hồ, tinh lai hc âu",A351,Nguyễn Văn Luông,30203015,Xã Sin Suối Hồ,302,Tỉnh Lai Châu,abbr|typo,A351,Nguyễn Văn Luông,30203015,Xã Sin Suối Hồ,302,Tỉnh Lai Châu,True,True,True,beam_search
+"lý th ái tổ,xã ngh ĩa th ành,thanh pho hồ ch í minh",A241,Lý Thái Tổ,71705018,Xã Nghĩa Thành,701,Tp Hồ Chí Minh,abbr|tight-comma,A241,Lý Thái Tổ,71705018,Xã Nghĩa Thành,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tr ần huy li ệu, xã kon  chi êng, tinh gia lai",A485,Trần Huy Liệu,60305118,Xã Kon Chiêng,603,Tỉnh Gia Lai,abbr|typo,A485,Trần Huy Liệu,60305118,Xã Kon Chiêng,603,Tỉnh Gia Lai,True,True,True,beam_search
+"ch âu văn ti ếp, xã th ạch hà, tinh hàtĩnh",A062,Châu Văn Tiếp,40513026,Xã Thạch Hà,405,Tỉnh Hà Tĩnh,typo,A062,Châu Văn Tiếp,40513026,Xã Thạch Hà,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"nguy ễn th ị nh ỏ, xã tr à leng, hanh pho duong à nẵng",A325,Nguyễn Thị Nhỏ,50329043,Xã Trà Leng,501,Tp Đà Nẵng,typo,A325,Nguyễn Thị Nhỏ,50329043,Xã Trà Leng,501,Tp Đà Nẵng,True,True,True,beam_search
+"tân sinh, ãx duong ồng vi ệt, tinh bắc ninh",A440,Tân Sinh,22101050,Xã Đồng Việt,223,Tỉnh Bắc Ninh,typo,A440,Tân Sinh,,,223,Tỉnh Bắc Ninh,True,False,True,beam_search
+"phan văn duong ạt, xã an duong ịnh, tinh vĩnh loong",A394,Phan Văn Đạt,81107096,Xã An Định,809,Tỉnh Vĩnh Long,abbr|typo,,,,,,,False,False,False,beam_search
+"thi sách,xã duong ăk rve,tinh qu ảng gn ãi",A455,Thi Sách,60108089,Xã Đăk Rve,505,Tỉnh Quảng Ngãi,typo|tight-comma,A455,Thi Sách,,,,,True,False,False,beam_search
+"huy ền to ại, xã ph ú trung, tinh dg ồng nai",A170,Huyền Toại,70716076,Xã Phú Trung,713,Tỉnh Đồng Nai,abbr,A170,Huyền Toại,70716076,Xã Phú Trung,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"duy tn, xã bảo lâm 3, tinh lâm dg ồng",A080,Duy Tân,70313039,Xã Bảo Lâm 3,703,Tỉnh Lâm Đồng,abbr|typo,A080,Duy Tân,70313039,Xã Bảo Lâm 3,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"ông ích khi êm,xã bảo lâm 2,tinh lâm duong ồng",A363,Ông Ích Khiêm,70313038,Xã Bảo Lâm 2,703,Tỉnh Lâm Đồng,abbr|tight-comma,A363,Ông Ích Khiêm,70313038,Xã Bảo Lâm 2,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"cách mạng,xã hồng th ái,tinh lâm dg ồng",A052,Cách Mạng,71505066,Xã Hồng Thái,703,Tỉnh Lâm Đồng,abbr|tight-comma,A052,Cách Mạng,21103008,Xã Hồng Thái,211,Tỉnh Tuyên Quang,True,False,False,beam_search
+"ph ạm văn ch í, xã tây kh ánh vĩnh, tinh kh ánh hòa",A375,Phạm Văn Chí,51111035,Xã Tây Khánh Vĩnh,511,Tỉnh Khánh Hòa,abbr,A375,Phạm Văn Chí,51111035,Xã Tây Khánh Vĩnh,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"nguy ễn vn tr ỗi,xã tri ệu vi ệt vư ơng,tinh hưng yên",A355,Nguyễn Văn Trỗi,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,abbr|typo|tight-comma,A355,Nguyễn Văn Trỗi,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"mê linh, xã duong ịnh th ành, tinh cà mau",A255,Mê Linh,82111051,Xã Định Thành,823,Tỉnh Cà Mau,abbr,A255,Mê Linh,,,823,Tỉnh Cà Mau,True,False,True,beam_search
+"nguy ễn th ị thh ập,ph ường an lộc,tinh duong ồng nai",A327,Nguyễn Thị Thập,70709059,Phường An Lộc,713,Tỉnh Đồng Nai,typo|tight-comma,A320,Nguyễn Thi,70709059,Phường An Lộc,713,Tỉnh Đồng Nai,False,True,True,beam_search
+"hu ỳnh duong ình hai, xã paủ , tinh lai ch âu",A172,Huỳnh Đình Hai,30201036,Xã Pa Ủ,302,Tỉnh Lai Châu,abbr|typo,,,30201036,Xã Pa Ủ,302,Tỉnh Lai Châu,False,True,True,beam_search
+"tr ương duong ịnh, ph ường hốnai, tinh duong ồng nai",A522,Trương Định,71301006,Phường Hố Nai,713,Tỉnh Đồng Nai,typo,,,71301006,Phường Hố Nai,713,Tỉnh Đồng Nai,False,True,True,beam_search
+"c ánh hưng,ph ường th ới an,t.p hồ ch í minh",A059,Chánh Hưng,70123097,Phường Thới An,701,Tp Hồ Chí Minh,abbr|typo|tight-comma,A185,Hưng Phú,70123097,Phường Thới An,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"rạch cầu ch ông, xã dg. ắk mil, tinh lâm dg. ồng",A418,Rạch Cầu Chông,60607104,Xã Đắk Mil,703,Tỉnh Lâm Đồng,abbr,A418,Rạch Cầu Chông,60607104,Xã Đắk Mil,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"xã hữu lũng, tinh lạng sơn",,,20921044,Xã Hữu Lũng,209,Tỉnh Lạng Sơn,abbr,,,20921044,Xã Hữu Lũng,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"sư vạn hạnh, xã yên th ịnh, tinh th ái nguyê n",A424,Sư Vạn Hạnh,20707070,Xã Yên Thịnh,215,Tỉnh Thái Nguyên,abbr|typo,A424,Sư Vạn Hạnh,20707070,Xã Yên Thịnh,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"ph ạm văn hai, xã hàm tân, tinh lâm duoong ồng",A378,Phạm Văn Hai,71514084,Xã Hàm Tân,703,Tỉnh Lâm Đồng,typo,A378,Phạm Văn Hai,71514084,Xã Hàm Tân,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"tr ần hưng d. ạo, xã rt à linh, tp d. à nẵng",A486,Trần Hưng Đạo,50329042,Xã Trà Linh,501,Tp Đà Nẵng,abbr|typo,A486,Trần Hưng Đạo,50329042,Xã Trà Linh,501,Tp Đà Nẵng,True,True,True,beam_search
+"nguy ễn thh ị th ập, xã tam duong ảo, tinh ph ú th ọ",A327,Nguyễn Thị Thập,21904077,Xã Tam Đảo,217,Tỉnh Phú Thọ,typo,A407,Phú Thọ,21905083,Xã Tam Dương Bắc,217,Tỉnh Phú Thọ,False,False,True,beam_search
+"bạch mã,xã sơn giang,tinnh hà tĩnh",A023,Bạch Mã,40509054,Xã Sơn Giang,405,Tỉnh Hà Tĩnh,abbr|typo|tight-comma,A023,Bạch Mã,40509054,Xã Sơn Giang,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"ph ường ki ến hưng, th ành ph ố hà nội",,,10127047,Phường Kiến Hưng,101,Thành phố Hà Nội,abbr,,,10127047,Phường Kiến Hưng,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn oanh, xã dgg. ạ tẻh, tinh lâm dg. ồng",A308,Nguyễn Oanh,70317045,Xã Đạ Tẻh,703,Tỉnh Lâm Đồng,abbr|typo,A308,Nguyễn Oanh,,,,,True,False,False,beam_search
+"nguy ễn công tr ứ, xã tr ạm tấu, tinh llào cai",A281,Nguyễn Công Trứ,21317005,Xã Trạm Tấu,205,Tỉnh Lào Cai,abbr|typo,A281,Nguyễn Công Trứ,21317005,Xã Trạm Tấu,205,Tỉnh Lào Cai,True,True,True,beam_search
+"ph ạm văn ch í, xã nam tr ạch, tinh qu ảng tr ị",A375,Phạm Văn Chí,40709030,Xã Nam Trạch,409,Tỉnh Quảng Trị,abbr,A375,Phạm Văn Chí,40709030,Xã Nam Trạch,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"kh ánh hội,ph ường qu ảng yên,tinh qu ảng ninh",A188,Khánh Hội,22525011,Phường Quảng Yên,225,Tỉnh Quảng Ninh,abbr|tight-comma,A188,Khánh Hội,22525011,Phường Quảng Yên,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"nguyễnduongìnhchi,xãlonghưng,thanhphocầnthơ",A287,Nguyễn Đình Chi,81907083,Xã Long Hưng,815,Tp Cần Thơ,typo|no-space,A284,Nguyễn Du,81907083,Xã Long Hưng,815,Tp Cần Thơ,False,True,True,beam_search
+"nguy ễn vă nlinh, xã sơn th ủy, tinh qu ảng ng ãi",A350,Nguyễn Văn Linh,50513041,Xã Sơn Thủy,505,Tỉnh Quảng Ngãi,abbr|typo,A350,Nguyễn Văn Linh,50513041,Xã Sơn Thủy,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"xã tống snơ, tinh thanh hóa",,,40131023,Xã Tống Sơn,401,Tỉnh Thanh Hóa,abbr|typo,,,40131023,Xã Tống Sơn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"côngchúanggọchân,xãyênminh,tinhtuyênquang",A072,Công Chúa Ngọc Hân,20107065,Xã Yên Minh,211,Tỉnh Tuyên Quang,abbr|typo|tight-comma|no-space,A072,Công Chúa Ngọc Hân,20107065,Xã Yên Minh,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"nguy ễnn thi, xã bum nưa, tinh lai ch âu",A320,Nguyễn Thi,30201032,Xã Bum Nưa,302,Tỉnh Lai Châu,abbr|typo,A320,Nguyễn Thi,30201032,Xã Bum Nưa,302,Tỉnh Lai Châu,True,True,True,beam_search
+"nguyễnphúcchu,xãtrungthuần,tinhquảngtrị",A311,Nguyễn Phúc Chu,40707020,Xã Trung Thuần,409,Tỉnh Quảng Trị,typo|no-space,A311,Nguyễn Phúc Chu,40707020,Xã Trung Thuần,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"bình tây, xã xu ân du,t inh thanh hóa",A035,Bình Tây,40127152,Xã Xuân Du,401,Tỉnh Thanh Hóa,abbr|typo,A035,Bình Tây,40127152,Xã Xuân Du,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"xã kh ánh xu ân,tinh cao bằng",,,20303014,Xã Khánh Xuân,203,Tỉnh Cao Bằng,abbr|tight-comma,,,20303014,Xã Khánh Xuân,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"xã hàm thạ nh,tinh lâm duong ồng",,,71509078,Xã Hàm Thạnh,703,Tỉnh Lâm Đồng,typo|tight-comma,,,71509078,Xã Hàm Thạnh,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"tây th ạnh, ph ường ph ố hi ến, tinh hưng yên",A447,Tây Thạnh,10901001,Phường Phố Hiến,109,Tỉnh Hưng Yên,abbr,A447,Tây Thạnh,10901001,Phường Phố Hiến,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"tăngb ạt hổ, ph ường cao xanh, tinh qu ảng ninh",A429,Tăng Bạt Hổ,22501020,Phường Cao Xanh,225,Tỉnh Quảng Ninh,abbr|typo,A429,Tăng Bạt Hổ,22501020,Phường Cao Xanh,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"3tháng2,xãthiệnhưng,tinhduongồngnai",A013,3 Tháng 2,70706067,Xã Thiện Hưng,713,Tỉnh Đồng Nai,abbr|no-space,A013,3 Tháng 2,70706067,Xã Thiện Hưng,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"cao duong ạt,xã ho à xá,th ành ph ố hà ni",A049,Cao Đạt,10147067,Xã Hoà Xá,101,Thành phố Hà Nội,typo|tight-comma,,,10147067,Xã Hoà Xá,101,Thành phố Hà Nội,False,True,True,beam_search
+"hồ tùng mậu, xã th ổ tang, tinh phh ú th ọ",A163,Hồ Tùng Mậu,21907085,Xã Thổ Tang,217,Tỉnh Phú Thọ,abbr|typo,A163,Hồ Tùng Mậu,21907085,Xã Thổ Tang,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tự do ,xã ch âu pha, thanh pho hồ ch í minh",A536,Tự Do,71709012,Xã Châu Pha,701,Tp Hồ Chí Minh,abbr|typo,A536,Tự Do,71709012,Xã Châu Pha,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"sông doung áy, xã phong nẫm, thanh pho cần th ơ",A419,Sông Đáy,81903073,Xã Phong Nẫm,815,Tp Cần Thơ,typo,,,81903073,Xã Phong Nẫm,815,Tp Cần Thơ,False,True,True,beam_search
+"cao bá nh ạ, xã duong ắk sắk, tiinh lâm duong ồng",A048,Cao Bá Nhạ,60607105,Xã Đắk Sắk,703,Tỉnh Lâm Đồng,abbr|typo,A048,Cao Bá Nhạ,,,,,True,False,False,beam_search
+"hu ỳnh tịnh của, xã th ường xu â,n tinh thanh hóa",A181,Huỳnh Tịnh Của,40123161,Xã Thường Xuân,401,Tỉnh Thanh Hóa,abbr|typo,A181,Huỳnh Tịnh Của,40123161,Xã Thường Xuân,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"tam d. ảo, xã dầu ti ếng, tp hồ ch í minh",A427,Tam Đảo,71113061,Xã Dầu Tiếng,701,Tp Hồ Chí Minh,abbr,A427,Tam Đảo,71113061,Xã Dầu Tiếng,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tân sinh, xã tân hưng, tinh tây ninh",A440,Tân Sinh,80103003,Xã Tân Hưng,709,Tỉnh Tây Ninh,abbr,A440,Tân Sinh,80103003,Xã Tân Hưng,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"đo àn nh ữ hải,xã bắc hà,tinhh lào cai",A103,Đoàn Nhữ Hải,20509083,Xã Bắc Hà,205,Tỉnh Lào Cai,abbr|typo|tight-comma,A103,Đoàn Nhữ Hải,20509083,Xã Bắc Hà,205,Tỉnh Lào Cai,True,True,True,beam_search
+"nguy ễn vă lạc, xã th ạnh duong ông, tinh an giang",A349,Nguyễn Văn Lạc,81307080,Xã Thạnh Đông,805,Tỉnh An Giang,typo,A349,Nguyễn Văn Lạc,,,805,Tỉnh An Giang,True,False,True,beam_search
+"tạ uyên, xã lao bảo, tinh qu ảng tr ị",A426,Tạ Uyên,40915058,Xã Lao Bảo,409,Tỉnh Quảng Trị,abbr|typo,A426,Tạ Uyên,40915058,Xã Lao Bảo,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"bình ph ú, xã d. ăk aso, tinh qu ảng ng ãi",A033,Bình Phú,60115071,Xã Đăk Sao,505,Tỉnh Quảng Ngãi,abbr|typo,A033,Bình Phú,60115071,Xã Đăk Sao,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"dạ namm, xã hải ninh, tinh qu ảng ninh",A076,Dạ Nam,22509047,Xã Hải Ninh,225,Tỉnh Quảng Ninh,abbr|typo,A076,Dạ Nam,22509047,Xã Hải Ninh,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"dư ơng qu ảng hàn, ph ường duong ào duy tư ,tinh thanh hóa",A082,Dương Quảng Hàn,40153016,Phường Đào Duy Tư,401,Tỉnh Thanh Hóa,typo,A082,Dương Quảng Hàn,,,401,Tỉnh Thanh Hóa,True,False,True,beam_search
+"xã nh ơn ho à lập, tinh tây ninh",,,80109014,Xã Nhơn Hoà Lập,709,Tỉnh Tây Ninh,abbr,,,80109014,Xã Nhơn Hoà Lập,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tr ần qu ý,xã mư ờng than,tinhh lai ch âu",A504,Trần Quý,30209004,Xã Mường Than,302,Tỉnh Lai Châu,abbr|typo|tight-comma,A504,Trần Quý,30209004,Xã Mường Than,302,Tỉnh Lai Châu,True,True,True,beam_search
+"d.ồngkhởi,xãquỳnhphụ,tinhhưgyên",A113,Đồng Khởi,11503064,Xã Quỳnh Phụ,109,Tỉnh Hưng Yên,abbr|typo|no-space,A113,Đồng Khởi,11503064,Xã Quỳnh Phụ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"tr ần xu ân so ạn, xã qu  ốc oai, th ành ph ố hà nội",A516,Trần Xuân Soạn,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,abbr|typo,A516,Trần Xuân Soạn,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,True,True,True,beam_search
+"vườnchuối,xãdg.ôngcứu,tinhbắcninh",A559,Vườn Chuối,22315094,Xã Đông Cứu,223,Tỉnh Bắc Ninh,abbr|typo|no-space,A559,Vườn Chuối,22315094,Xã Đông Cứu,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn cư trinh, xã nh ơn tr ạch, tinh duong ồng nai",A282,Nguyễn Cư Trinh,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,clean,A282,Nguyễn Cư Trinh,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"t ệ tĩnh, xã di ễn ch âu, tinh ngh ệ an",A532,Tuệ Tĩnh,40325013,Xã Diễn Châu,403,Tỉnh Nghệ An,typo,A532,Tuệ Tĩnh,40325013,Xã Diễn Châu,403,Tỉnh Nghệ An,True,True,True,beam_search
+"qu ốc lộ 13, xã hải an, tinh ninh bình",A416,Quốc Lộ 13,11319080,Xã Hải An,117,Tỉnh Ninh Bình,abbr,A416,Quốc Lộ 13,11319080,Xã Hải An,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"xã xu ân dư ơng, tinh th ái nguy ên",,,20709086,Xã Xuân Dương,215,Tỉnh Thái Nguyên,clean,A126,Hải Nguyên,20709086,Xã Xuân Dương,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"nguy ễn bi ểu, xã tân thu ận bình, tinh duong ồng th áp",A276,Nguyễn Biểu,80711042,Xã Tân Thuận Bình,803,Tỉnh Đồng Tháp,clean,A276,Nguyễn Biểu,80711042,Xã Tân Thuận Bình,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"lê văn ssĩ, xã thu ần trung, tinh ngh ệ an",A226,Lê Văn Sĩ,40329025,Xã Thuần Trung,403,Tỉnh Nghệ An,abbr|typo,A226,Lê Văn Sĩ,40329025,Xã Thuần Trung,403,Tỉnh Nghệ An,True,True,True,beam_search
+"bình ph ú,ph ường duong ào vi ên,tinh bắc nnh",A033,Bình Phú,22305076,Phường Đào Viên,223,Tỉnh Bắc Ninh,typo|tight-comma,A033,Bình Phú,,,,,True,False,False,beam_search
+"tăng bạt hổ,xã vân ud,tinh ngh ệ an",A429,Tăng Bạt Hổ,40323126,Xã Vân Du,403,Tỉnh Nghệ An,typo|tight-comma,A429,Tăng Bạt Hổ,40335046,Xã Vạn An,403,Tỉnh Nghệ An,True,False,True,beam_search
+"tr ương qu ốc dung, xã kim đi ền, tinh qu ảng tr ị",A525,Trương Quốc Dung,40705009,Xã Kim Điền,409,Tỉnh Quảng Trị,abbr,A525,Trương Quốc Dung,40705009,Xã Kim Điền,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"tr ường sa,xã hưng lộc,th nàh ph ố hu ế",A528,Trường Sa,41113027,Xã Hưng Lộc,411,Thành phố Huế,abbr|typo|tight-comma,A528,Trường Sa,41113027,Xã Hưng Lộc,411,Thành phố Huế,True,True,True,beam_search
+"tùngthiệnvương,xãtiênthủy,tinhvĩnhlong",A534,Tùng Thiện Vương,81103084,Xã Tiên Thủy,809,Tỉnh Vĩnh Long,abbr|typo|no-space,A534,Tùng Thiện Vương,81103084,Xã Tiên Thủy,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"phạmduongìnhhổ,xãgiồngtrôm,tinhvĩnhlong",A367,Phạm Đình Hổ,81109112,Xã Giồng Trôm,809,Tỉnh Vĩnh Long,no-space,,,81109112,Xã Giồng Trôm,809,Tỉnh Vĩnh Long,False,True,True,beam_search
+"dồsơn,xãnamtiềnhải,tinhhưngyên",A111,Đồ Sơn,11515063,Xã Nam Tiền Hải,109,Tỉnh Hưng Yên,abbr|typo|tight-comma|no-space,A111,Đồ Sơn,11515063,Xã Nam Tiền Hải,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"xã th ượng duong ức, thanh pho duong à nẵng",,,50307071,Xã Thượng Đức,501,Tp Đà Nẵng,abbr,,,,,,,True,False,False,beam_search
+"3 th áng 2, xã sính ph ình, tiinh đi ện bi ên",A013,3 Tháng 2,30113018,Xã Sính Phình,301,Tỉnh Điện Biên,abbr|typo,A013,3 Tháng 2,30113018,Xã Sính Phình,301,Tỉnh Điện Biên,True,True,True,beam_search
+"dạ nam, xã hưng nh ượng, tinh vĩnh long",A076,Dạ Nam,81109111,Xã Hưng Nhượng,809,Tỉnh Vĩnh Long,abbr,A076,Dạ Nam,81109111,Xã Hưng Nhượng,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"kh ánh hội, xã mư ờng lát, ttinh thanh hóa",A188,Khánh Hội,40107094,Xã Mường Lát,401,Tỉnh Thanh Hóa,abbr|typo,A188,Khánh Hội,40107094,Xã Mường Lát,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"bavân,xãdgịnhtânn,tinhthanhhóa",A009,Ba Vân,40135070,Xã Định Tân,401,Tỉnh Thanh Hóa,abbr|typo|no-space,A009,Ba Vân,40135070,Xã Định Tân,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"th ành công, xã tr à vân, than hpho d. à nẵng",A452,Thành Công,50329041,Xã Trà Vân,501,Tp Đà Nẵng,abbr|typo,A452,Thành Công,50329041,Xã Trà Vân,501,Tp Đà Nẵng,True,True,True,beam_search
+"tùng thi ện vư ơng, xã hải lăng, tinh qu ảnng tr ị",A534,Tùng Thiện Vương,40913075,Xã Hải Lăng,409,Tỉnh Quảng Trị,abbr|typo,A534,Tùng Thiện Vương,22513034,Xã Hải Lạng,225,Tỉnh Quảng Ninh,True,False,False,beam_search
+"hẻm hư ơng lộ 14, xã ch ợ mới, tinh th ái nguy ên",A138,Hẻm Hương Lộ 14,20713090,Xã Chợ Mới,215,Tỉnh Thái Nguyên,abbr,A138,Hẻm Hương Lộ 14,20713090,Xã Chợ Mới,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"đinh ti ên ho àng, xã lư ơng ho à, tinh tây ninh",A100,Đinh Tiên Hoàng,80117037,Xã Lương Hoà,709,Tỉnh Tây Ninh,abbr,A100,Đinh Tiên Hoàng,80117037,Xã Lương Hoà,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tự do, xã nam cam ranh, tinh kh ánh ha",A536,Tự Do,51109009,Xã Nam Cam Ranh,511,Tỉnh Khánh Hòa,typo,A536,Tự Do,51109009,Xã Nam Cam Ranh,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"nguy ễn súy, xã ch âu phong, tinh an giang",A314,Nguyễn Súy,80507013,Xã Châu Phong,805,Tỉnh An Giang,abbr,A314,Nguyễn Súy,80507013,Xã Châu Phong,805,Tỉnh An Giang,True,True,True,beam_search
+"ch ấn hưng,xã ki ều ph ú,th ành ph  ố hà nội",A063,Chấn Hưng,10139100,Xã Kiều Phú,101,Thành phố Hà Nội,typo|tight-comma,A063,Chấn Hưng,10139100,Xã Kiều Phú,101,Thành phố Hà Nội,True,True,True,beam_search
+"xã vĩnh th ành, tihn vĩnh long",,,81105088,Xã Vĩnh Thành,809,Tỉnh Vĩnh Long,typo,,,81105088,Xã Vĩnh Thành,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"xã ph ước ch ánh, tp dg à nẵng",,,50323092,Xã Phước Chánh,501,Tp Đà Nẵng,abbr,,,50323092,Xã Phước Chánh,501,Tp Đà Nẵng,True,True,True,beam_search
+"xã th ạch lập, tinh than hhóa",,,40121130,Xã Thạch Lập,401,Tỉnh Thanh Hóa,abbr|typo,,,40121130,Xã Thạch Lập,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nguy ễn văn bình,ph ường ho à bình,thanh pho hải ph òng",A342,Nguyễn Văn Bình,10311003,Phường Hoà Bình,103,Tp Hải Phòng,tight-comma,A342,Nguyễn Văn Bình,10311003,Phường Hoà Bình,103,Tp Hải Phòng,True,True,True,beam_search
+"ph ù duong ổng thi ên vư ơng, xã duong ại lộc, t.p duong à  nẵng",A408,Phù Đổng Thiên Vương,50307069,Xã Đại Lộc,501,Tp Đà Nẵng,abbr|typo,A145,Hiền Vương,,,,,False,False,False,beam_search
+"cây  tr àm, ph ường an hội, tinh vĩnh long",A055,Cây Tràm,81101077,Phường An Hội,809,Tỉnh Vĩnh Long,abbr|typo,A055,Cây Tràm,81101077,Phường An Hội,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"nguy ễn văn bảo, xã tam ng ããi, tinh vĩnh long",A341,Nguyễn Văn Bảo,81707053,Xã Tam Ngãi,809,Tỉnh Vĩnh Long,abbr|typo,A341,Nguyễn Văn Bảo,81707053,Xã Tam Ngãi,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"phan văn kh ỏee,ph ường dư ơng nỗ,th ành ph ố hu ế",A396,Phan Văn Khỏe,41101040,Phường Dương Nỗ,411,Thành phố Huế,abbr|typo|tight-comma,A396,Phan Văn Khỏe,41101040,Phường Dương Nỗ,411,Thành phố Huế,True,True,True,beam_search
+"h ơng lộ 22, ph ường mỹ tho, tinh duong ồng th áp",A144,Hương Lộ 22,80701001,Phường Mỹ Tho,803,Tỉnh Đồng Tháp,abbr|typo,A144,Hương Lộ 22,80701001,Phường Mỹ Tho,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"xã duong ại lộc, thanh pho duong à ẵng",,,50307069,Xã Đại Lộc,501,Tp Đà Nẵng,abbr|typo,,,,,,,True,False,False,beam_search
+"ph ạm ng ọc th ạch, xã minh  quang, tinh tuy ên quang",A370,Phạm Ngọc Thạch,21113003,Xã Minh Quang,211,Tỉnh Tuyên Quang,typo,A370,Phạm Ngọc Thạch,21113003,Xã Minh Quang,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"nguyễnchếnghĩa,xãhoàhưng,tinhangiang",A279,Nguyễn Chế Nghĩa,81311075,Xã Hoà Hưng,805,Tỉnh An Giang,abbr|typo|no-space,A279,Nguyễn Chế Nghĩa,81311075,Xã Hoà Hưng,805,Tỉnh An Giang,True,True,True,beam_search
+"lê văn ph úc,xã hải ninh,t inh lâm duong ồng",A225,Lê Văn Phúc,71505067,Xã Hải Ninh,703,Tỉnh Lâm Đồng,abbr|typo|tight-comma,A225,Lê Văn Phúc,71505067,Xã Hải Ninh,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"học lạc, xã đak hau, tinh duong ồng nai",A158,Học Lạc,70707087,Xã Đak Nhau,713,Tỉnh Đồng Nai,typo,A158,Học Lạc,60111067,Xã Đăk Hà,505,Tỉnh Quảng Ngãi,True,False,False,beam_search
+"tr ần tu ấn kh ải, xã văn lang, tinh th ái nguy ên",A510,Trần Tuấn Khải,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,abbr,A510,Trần Tuấn Khải,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"tôn th ất duong ạm,xã bình giang,tinh an giang",A469,Tôn Thất Đạm,81305088,Xã Bình Giang,805,Tỉnh An Giang,tight-comma,A031,Bình Giã,81305088,Xã Bình Giang,805,Tỉnh An Giang,False,True,True,beam_search
+"bàhom,xãliênhòa,tinhphúthọ",A017,Bà Hom,21903074,Xã Liên Hòa,217,Tỉnh Phú Thọ,abbr|no-space,A017,Bà Hom,21903074,Xã Liên Hòa,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"phan vănn hân, xã na loi, tinh ngh ệ an",A395,Phan Văn Hân,40309038,Xã Na Loi,403,Tỉnh Nghệ An,abbr|typo,A395,Phan Văn Hân,40309038,Xã Na Loi,403,Tỉnh Nghệ An,True,True,True,beam_search
+"lê hồng phong, phường th ống nh ất, tinh gia lai",A205,Lê Hồng Phong,60301060,Phường Thống Nhất,603,Tỉnh Gia Lai,abbr|typo,A205,Lê Hồng Phong,60301060,Phường Thống Nhất,603,Tỉnh Gia Lai,True,True,True,beam_search
+"nguyễnduydương,xãnhisơn,tinhthanhhóa",A286,Nguyễn Duy Dương,40107096,Xã Nhi Sơn,401,Tỉnh Thanh Hóa,abbr|typo|no-space,A286,Nguyễn Duy Dương,40107096,Xã Nhi Sơn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"xãtuấnsơn,tinhlạngsơn",,,20921045,Xã Tuấn Sơn,209,Tỉnh Lạng Sơn,typo|no-space,,,20921045,Xã Tuấn Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"tân th ọ, xã vănbàn, tinh lào cai",A444,Tân Thọ,20519070,Xã Văn Bàn,205,Tỉnh Lào Cai,abbr|typo,A444,Tân Thọ,20519070,Xã Văn Bàn,205,Tỉnh Lào Cai,True,True,True,beam_search
+"ba vì, ph ường duong ồng xo ài, tinh  duong ồng nai",A014,Ba Vì,70711077,Phường Đồng Xoài,713,Tỉnh Đồng Nai,typo,A014,Ba Vì,,,,,True,False,False,beam_search
+"xãtiêndg.ồng,tinhnghệan",,,40319094,Xã Tiên Đồng,403,Tỉnh Nghệ An,abbr|no-space,,,40319094,Xã Tiên Đồng,403,Tỉnh Nghệ An,True,True,True,beam_search
+"xãchâusơn,tinhlạngsơn",,,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,abbr|typo|no-space,,,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"nguy ễn sơn hà, xã bình ho à, tinh tây ninh",A313,Nguyễn Sơn Hà,80107011,Xã Bình Hoà,709,Tỉnh Tây Ninh,abbr,A313,Nguyễn Sơn Hà,80107011,Xã Bình Hoà,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"ph ường d. ông hoa lư,tinh niinh bình",,,11713101,Phường Đông Hoa Lư,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A108,Đông Hồ,11713101,Phường Đông Hoa Lư,117,Tỉnh Ninh Bình,False,True,True,beam_search
+"ng ọc uy ển, xã nà hang, tinh tuy ên quang",A264,Ngọc Uyển,21103009,Xã Nà Hang,211,Tỉnh Tuyên Quang,abbr,A264,Ngọc Uyển,21103009,Xã Nà Hang,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"tự cư ờng, ph ường  an nh ơn bắc, tinh gia lai",A539,Tự Cường,50717010,Phường An Nhơn Bắc,603,Tỉnh Gia Lai,abbr|typo,A539,Tự Cường,50717010,Phường An Nhơn Bắc,603,Tỉnh Gia Lai,True,True,True,beam_search
+"hu ỳnh th úc kh áng, ph ường ch ánh ph ú ho à, tp hồ ch í minh",A180,Huỳnh Thúc Kháng,71115050,Phường Chánh Phú Hoà,701,Tp Hồ Chí Minh,abbr,A180,Huỳnh Thúc Kháng,71115050,Phường Chánh Phú Hoà,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"ph ạm văn duong ạt, xã nam an ph ụ, thanh pho hải ph òng",A377,Phạm Văn Đạt,10709072,Xã Nam An Phụ,103,Tp Hải Phòng,abbr,,,10709072,Xã Nam An Phụ,103,Tp Hải Phòng,False,True,True,beam_search
+"bà lê ch ân, xã núa ngam, tinh đ ện bi ên",A020,Bà Lê Chân,30117009,Xã Núa Ngam,301,Tỉnh Điện Biên,abbr|typo,A020,Bà Lê Chân,30117009,Xã Núa Ngam,301,Tỉnh Điện Biên,True,True,True,beam_search
+"phan huy ích, xã qu ảng lâm, tinh đ iện bi ên",A385,Phan Huy Ích,30104041,Xã Quảng Lâm,301,Tỉnh Điện Biên,abbr|typo,A385,Phan Huy Ích,20323004,Xã Quảng Lâm,203,Tỉnh Cao Bằng,True,False,False,beam_search
+"nguy ễn th ái sơn,xã ti ên trang,tinnh thanh hóa",A318,Nguyễn Thái Sơn,40149051,Xã Tiên Trang,401,Tỉnh Thanh Hóa,abbr|typo|tight-comma,A318,Nguyễn Thái Sơn,40149051,Xã Tiên Trang,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"xã ph  tân, tinh cà mau",,,82308034,Xã Phú Tân,823,Tỉnh Cà Mau,abbr|typo,,,82308034,Xã Phú Tân,823,Tỉnh Cà Mau,True,True,True,beam_search
+"phạạmngọcthạch,xãsơnhạ,tinhquảngngãi",A370,Phạm Ngọc Thạch,50513038,Xã Sơn Hạ,505,Tỉnh Quảng Ngãi,abbr|typo|no-space,A370,Phạm Ngọc Thạch,50513038,Xã Sơn Hạ,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"nguy ễn ki ệm, xã tân hào, tinh vĩnh  long",A301,Nguyễn Kiệm,81109113,Xã Tân Hào,809,Tỉnh Vĩnh Long,abbr|typo,A301,Nguyễn Kiệm,81109113,Xã Tân Hào,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"nguy ễn văn tr ỗi, ph ường tr ường thi, tinh ninh bình",A355,Nguyễn Văn Trỗi,11301127,Phường Trường Thi,117,Tỉnh Ninh Bình,abbr,A355,Nguyễn Văn Trỗi,11301127,Phường Trường Thi,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"côbắc,xãcmẩlạc,tinhhàtĩnh",A070,Cô Bắc,40515016,Xã Cẩm Lạc,405,Tỉnh Hà Tĩnh,abbr|typo|no-space,A070,Cô Bắc,40515016,Xã Cẩm Lạc,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"lêduẩn,phườnganphú,thanhphohồchíminh",A202,Lê Duẩn,71107035,Phường An Phú,701,Tp Hồ Chí Minh,tight-comma|no-space,A202,Lê Duẩn,71107035,Phường An Phú,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"bàn cờ,ph ường phong đi ền,th ành ph ố hu ế",A026,Bàn Cờ,41103016,Phường Phong Điền,411,Thành phố Huế,abbr|tight-comma,A026,Bàn Cờ,41103016,Phường Phong Điền,411,Thành phố Huế,True,True,True,beam_search
+"vĩnh vi ễn,xãã tân th ành,tinh qu ảng tr ị",A552,Vĩnh Viễn,40705012,Xã Tân Thành,409,Tỉnh Quảng Trị,typo|tight-comma,A552,Vĩnh Viễn,40705012,Xã Tân Thành,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"võ tr ường to àn, xã hưn dg ạo, th ành ph ố hà nội",A555,Võ Trường Toàn,10139099,Xã Hưng Đạo,101,Thành phố Hà Nội,abbr|typo,A555,Võ Trường Toàn,10139099,Xã Hưng Đạo,101,Thành phố Hà Nội,True,True,True,beam_search
+"hai bà  tr ưng, xã th ành vinh, tinh thanh hóa",A123,Hai Bà Trưng,40119144,Xã Thành Vinh,401,Tỉnh Thanh Hóa,typo,A123,Hai Bà Trưng,40119144,Xã Thành Vinh,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nguy ễn văn lạc, xã yên ch â,u tinh sơn la",A349,Nguyễn Văn Lạc,30317046,Xã Yên Châu,303,Tỉnh Sơn La,abbr|typo,A349,Nguyễn Văn Lạc,30317046,Xã Yên Châu,303,Tỉnh Sơn La,True,True,True,beam_search
+"tr ần minh quy ền,xã tân th ạnh,tinh an gaing",A493,Trần Minh Quyền,81317061,Xã Tân Thạnh,805,Tỉnh An Giang,typo|tight-comma,A493,Trần Minh Quyền,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"dư ơng tử giang, xã văn lang, tinh p ú th ọ",A083,Dương Tử Giang,21707033,Xã Văn Lang,217,Tỉnh Phú Thọ,abbr|typo,A083,Dương Tử Giang,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,True,False,False,beam_search
+"tr ần th ành, xã vvụ bổn, tinh duong ắk lắk",A507,Trần Thành,60519041,Xã Vụ Bổn,605,Tỉnh Đắk Lắk,abbr|typo,A507,Trần Thành,60519041,Xã Vụ Bổn,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"phan th úc du ện, xã hùng sơn, tp dg. à nẵng",A392,Phan Thúc Duyện,50304086,Xã Hùng Sơn,501,Tp Đà Nẵng,abbr|typo,A142,Hưng Sơn,50304086,Xã Hùng Sơn,501,Tp Đà Nẵng,False,True,True,beam_search
+"nguy ễn thi, x ba xa, tinh qu ảng ng ãi",A320,Nguyễn Thi,50525055,Xã Ba Xa,505,Tỉnh Quảng Ngãi,abbr|typo,A320,Nguyễn Thi,50525055,Xã Ba Xa,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"lư ơng văn can, xã cao phong, tinh ph ú th ọ",A236,Lương Văn Can,30510103,Xã Cao Phong,217,Tỉnh Phú Thọ,abbr,A236,Lương Văn Can,30510103,Xã Cao Phong,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tr  àkh úc, xã mư ờng ch à, tinh đi ện bi ên",A476,Trà Khúc,30123032,Xã Mường Chà,301,Tỉnh Điện Biên,abbr|typo,A476,Trà Khúc,30123032,Xã Mường Chà,301,Tỉnh Điện Biên,True,True,True,beam_search
+"xãninhquới,tinhcàmau",,,82103049,Xã Ninh Quới,823,Tỉnh Cà Mau,abbr|typo|no-space,,,82103049,Xã Ninh Quới,823,Tỉnh Cà Mau,True,True,True,beam_search
+"tr ần hưng duong ạo, ph ường sông công, tinh th ái nguy ên",A486,Trần Hưng Đạo,21503034,Phường Sông Công,215,Tỉnh Thái Nguyên,clean,A126,Hải Nguyên,21503034,Phường Sông Công,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"lư ơng ng ọc quy ến, xã kim ng ân, tinh qu ảng tr ị",A234,Lương Ngọc Quyến,40713041,Xã Kim Ngân,409,Tỉnh Quảng Trị,clean,A234,Lương Ngọc Quyến,40713041,Xã Kim Ngân,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"tr ưng nữ vư ơng, xã thu ầ trung, tinh ngh ệ an",A530,Trưng Nữ Vương,40329025,Xã Thuần Trung,403,Tỉnh Nghệ An,typo,A530,Trưng Nữ Vương,40329025,Xã Thuần Trung,403,Tỉnh Nghệ An,True,True,True,beam_search
+"dg ằng tt, xã cầu kh ởi, tinh tây ninh",A090,Đằng Tất,70907077,Xã Cầu Khởi,709,Tỉnh Tây Ninh,abbr|typo,A090,Đằng Tất,70907077,Xã Cầu Khởi,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"cầu xéo, xã cửu an, tinh gia lai",A058,Cầu Xéo,60311084,Xã Cửu An,603,Tỉnh Gia Lai,abbr,A058,Cầu Xéo,60311084,Xã Cửu An,603,Tỉnh Gia Lai,True,True,True,beam_search
+"hu ỳnh tịnh của,xã an hi ệp,tinh vĩnh long",A181,Huỳnh Tịnh Của,81113110,Xã An Hiệp,809,Tỉnh Vĩnh Long,abbr|tight-comma,A181,Huỳnh Tịnh Của,81113110,Xã An Hiệp,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"tam dg ảo, xã qu ới đi ền, tinh vĩnh long",A427,Tam Đảo,81115099,Xã Quới Điền,809,Tỉnh Vĩnh Long,abbr,A427,Tam Đảo,81115099,Xã Quới Điền,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"hnùg vư ơng,xã ho ài ân,tinh gia lai",A184,Hùng Vương,50707042,Xã Hoài Ân,603,Tỉnh Gia Lai,typo|tight-comma,A184,Hùng Vương,50707042,Xã Hoài Ân,603,Tỉnh Gia Lai,True,True,True,beam_search
+"phan ph ú  ti ên, xã cẩm trung, tinh hà tĩnh",A390,Phan Phú Tiên,40515017,Xã Cẩm Trung,405,Tỉnh Hà Tĩnh,typo,A390,Phan Phú Tiên,40515017,Xã Cẩm Trung,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"ti ền giang, xã ng ô mây, tinh gia lai",A462,Tiền Giang,50713021,Xã Ngô Mây,603,Tỉnh Gia Lai,abbr,A462,Tiền Giang,50713021,Xã Ngô Mây,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tr ường sơn, xã hưn gnguy ên, tinh ngh ệ an",A529,Trường Sơn,40337030,Xã Hưng Nguyên,403,Tỉnh Nghệ An,abbr|typo,A529,Trường Sơn,40337030,Xã Hưng Nguyên,403,Tỉnh Nghệ An,True,True,True,beam_search
+"ng ọc uy ển, ph ường vi ệt yên, tnih bắc ninh",A264,Ngọc Uyển,22117047,Phường Việt Yên,223,Tỉnh Bắc Ninh,abbr|typo,A264,Ngọc Uyển,22117047,Phường Việt Yên,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"huỳnhthiệnlộc,xãlâmsơn,tinhkhánhhòa",A178,Huỳnh Thiện Lộc,70503060,Xã Lâm Sơn,511,Tỉnh Khánh Hòa,no-space,A178,Huỳnh Thiện Lộc,70503060,Xã Lâm Sơn,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"ph ường tr ần ph ú, tinh  hà tĩnh",,,40501020,Phường Trần Phú,405,Tỉnh Hà Tĩnh,typo,A498,Trần Phú,40501020,Phường Trần Phú,405,Tỉnh Hà Tĩnh,False,True,True,beam_search
+"bình gi ã, xã nh ơn tr ạch, tinh duong ồng nai",A031,Bình Giã,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,clean,A031,Bình Giã,71317009,Xã Nhơn Trạch,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"qu ân sự, xã duong ồng hỷ, tinh thá i nguy ên",A414,Quân Sự,21511028,Xã Đồng Hỷ,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,,,215,Tỉnh Thái Nguyên,False,False,True,beam_search
+"nguy ễn du,ph ường tth ới sơn,tinh duong ồng th áp",A284,Nguyễn Du,80701004,Phường Thới Sơn,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A284,Nguyễn Du,,,,,True,False,False,beam_search
+"gi ải ph óng, xã ba sơn,tinh lạng sơn",A119,Giải Phóng,20913061,Xã Ba Sơn,209,Tỉnh Lạng Sơn,abbr|typo|tight-comma,A119,Giải Phóng,20913061,Xã Ba Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"sông duong áy, xã sáng nh è, tinh đi ện bi ên",A419,Sông Đáy,30113020,Xã Sáng Nhè,301,Tỉnh Điện Biên,clean,,,30113020,Xã Sáng Nhè,301,Tỉnh Điện Biên,False,True,True,beam_search
+"qu ốc lộ 1a, ph ường tân th ành, tinh cà mmau",A415,Quốc Lộ 1A,82301003,Phường Tân Thành,823,Tỉnh Cà Mau,abbr|typo,A415,Quốc Lộ 1A,71709009,Phường Tân Thành,701,Tp Hồ Chí Minh,True,False,False,beam_search
+"bà lê ch ân,xã long đi ền,tinh an giang",A020,Bà Lê Chân,80517046,Xã Long Điền,805,Tỉnh An Giang,abbr|tight-comma,A020,Bà Lê Chân,80517046,Xã Long Điền,805,Tỉnh An Giang,True,True,True,beam_search
+"xã tu ần gi áo, tinh đi ện biê n",,,30115011,Xã Tuần Giáo,301,Tỉnh Điện Biên,abbr|typo,,,30115011,Xã Tuần Giáo,301,Tỉnh Điện Biên,True,True,True,beam_search
+"nguyễnthịthập,xãiapúch,tinhgialai",A327,Nguyễn Thị Thập,60317128,Xã Ia Púch,603,Tỉnh Gia Lai,abbr|typo|no-space,A327,Nguyễn Thị Thập,60317128,Xã Ia Púch,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xã hải ch âu,tinhn gh ệ an",,,40325016,Xã Hải Châu,403,Tỉnh Nghệ An,typo|tight-comma,,,40325016,Xã Hải Châu,403,Tỉnh Nghệ An,True,True,True,beam_search
+"ph ổ quang, ph ường mỹ th ượng, ht ành ph ố hu ế",A402,Phổ Quang,41109003,Phường Mỹ Thượng,411,Thành phố Huế,typo,A402,Phổ Quang,41109003,Phường Mỹ Thượng,411,Thành phố Huế,True,True,True,beam_search
+"mạcduongỉnhchi,phườnghảininh,tinhhàtĩnh",A247,Mạc Đỉnh Chi,40520002,Phường Hải Ninh,405,Tỉnh Hà Tĩnh,typo|no-space,,,40520002,Phường Hải Ninh,405,Tỉnh Hà Tĩnh,False,True,True,beam_search
+"dư ơng q ảng hàn, xã nh ựt tảo, tinh tây ninh",A082,Dương Quảng Hàn,80123053,Xã Nhựt Tảo,709,Tỉnh Tây Ninh,typo,A082,Dương Quảng Hàn,80123053,Xã Nhựt Tảo,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"xãvĩnhchâu,tinhtâyninh",,,80103004,Xã Vĩnh Châu,709,Tỉnh Tây Ninh,abbr|no-space,,,80103004,Xã Vĩnh Châu,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"võvăn tần, xã sơn ki ên, tinh an giang",A556,Võ Văn Tần,81305085,Xã Sơn Kiên,805,Tỉnh An Giang,abbr|typo,A556,Võ Văn Tần,81305085,Xã Sơn Kiên,805,Tỉnh An Giang,True,True,True,beam_search
+"vũ tùngg, xã tân long, tinh d. ồng th áp",A558,Vũ Tùng,80311077,Xã Tân Long,803,Tỉnh Đồng Tháp,abbr|typo,A558,Vũ Tùng,80311077,Xã Tân Long,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"tr ần mai ninh, ph ườn gba dg ình, th ành ph ố hà nội",A492,Trần Mai Ninh,10101003,Phường Ba Đình,101,Thành phố Hà Nội,abbr|typo,A492,Trần Mai Ninh,,,101,Thành phố Hà Nội,True,False,True,beam_search
+"nh ật tảo, xã bình ch âu, thanh phohồ ch í minh",A358,Nhật Tảo,71707166,Xã Bình Châu,701,Tp Hồ Chí Minh,abbr|typo,A358,Nhật Tảo,71707166,Xã Bình Châu,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"xã bình hàng trung, tinh duong ồng th áp",,,80315087,Xã Bình Hàng Trung,803,Tỉnh Đồng Tháp,abbr,,,80315087,Xã Bình Hàng Trung,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"xãnàtấu,tinhđiệnbiên",,,30121043,Xã Nà Tấu,301,Tỉnh Điện Biên,abbr|no-space,,,30121043,Xã Nà Tấu,301,Tỉnh Điện Biên,True,True,True,beam_search
+"tứ hải, xã kka d. ô, tinh lâm d. ồng",A535,Tứ Hải,70307012,Xã Ka Đô,703,Tỉnh Lâm Đồng,abbr|typo,A535,Tứ Hải,70307012,Xã Ka Đô,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"chu văn an, ph ường ttân thu ận, thanh pho hồ ch í minh",A067,Chu Văn An,70113080,Phường Tân Thuận,701,Tp Hồ Chí Minh,typo,A067,Chu Văn An,70113080,Phường Tân Thuận,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tr ần văn đang,ph ường bình ph ú,thannh pho hồ ch í minh",A511,Trần Văn Đang,70111078,Phường Bình Phú,701,Tp Hồ Chí Minh,abbr|typo|tight-comma,A511,Trần Văn Đang,70111078,Phường Bình Phú,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"ba vân, xã ti ên du, tinh bắc ninh",A009,Ba Vân,22307085,Xã Tiên Du,223,Tỉnh Bắc Ninh,abbr,A009,Ba Vân,22307085,Xã Tiên Du,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"hu ỳnnh mẫn duong ạt, ph ường lư ơng văn tri, tinh lạng sơn",A175,Huỳnh Mẫn Đạt,20901063,Phường Lương Văn Tri,209,Tỉnh Lạng Sơn,abbr|typo,,,20901063,Phường Lương Văn Tri,209,Tỉnh Lạng Sơn,False,True,True,beam_search
+"ph ường th ượng cát, th ành p hố hà nội",,,10157034,Phường Thượng Cát,101,Thành phố Hà Nội,abbr|typo,,,10157034,Phường Thượng Cát,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn an ninh, ãx tân th ạnh, t.p cần th ơ",A273,Nguyễn An Ninh,81905070,Xã Tân Thạnh,815,Tp Cần Thơ,abbr|typo,A273,Nguyễn An Ninh,81905070,Xã Tân Thạnh,815,Tp Cần Thơ,True,True,True,beam_search
+"tr ần mai ninh, xã tân ph ú, tinh vĩnh long",A492,Trần Mai Ninh,81103085,Xã Tân Phú,809,Tỉnh Vĩnh Long,abbr,A492,Trần Mai Ninh,81103085,Xã Tân Phú,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"duong ồng đen, xã nghi xu ân, tinnh hà tĩnh",A112,Đồng Đen,40505043,Xã Nghi Xuân,405,Tỉnh Hà Tĩnh,typo,,,40505043,Xã Nghi Xuân,405,Tỉnh Hà Tĩnh,False,True,True,beam_search
+"tôn th ất thi ệp, xã duuy ngh ĩa, t.p d. à nẵng",A471,Tôn Thất Thiệp,50311055,Xã Duy Nghĩa,501,Tp Đà Nẵng,abbr|typo,A471,Tôn Thất Thiệp,50311055,Xã Duy Nghĩa,501,Tp Đà Nẵng,True,True,True,beam_search
+"ph ổ quang, xã ho ̉a lựu, t.p cần t hơ",A402,Phổ Quang,81601033,Xã Hỏa Lựu,815,Tp Cần Thơ,abbr|typo,A402,Phổ Quang,81601033,Xã Hỏa Lựu,815,Tp Cần Thơ,True,True,True,beam_search
+"hu ỳnh tho ại yến, xã tân th ạnh, itnh an giang",A179,Huỳnh Thoại Yến,81317061,Xã Tân Thạnh,805,Tỉnh An Giang,abbr|typo,A179,Huỳnh Thoại Yến,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"lê quang sung, xã tân th ạnh, tinh duong ồng th áp",A211,Lê Quang Sung,80311075,Xã Tân Thạnh,803,Tỉnh Đồng Tháp,abbr,A211,Lê Quang Sung,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"võ tr ường to à,n xã mư ờng xén, tinh ngh ệ an",A555,Võ Trường Toàn,40309034,Xã Mường Xén,403,Tỉnh Nghệ An,abbr|typo,A555,Võ Trường Toàn,40309034,Xã Mường Xén,403,Tỉnh Nghệ An,True,True,True,beam_search
+"duong ào cam mộc, xã ea wer,  tinh duong ắk lắk",A085,Đào Cam Mộc,60511015,Xã Ea Wer,605,Tỉnh Đắk Lắk,typo,,,60511015,Xã Ea Wer,605,Tỉnh Đắk Lắk,False,True,True,beam_search
+"ph ạm ng ũ lão,xã tống tr ân, tinh hưng yên",A371,Phạm Ngũ Lão,10911014,Xã Tống Trân,109,Tỉnh Hưng Yên,abbr|typo,A371,Phạm Ngũ Lão,10911014,Xã Tống Trân,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"nguy ễn tr ọng tuy ển, xã trung hưng, thanh phho cần th ơ",A336,Nguyễn Trọng Tuyển,81527028,Xã Trung Hưng,815,Tp Cần Thơ,abbr|typo,A336,Nguyễn Trọng Tuyển,81527028,Xã Trung Hưng,815,Tp Cần Thơ,True,True,True,beam_search
+"xãxuânlãnh,tinhduongắklắk",,,50903099,Xã Xuân Lãnh,605,Tỉnh Đắk Lắk,abbr|no-space,,,50903099,Xã Xuân Lãnh,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tự cư ờng, ph ường tân sơn, thanh phohồ ch í minh",A539,Tự Cường,70127123,Phường Tân Sơn,701,Tp Hồ Chí Minh,abbr|typo,A539,Tự Cường,70127123,Phường Tân Sơn,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tr ương qu ốc dung, ph ườngtây th ạnh, thanh pho hồ ch í minh",A525,Trương Quốc Dung,70128124,Phường Tây Thạnh,701,Tp Hồ Chí Minh,typo,A525,Trương Quốc Dung,70128124,Phường Tây Thạnh,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"hồ hảo hớn, xã ttuy ên bình, tinh tây ninh",A161,Hồ Hảo Hớn,80105005,Xã Tuyên Bình,709,Tỉnh Tây Ninh,abbr|typo,A161,Hồ Hảo Hớn,80105005,Xã Tuyên Bình,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tr ần nh ật du ật, xã xu ân vi ên, tinh ph ú th ọ",A497,Trần Nhật Duật,21715064,Xã Xuân Viên,217,Tỉnh Phú Thọ,abbr,A497,Trần Nhật Duật,21715064,Xã Xuân Viên,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"ph ạm vă ndg ạt, xã tam dg ồng, tinh ngh ệ an",A377,Phạm Văn Đạt,40331099,Xã Tam Đồng,403,Tỉnh Nghệ An,abbr|typo,,,40331099,Xã Tam Đồng,403,Tỉnh Nghệ An,False,True,True,beam_search
+"bà hạt, xã bác ái duonng ông, tinh kh ánh hòa",A016,Bà Hạt,70509063,Xã Bác Ái Đông,511,Tỉnh Khánh Hòa,abbr|typo,A016,Bà Hạt,,,511,Tỉnh Khánh Hòa,True,False,True,beam_search
+"hai bà tr ưng,xã tập sơn,tinh vĩnh  long",A123,Hai Bà Trưng,81713068,Xã Tập Sơn,809,Tỉnh Vĩnh Long,abbr|typo|tight-comma,A123,Hai Bà Trưng,81713068,Xã Tập Sơn,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"phan tôn, ph ườngc h ũ, tinh bắc ninh",A393,Phan Tôn,22121017,Phường Chũ,223,Tỉnh Bắc Ninh,abbr|typo,A393,Phan Tôn,22121017,Phường Chũ,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"xãdngphú,tinhdồngnai",,,70701082,Xã Đồng Phú,713,Tỉnh Đồng Nai,abbr|typo|no-space,A114,Đồng Nai,70701082,Xã Đồng Phú,713,Tỉnh Đồng Nai,False,True,True,beam_search
+"nguy ến x, xã hùng vi ệt, tinh ph ú th ọ",A362,Nguyến Xí,21713037,Xã Hùng Việt,217,Tỉnh Phú Thọ,typo,A407,Phú Thọ,21713037,Xã Hùng Việt,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"ng ọc uy ển, xã ngh aĩ dân, tinh hưng yên",A264,Ngọc Uyển,10909016,Xã Nghĩa Dân,109,Tỉnh Hưng Yên,abbr|typo,A264,Ngọc Uyển,10909016,Xã Nghĩa Dân,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"ph ú hữu,xã an th ạnh th ủy,tinh duong ồng th áp",A405,Phú Hữu,80711044,Xã An Thạnh Thủy,803,Tỉnh Đồng Tháp,tight-comma,A405,Phú Hữu,80711044,Xã An Thạnh Thủy,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"bạch duong ằgn,xã cần giu ộc,tinh tây ninh",A022,Bạch Đằng,80127048,Xã Cần Giuộc,709,Tỉnh Tây Ninh,abbr|typo|tight-comma,A057,Cần Giuộc,80127048,Xã Cần Giuộc,709,Tỉnh Tây Ninh,False,True,True,beam_search
+"thiênphước,xãduongứcthọ,tinhhàtĩnh",A458,Thiên Phước,40507046,Xã Đức Thọ,405,Tỉnh Hà Tĩnh,abbr|no-space,A458,Thiên Phước,,,405,Tỉnh Hà Tĩnh,True,False,True,beam_search
+"hu ỳnh tho ại yến,xxã th ạnh ph ước,tinh vĩnh long",A179,Huỳnh Thoại Yến,81111119,Xã Thạnh Phước,809,Tỉnh Vĩnh Long,typo|tight-comma,A179,Huỳnh Thoại Yến,81111119,Xã Thạnh Phước,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"ph ước hưng, xã long cốc, tinh ph ú th ọ",A411,Phước Hưng,21720060,Xã Long Cốc,217,Tỉnh Phú Thọ,abbr,A411,Phước Hưng,21720060,Xã Long Cốc,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"xã hưng mỹ, tinh vĩnh llong",,,81705047,Xã Hưng Mỹ,809,Tỉnh Vĩnh Long,abbr|typo,,,82309038,Xã Hưng Mỹ,823,Tỉnh Cà Mau,True,False,False,beam_search
+"xã bìnhh li êu, tinh qu ảng ninh",,,22507045,Xã Bình Liêu,225,Tỉnh Quảng Ninh,typo,,,22507045,Xã Bình Liêu,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"nguy ễn th ị tần, xã hư ớng hi ệp,tinh qu ảng tr ị",A326,Nguyễn Thị Tần,40917065,Xã Hướng Hiệp,409,Tỉnh Quảng Trị,abbr|typo,A326,Nguyễn Thị Tần,40917065,Xã Hướng Hiệp,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"nguy ễn rt ường tộ,xã vĩnh ho à,thanh pho hải ph òng",A337,Nguyễn Trường Tộ,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,typo|tight-comma,A337,Nguyễn Trường Tộ,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn th ời trung, ph ường duy hà, tinh ninh bình",A331,Nguyễn Thời Trung,11103114,Phường Duy Hà,117,Tỉnh Ninh Bình,abbr,A331,Nguyễn Thời Trung,11103114,Phường Duy Hà,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"ph ường vũ  ph úc, tinh hưng yên",,,11501044,Phường Vũ Phúc,109,Tỉnh Hưng Yên,typo,,,11501044,Phường Vũ Phúc,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"xómvôi,xãđoànkết,tinhsơnla",A565,Xóm Vôi,30319009,Xã Đoàn Kết,303,Tỉnh Sơn La,no-space,A565,Xóm Vôi,30319009,Xã Đoàn Kết,303,Tỉnh Sơn La,True,True,True,beam_search
+"phan dg. ình ph ùng, ph ường ph ú thu ận, thanh pho hồ ch í minh",A383,Phan Đình Phùng,70113081,Phường Phú Thuận,701,Tp Hồ Chí Minh,abbr,A185,Hưng Phú,70113081,Phường Phú Thuận,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"th áiphi ên,xã tam giang,tinh bắc ninh",A449,Thái Phiên,22303082,Xã Tam Giang,223,Tỉnh Bắc Ninh,abbr|typo|tight-comma,A449,Thái Phiên,22303082,Xã Tam Giang,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"tân sơn nh ì,xã hòa mỹ,tinh duon gắk lắk",A442,Tân Sơn Nhì,50912089,Xã Hòa Mỹ,605,Tỉnh Đắk Lắk,typo|tight-comma,A442,Tân Sơn Nhì,50912089,Xã Hòa Mỹ,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"nguy ễn ti ểu la, xã t rà my, thanh pho duong à nẵng",A333,Nguyễn Tiểu La,50327038,Xã Trà My,501,Tp Đà Nẵng,abbr|typo,A333,Nguyễn Tiểu La,50327038,Xã Trà My,501,Tp Đà Nẵng,True,True,True,beam_search
+"xã bình ho à, tinh an gaing",,,80519039,Xã Bình Hoà,805,Tỉnh An Giang,abbr|typo,,,80519039,Xã Bình Hoà,805,Tỉnh An Giang,True,True,True,beam_search
+"ph ường ho à  bình, tp hải ph òng",,,10311003,Phường Hoà Bình,103,Tp Hải Phòng,abbr|typo,A148,Hòa Bình,10311003,Phường Hoà Bình,103,Tp Hải Phòng,False,True,True,beam_search
+"cô giang, xã duong ịnh ho à, itnh thanh hóa",A071,Cô Giang,40135071,Xã Định Hoà,401,Tỉnh Thanh Hóa,abbr|typo,A071,Cô Giang,,,,,True,False,False,beam_search
+"võ th ành trang, xã ti ên lữ, tinh hưngg yên",A553,Võ Thành Trang,10913009,Xã Tiên Lữ,109,Tỉnh Hưng Yên,abbr|typo,A553,Võ Thành Trang,10913009,Xã Tiên Lữ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"tr ần tr ọng kim, ph ường an nh ơn, thanh pho hồ ch í mminh",A509,Trần Trọng Kim,70125110,Phường An Nhơn,701,Tp Hồ Chí Minh,typo,A509,Trần Trọng Kim,50717007,Phường An Nhơn,603,Tỉnh Gia Lai,True,False,False,beam_search
+"mạcvăn,xãyênduongịnh,tinhthanhhóa",A250,Mạc Văn,40135065,Xã Yên Định,401,Tỉnh Thanh Hóa,abbr|no-space,A250,Mạc Văn,,,401,Tỉnh Thanh Hóa,True,False,True,beam_search
+"lê văn linh,xã xu ân hồng,tinh ninh bnìh",A223,Lê Văn Linh,11313075,Xã Xuân Hồng,117,Tỉnh Ninh Bình,typo|tight-comma,A223,Lê Văn Linh,11313075,Xã Xuân Hồng,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn thi,, ph ường tự lạn, tinh bắc ninh",A320,Nguyễn Thi,22117046,Phường Tự Lạn,223,Tỉnh Bắc Ninh,typo,A320,Nguyễn Thi,22117046,Phường Tự Lạn,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"ng ô gia tự,xã sơn giang,tinh hà tĩnh",A266,Ngô Gia Tự,40509054,Xã Sơn Giang,405,Tỉnh Hà Tĩnh,abbr|tight-comma,A266,Ngô Gia Tự,40509054,Xã Sơn Giang,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"xã tân an,tinh tyu ên quang",,,21105012,Xã Tân An,211,Tỉnh Tuyên Quang,typo|tight-comma,,,71307049,Xã Tân An,713,Tỉnh Đồng Nai,True,False,False,beam_search
+"xãnàphặc,tinhtháinguyên",,,20705066,Xã Nà Phặc,215,Tỉnh Thái Nguyên,typo|no-space,A126,Hải Nguyên,20705066,Xã Nà Phặc,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"nguy ễn ki ệm, xã ho à hội, tinh gia lai",A301,Nguyễn Kiệm,50713024,Xã Hoà Hội,603,Tỉnh Gia Lai,clean,A301,Nguyễn Kiệm,50713024,Xã Hoà Hội,603,Tỉnh Gia Lai,True,True,True,beam_search
+"ba vân,xã xu ân lư ơng,tinh bắc nninh",A009,Ba Vân,22103035,Xã Xuân Lương,223,Tỉnh Bắc Ninh,typo|tight-comma,A009,Ba Vân,22103035,Xã Xuân Lương,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"cách mạng th áng tám, ãx duong ức tr ọng, tinh lâm duong ồng",A053,Cách Mạng Tháng Tám,70309016,Xã Đức Trọng,703,Tỉnh Lâm Đồng,typo,A053,Cách Mạng Tháng Tám,,,,,True,False,False,beam_search
+"tô hi ến th ành, xã ch âusơn, tinh lạng sơn",A466,Tô Hiến Thành,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,typo,A466,Tô Hiến Thành,20919041,Xã Châu Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"nguy ễn g ọc cung, xã hùng duong ức, tinh tuy ên quang",A305,Nguyễn Ngọc Cung,21107027,Xã Hùng Đức,211,Tỉnh Tuyên Quang,typo,A305,Nguyễn Ngọc Cung,,,211,Tỉnh Tuyên Quang,True,False,True,beam_search
+"tú xư ơng, xã th ạch th ất, th ành ph ố hà nội",A533,Tú Xương,10135093,Xã Thạch Thất,101,Thành phố Hà Nội,abbr,A533,Tú Xương,10135093,Xã Thạch Thất,101,Thành phố Hà Nội,True,True,True,beam_search
+"bùi huy bích, xã an nh ơn tây, tinh gia lai",A040,Bùi Huy Bích,50717011,Xã An Nhơn Tây,603,Tỉnh Gia Lai,abbr,A040,Bùi Huy Bích,50717011,Xã An Nhơn Tây,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xãq u ỳnh an,tinh hưng yên",,,11503067,Xã Quỳnh An,109,Tỉnh Hưng Yên,abbr|typo|tight-comma,,,11503067,Xã Quỳnh An,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"nguy ễn th ầnn hi ến, xã hi ếu giang, tinh qu ảng tr ị",A319,Nguyễn Thần Hiến,40909067,Xã Hiếu Giang,409,Tỉnh Quảng Trị,abbr|typo,,,40909067,Xã Hiếu Giang,409,Tỉnh Quảng Trị,False,True,True,beam_search
+"nguy ễn th ị tần, xã mỹ lý, tinh ngh ệ an",A326,Nguyễn Thị Tần,40309041,Xã Mỹ Lý,403,Tỉnh Nghệ An,abbr,A326,Nguyễn Thị Tần,40309041,Xã Mỹ Lý,403,Tỉnh Nghệ An,True,True,True,beam_search
+"trầnchánhchiếu,xãcẩmxuyên,tinhhàtĩnh",A480,Trần Chánh Chiếu,40515012,Xã Cẩm Xuyên,405,Tỉnh Hà Tĩnh,abbr|typo|tight-comma|no-space,A480,Trần Chánh Chiếu,40515012,Xã Cẩm Xuyên,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"hòa hảo, xã duong ạ tẻh 3, tinh lâ mduong ồng",A149,Hòa Hảo,70317047,Xã Đạ Tẻh 3,703,Tỉnh Lâm Đồng,abbr|typo,A149,Hòa Hảo,,,,,True,False,False,beam_search
+"nguyễnankhương,xãchơlong,tinhgialai",A274,Nguyễn An Khương,60313097,Xã Chơ Long,603,Tỉnh Gia Lai,abbr|typo|no-space,A274,Nguyễn An Khương,60313097,Xã Chơ Long,603,Tỉnh Gia Lai,True,True,True,beam_search
+"th íc hqu ảng duong ức, xã mư ờng nh à, tinh đi ện bi ên",A456,Thích Quảng Đức,30117010,Xã Mường Nhà,301,Tỉnh Điện Biên,typo,,,30117010,Xã Mường Nhà,301,Tỉnh Điện Biên,False,True,True,beam_search
+"tinh lộ 34,xã hải ti ến,tinh ninh ìbnh",A465,Tỉnh Lộ 34,11319078,Xã Hải Tiến,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A465,Tỉnh Lộ 34,11319078,Xã Hải Tiến,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn th ị ngh ĩa, xã yên tr ạch, tinh th ái nguy  ên",A324,Nguyễn Thị Nghĩa,21509039,Xã Yên Trạch,215,Tỉnh Thái Nguyên,abbr|typo,A324,Nguyễn Thị Nghĩa,21509039,Xã Yên Trạch,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"maikhôi,xãmộchoá,tinhtâyninh",A251,Mai Khôi,80107012,Xã Mộc Hoá,709,Tỉnh Tây Ninh,abbr|tight-comma|no-space,A251,Mai Khôi,80107012,Xã Mộc Hoá,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"út tịch, xã lư ơng minh, tinh qu ảng ninh",A542,Út Tịch,22501035,Xã Lương Minh,225,Tỉnh Quảng Ninh,abbr,A542,Út Tịch,22501035,Xã Lương Minh,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"pha th úc duy ện, xã thi ện tân, tinh lạng sơn",A392,Phan Thúc Duyện,20921048,Xã Thiện Tân,209,Tỉnh Lạng Sơn,abbr|typo,A374,Phạm Thúc Duyên,20921048,Xã Thiện Tân,209,Tỉnh Lạng Sơn,False,True,True,beam_search
+"bãy sậy, xã kh ổng lào, tinh lai ch âu",A025,Bãy Sậy,30203019,Xã Khổng Lào,302,Tỉnh Lai Châu,clean,A025,Bãy Sậy,30203019,Xã Khổng Lào,302,Tỉnh Lai Châu,True,True,True,beam_search
+"hẻm âu cơ, xã tri tôn, tinh a giang",A137,Hẻm Âu Cơ,80515034,Xã Tri Tôn,805,Tỉnh An Giang,abbr|typo,A137,Hẻm Âu Cơ,80515034,Xã Tri Tôn,805,Tỉnh An Giang,True,True,True,beam_search
+"sông thao, xã nam duon à, tinh lâm duong ồng",A421,Sông Thao,60605106,Xã Nam Đà,703,Tỉnh Lâm Đồng,typo,A421,Sông Thao,22107015,Xã Nam Dương,223,Tỉnh Bắc Ninh,True,False,False,beam_search
+"vũ ùng, xã tr ường ph ú, tinh qu ảng tr ị",A558,Vũ Tùng,40713039,Xã Trường Phú,409,Tỉnh Quảng Trị,abbr|typo,A558,Vũ Tùng,40713039,Xã Trường Phú,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"nam kỳỳ kh ởi ngh ĩa, xã ph ú kh ê, tinh ph ú th ọ",A258,Nam Kỳ Khởi Nghĩa,21713036,Xã Phú Khê,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,21713036,Xã Phú Khê,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"tôn th ất tùng, xã na rì, tinh th ái nguy ên",A473,Tôn Thất Tùng,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,abbr,A473,Tôn Thất Tùng,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"tr ầ nkh ánh dư, xã tr ần ph án, tinh cà mau",A489,Trần Khánh Dư,82311008,Xã Trần Phán,823,Tỉnh Cà Mau,typo,A489,Trần Khánh Dư,82311008,Xã Trần Phán,823,Tỉnh Cà Mau,True,True,True,beam_search
+"xóm củi,xã thi ên ph ủ,tinh thanh hóa",A563,Xóm Củi,40109101,Xã Thiên Phủ,401,Tỉnh Thanh Hóa,abbr|tight-comma,A563,Xóm Củi,40109101,Xã Thiên Phủ,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"bình tây, ph ườnng cửa lò, tinh ngh ệ an",A035,Bình Tây,40301121,Phường Cửa Lò,403,Tỉnh Nghệ An,abbr|typo,A035,Bình Tây,40301121,Phường Cửa Lò,403,Tỉnh Nghệ An,True,True,True,beam_search
+"nguy ễn lâm,xã năm căn,tinh c àmau",A303,Nguyễn Lâm,82312030,Xã Năm Căn,823,Tỉnh Cà Mau,typo|tight-comma,A303,Nguyễn Lâm,82312030,Xã Năm Căn,823,Tỉnh Cà Mau,True,True,True,beam_search
+"ng ô quy ền, xã duongức tr ọng, tinh lâm duong ồng",A268,Ngô Quyền,70309016,Xã Đức Trọng,703,Tỉnh Lâm Đồng,typo,A268,Ngô Quyền,,,,,True,False,False,beam_search
+"đinh bộ lĩhn,ph ường quy nh ơn duong ông,tinh gia lai",A097,Đinh Bộ Lĩnh,50701002,Phường Quy Nhơn Đông,603,Tỉnh Gia Lai,typo|tight-comma,A097,Đinh Bộ Lĩnh,50701001,Phường Quy Nhơn,603,Tỉnh Gia Lai,True,False,True,beam_search
+"nguy ễn hồng, xã ia ttul, tinh gia lai",A272,Nguyễn Hồng,60320106,Xã Ia Tul,603,Tỉnh Gia Lai,abbr|typo,A272,Nguyễn Hồng,60320106,Xã Ia Tul,603,Tỉnh Gia Lai,True,True,True,beam_search
+"dằngthiáthân,phườngvânphú,tinhphúthọ",A091,Đằng Thái Thân,21701004,Phường Vân Phú,217,Tỉnh Phú Thọ,abbr|typo|no-space,A407,Phú Thọ,21701004,Phường Vân Phú,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"phạmvănhai,phườgndươngnội,thànhphốhànội",A378,Phạm Văn Hai,10127044,Phường Dương Nội,101,Thành phố Hà Nội,abbr|typo|tight-comma|no-space,A378,Phạm Văn Hai,10127044,Phường Dương Nội,101,Thành phố Hà Nội,True,True,True,beam_search
+"ph ạm văn chi êu, xã dư ơng minh ch âu, tinh tây ninh",A376,Phạm Văn Chiêu,70907078,Xã Dương Minh Châu,709,Tỉnh Tây Ninh,abbr,A376,Phạm Văn Chiêu,70907078,Xã Dương Minh Châu,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"nguy ễn an kh ưnơg, xã an th ạnh th ủy, tinh duong ồng th áp",A274,Nguyễn An Khương,80711044,Xã An Thạnh Thủy,803,Tỉnh Đồng Tháp,abbr|typo,,,80711044,Xã An Thạnh Thủy,803,Tỉnh Đồng Tháp,False,True,True,beam_search
+"hồ báá ki ện,xã tân lập,tinh lâm duong ồng",A159,Hồ Bá Kiện,71509082,Xã Tân Lập,703,Tỉnh Lâm Đồng,typo|tight-comma,A159,Hồ Bá Kiện,70903085,Xã Tân Lập,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"hồ ng ọc cẩn, xã vĩnh lộc, tp hồ ch í minh",A162,Hồ Ngọc Cẩn,70139141,Xã Vĩnh Lộc,701,Tp Hồ Chí Minh,abbr,A162,Hồ Ngọc Cẩn,70139141,Xã Vĩnh Lộc,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"xã th ất kh ê,tinh lạng sơn",,,20903001,Xã Thất Khê,209,Tỉnh Lạng Sơn,abbr|typo|tight-comma,,,20903001,Xã Thất Khê,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"u'u long, xã đan th ượng, tinh ph ú th ọ",A543,U'u Long,21707030,Xã Đan Thượng,217,Tỉnh Phú Thọ,abbr,A543,U'u Long,21707030,Xã Đan Thượng,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"cống qu ỳnh, ph ường kim li ên,  th ành ph ố hà nội",A073,Cống Quỳnh,10109010,Phường Kim Liên,101,Thành phố Hà Nội,abbr|typo,A073,Cống Quỳnh,10109010,Phường Kim Liên,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn vnă tr ỗi, xã mư ờng bám, tinh sơn la",A355,Nguyễn Văn Trỗi,30307070,Xã Mường Bám,303,Tỉnh Sơn La,typo,,,30307070,Xã Mường Bám,303,Tỉnh Sơn La,False,True,True,beam_search
+"hu ỳnh th úc kh áng, ph ường long thu ận, tinh duon ồng th áp",A180,Huỳnh Thúc Kháng,80703007,Phường Long Thuận,803,Tỉnh Đồng Tháp,abbr|typo,A180,Huỳnh Thúc Kháng,80703007,Phường Long Thuận,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"tử giang, xã cam lâm, tinh kh ánh  hòa",A540,Tử Giang,51117029,Xã Cam Lâm,511,Tỉnh Khánh Hòa,typo,A540,Tử Giang,51117029,Xã Cam Lâm,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"thh ành công,xã tân dư ơng,tinh duong ồng th áp",A452,Thành Công,80319099,Xã Tân Dương,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A452,Thành Công,80319099,Xã Tân Dương,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"cao duong ạt,xã ch ất bình,tnih ninh bình",A049,Cao Đạt,11715024,Xã Chất Bình,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,,,11715024,Xã Chất Bình,117,Tỉnh Ninh Bình,False,True,True,beam_search
+"bà tri ệu,xã ia pn ôn,tinh gia lai",A021,Bà Triệu,60315130,Xã Ia Pnôn,603,Tỉnh Gia Lai,abbr|tight-comma,A021,Bà Triệu,60315130,Xã Ia Pnôn,603,Tỉnh Gia Lai,True,True,True,beam_search
+"ph ường thu ận an, th ành ph ốhu ế",,,41109001,Phường Thuận An,411,Thành phố Huế,abbr|typo,,,41109001,Phường Thuận An,411,Thành phố Huế,True,True,True,beam_search
+"xã xu ân dg. ịnh, tinhh dg. ồng nai",,,71313034,Xã Xuân Định,713,Tỉnh Đồng Nai,abbr|typo,,,,,,,True,False,False,beam_search
+"tôn th ất tùng, xã võ nhai,  tinh th ái nguy ên",A473,Tôn Thất Tùng,21507049,Xã Võ Nhai,215,Tỉnh Thái Nguyên,abbr|typo,A473,Tôn Thất Tùng,21507049,Xã Võ Nhai,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"ph ường th ạch kh ôi, thanh pho hải ph òng",,,10701057,Phường Thạch Khôi,103,Tp Hải Phòng,clean,,,10701057,Phường Thạch Khôi,103,Tp Hải Phòng,True,True,True,beam_search
+"dân tr í,xã bình ph ú, tinh duong ồng th áp",A079,Dân Trí,80709023,Xã Bình Phú,803,Tỉnh Đồng Tháp,abbr|typo,A033,Bình Phú,21711017,Xã Bình Phú,217,Tỉnh Phú Thọ,False,False,False,beam_search
+"d ào duy từ, xã púng lu ông,, tinh lào cai",A086,Đào Duy Từ,21309003,Xã Púng Luông,205,Tỉnh Lào Cai,abbr|typo,A086,Đào Duy Từ,21309003,Xã Púng Luông,205,Tỉnh Lào Cai,True,True,True,beam_search
+"d. ồng kh ởi, xã quang trung, tinh cao bằng",A113,Đồng Khởi,20311048,Xã Quang Trung,203,Tỉnh Cao Bằng,abbr,A413,Quang Trung,20311048,Xã Quang Trung,203,Tỉnh Cao Bằng,False,True,True,beam_search
+"xã lâm sơn,tinh khh ánh hòa",,,70503060,Xã Lâm Sơn,511,Tỉnh Khánh Hòa,abbr|typo|tight-comma,A196,Lam Sơn,40137076,Xã Lam Sơn,401,Tỉnh Thanh Hóa,False,False,False,beam_search
+"côngchúangọchân,xãchilăng,tinhlngsơn",A072,Công Chúa Ngọc Hân,20917052,Xã Chi Lăng,209,Tỉnh Lạng Sơn,abbr|typo|no-space,A072,Công Chúa Ngọc Hân,20917052,Xã Chi Lăng,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"gò công xã quang lịch,tinh hưng yên",A121,Gò Công,11513092,Xã Quang Lịch,109,Tỉnh Hưng Yên,abbr|typo|tight-comma,A121,Gò Công,,,109,Tỉnh Hưng Yên,True,False,True,beam_search
+"tăng bạt hổ, xã ia tôr, tinh gia lai",A429,Tăng Bạt Hổ,60317074,Xã Ia Tôr,603,Tỉnh Gia Lai,abbr,A429,Tăng Bạt Hổ,60317074,Xã Ia Tôr,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tr ưng nữ vư ơng, xã cẩm tú, tinh thanh hóa",A530,Trưng Nữ Vương,40115137,Xã Cẩm Tú,401,Tỉnh Thanh Hóa,abbr,A530,Trưng Nữ Vương,40115137,Xã Cẩm Tú,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"phanchutrinh,phườnghưngphú,thanhphocầnthơ",A381,Phan Chu Trinh,81523009,Phường Hưng Phú,815,Tp Cần Thơ,no-space,A381,Phan Chu Trinh,81523009,Phường Hưng Phú,815,Tp Cần Thơ,True,True,True,beam_search
+"nguy ễễn th ị th ập, xã cốc pàng, tinh cao bằng",A327,Nguyễn Thị Thập,20303012,Xã Cốc Pàng,203,Tỉnh Cao Bằng,typo,,,20303012,Xã Cốc Pàng,203,Tỉnh Cao Bằng,False,True,True,beam_search
+"tự lập, xã li ên minh, tinh ninh bình",A537,Tự Lập,11303057,Xã Liên Minh,117,Tỉnh Ninh Bình,abbr,A537,Tự Lập,11303057,Xã Liên Minh,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn ki ệm, xã long ph ước, tinh duong ồồng nai",A301,Nguyễn Kiệm,71315012,Xã Long Phước,713,Tỉnh Đồng Nai,abbr|typo,A301,Nguyễn Kiệm,71315012,Xã Long Phước,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"phmạhữuchí,xãmỹphước,tpcầnthơ",A369,Phạm Hữu Chí,81907084,Xã Mỹ Phước,815,Tp Cần Thơ,abbr|typo|no-space,A369,Phạm Hữu Chí,81907084,Xã Mỹ Phước,815,Tp Cần Thơ,True,True,True,beam_search
+"hồng llĩnh, xã mao đi ền, thanh pho hải ph òng",A169,Hồng Lĩnh,10717085,Xã Mao Điền,103,Tp Hải Phòng,typo,A169,Hồng Lĩnh,10717085,Xã Mao Điền,103,Tp Hải Phòng,True,True,True,beam_search
+"tr ần mai ninh, xã sông lũy, tinh lâm dg.  ồng",A492,Trần Mai Ninh,71505069,Xã Sông Lũy,703,Tỉnh Lâm Đồng,abbr|typo,A492,Trần Mai Ninh,71505069,Xã Sông Lũy,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"hồng lạc, ãx sơn mỹ, tinh lâm d. ồng",A168,Hồng Lạc,71514085,Xã Sơn Mỹ,703,Tỉnh Lâm Đồng,abbr|typo,A168,Hồng Lạc,71514085,Xã Sơn Mỹ,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"caobánhạ,xãkimđiền,tinhquảngtrị",A048,Cao Bá Nhạ,40705009,Xã Kim Điền,409,Tỉnh Quảng Trị,abbr|no-space,A048,Cao Bá Nhạ,40705009,Xã Kim Điền,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"phan văn hân, xã xu â ncảnh, tinh duong ắk lắk",A395,Phan Văn Hân,50905073,Xã Xuân Cảnh,605,Tỉnh Đắk Lắk,abbr|typo,A395,Phan Văn Hân,,,,,True,False,False,beam_search
+"cửu long,ph ường an hải,t.p hải h òng",A075,Cửu Long,10313023,Phường An Hải,103,Tp Hải Phòng,abbr|typo|tight-comma,A075,Cửu Long,10313023,Phường An Hải,103,Tp Hải Phòng,True,True,True,beam_search
+"hươnglộ22,xãduongứclinh,tinhlâmduongồng",A144,Hương Lộ 22,71515092,Xã Đức Linh,703,Tỉnh Lâm Đồng,abbr|no-space,A144,Hương Lộ 22,,,,,True,False,False,beam_search
+"lê lai, xã đi ềmt h ụy, tinh th ái nguy ên",A206,Lê Lai,21515025,Xã Điềm Thụy,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,,,215,Tỉnh Thái Nguyên,False,False,True,beam_search
+"lêhồngphong,xãhòabình,tinhvĩnhlong",A205,Lê Hồng Phong,80911024,Xã Hòa Bình,809,Tỉnh Vĩnh Long,typo|no-space,A205,Lê Hồng Phong,80911024,Xã Hòa Bình,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"hồ tùng mậu, xã phong mỹ, tinh d. ồng th áp",A163,Hồ Tùng Mậu,80315084,Xã Phong Mỹ,803,Tỉnh Đồng Tháp,abbr,A163,Hồ Tùng Mậu,80315084,Xã Phong Mỹ,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"nguy ễn văn tr ỗi, ph ường quy nh ơn nam, tinh gia lai",A355,Nguyễn Văn Trỗi,50701004,Phường Quy Nhơn Nam,603,Tỉnh Gia Lai,clean,A355,Nguyễn Văn Trỗi,50701004,Phường Quy Nhơn Nam,603,Tỉnh Gia Lai,True,True,True,beam_search
+"duong ằng th ái th ân, ph ường cái kh ế, hanh pho cần th ơ",A091,Đằng Thái Thân,81519002,Phường Cái Khế,815,Tp Cần Thơ,typo,,,81519002,Phường Cái Khế,815,Tp Cần Thơ,False,True,True,beam_search
+"ông ích khi êm,ph ường tm hi ệp,tinh duong ồng nai",A363,Ông Ích Khiêm,71301003,Phường Tam Hiệp,713,Tỉnh Đồng Nai,abbr|typo|tight-comma,A363,Ông Ích Khiêm,,,,,True,False,False,beam_search
+"tr ần quang di ệu,xã vĩnh quan,g tinh gia lai",A499,Trần Quang Diệu,50711052,Xã Vĩnh Quang,603,Tỉnh Gia Lai,abbr|typo|tight-comma,A499,Trần Quang Diệu,50711052,Xã Vĩnh Quang,603,Tỉnh Gia Lai,True,True,True,beam_search
+"duong ất mới, xã đak đoa, tinh gial ai",A094,Đất Mới,60325111,Xã Đak Đoa,603,Tỉnh Gia Lai,abbr|typo,,,60325111,Xã Đak Đoa,603,Tỉnh Gia Lai,False,True,True,beam_search
+"đinh hòa, ã xu ân dư ơng, tinh lạng sơn",A099,Đinh Hòa,20915038,Xã Xuân Dương,209,Tỉnh Lạng Sơn,abbr|typo,A099,Đinh Hòa,20915038,Xã Xuân Dương,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"tri ệu quang ph ục, xã đa ph úc, th ành ph ố hà nội",A518,Triệu Quang Phục,10115123,Xã Đa Phúc,101,Thành phố Hà Nội,abbr,A518,Triệu Quang Phục,10115123,Xã Đa Phúc,101,Thành phố Hà Nội,True,True,True,beam_search
+"đo àn văn bơ,ph ường hi ệp ho à,tinh qu ảng ninh",A105,Đoàn Văn Bơ,22525010,Phường Hiệp Hoà,225,Tỉnh Quảng Ninh,abbr|tight-comma,A105,Đoàn Văn Bơ,22525010,Phường Hiệp Hoà,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"tân hòa dg ông, hp ường mũi né, tinh lâm dg ồng",A433,Tân Hòa Đông,71501053,Phường Mũi Né,703,Tỉnh Lâm Đồng,abbr|typo,A432,Tân Hóa,71501053,Phường Mũi Né,703,Tỉnh Lâm Đồng,False,True,True,beam_search
+"xãna rì, tinh th ái nguy ên",,,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"xã tânn ti ến,tinh thanh hóa",,,40133035,Xã Tân Tiến,401,Tỉnh Thanh Hóa,typo|tight-comma,,,40133035,Xã Tân Tiến,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"hu ỳnh thi ện lộc,ph ường duy ti ên,tinh ninh bình",A178,Huỳnh Thiện Lộc,11103111,Phường Duy Tiên,117,Tỉnh Ninh Bình,abbr|tight-comma,A178,Huỳnh Thiện Lộc,11103111,Phường Duy Tiên,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"xã cẩm gi àng,tinh th ái nguy ên",,,20711075,Xã Cẩm Giàng,215,Tỉnh Thái Nguyên,abbr|tight-comma,A126,Hải Nguyên,20711075,Xã Cẩm Giàng,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"ph ạm hữu ch í, ph ường bình tr ị d. ông, thanh pho hồ ch í minh",A369,Phạm Hữu Chí,70134102,Phường Bình Trị Đông,701,Tp Hồ Chí Minh,abbr,A369,Phạm Hữu Chí,70134102,Phường Bình Trị Đông,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"26 th áng 3,, xã th ái ho à, tinh tuy ên quang",A124,26 Tháng 3,21107026,Xã Thái Hoà,211,Tỉnh Tuyên Quang,abbr|typo,A124,26 Tháng 3,21107026,Xã Thái Hoà,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"xã hi ệp cư ờn,g tinh hưng yên",,,10909017,Xã Hiệp Cường,109,Tỉnh Hưng Yên,abbr|typo,,,10909017,Xã Hiệp Cường,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"hồ hu ấnnghi ệp, xã a mú sung, tinh lào cai",A140,Hồ Huấn Nghiệp,20507058,Xã A Mú Sung,205,Tỉnh Lào Cai,abbr|typo,A140,Hồ Huấn Nghiệp,20507058,Xã A Mú Sung,205,Tỉnh Lào Cai,True,True,True,beam_search
+"kha vạn cân, xã kỳ lạc, tinh hà tĩnh",A187,Kha Vạn Cân,40519010,Xã Kỳ Lạc,405,Tỉnh Hà Tĩnh,abbr,A187,Kha Vạn Cân,40519010,Xã Kỳ Lạc,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"mạc cửu, xã nậm cu ổi, tinh lai ch âu",A246,Mạc Cửu,30207025,Xã Nậm Cuổi,302,Tỉnh Lai Châu,abbr,A246,Mạc Cửu,30207025,Xã Nậm Cuổi,302,Tỉnh Lai Châu,True,True,True,beam_search
+"lạc long qqu ân, xã th ượng ph úc, th ành ph ố hà nội",A197,Lạc Long Quân,10143053,Xã Thượng Phúc,101,Thành phố Hà Nội,abbr|typo,A197,Lạc Long Quân,10143053,Xã Thượng Phúc,101,Thành phố Hà Nội,True,True,True,beam_search
+"xã yn th ắng, tinh thanh hóa",,,40117120,Xã Yên Thắng,401,Tỉnh Thanh Hóa,abbr|typo,,,40117120,Xã Yên Thắng,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"xã yyên ho à,tinh ngh ệ an",,,40315112,Xã Yên Hoà,403,Tỉnh Nghệ An,typo|tight-comma,,,40315112,Xã Yên Hoà,403,Tỉnh Nghệ An,True,True,True,beam_search
+"duong ào duy từ, xã ch ơ long, tinh gia llai",A086,Đào Duy Từ,60313097,Xã Chơ Long,603,Tỉnh Gia Lai,abbr|typo,A065,Chợ Lớn,60313097,Xã Chơ Long,603,Tỉnh Gia Lai,False,True,True,beam_search
+"tr à kh úc, xã gia lâm, tinh nnh bình",A476,Trà Khúc,11705008,Xã Gia Lâm,117,Tỉnh Ninh Bình,abbr|typo,A476,Trà Khúc,10119109,Xã Gia Lâm,101,Thành phố Hà Nội,True,False,False,beam_search
+"ph ường ngh ĩa lộ, tinh lào cai",,,21303008,Phường Nghĩa Lộ,205,Tỉnh Lào Cai,clean,,,21303008,Phường Nghĩa Lộ,205,Tỉnh Lào Cai,True,True,True,beam_search
+"calmette, xã ĩnh tư ờng, tinh ph ú th ọ",A047,Calmette,21907084,Xã Vĩnh Tường,217,Tỉnh Phú Thọ,typo,A047,Calmette,21907084,Xã Vĩnh Tường,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"hòa bình, xã bbúng lao, tinh đi ện bi ên",A148,Hòa Bình,30121044,Xã Búng Lao,301,Tỉnh Điện Biên,typo,A148,Hòa Bình,30121044,Xã Búng Lao,301,Tỉnh Điện Biên,True,True,True,beam_search
+"tôn th ất hi ệp, xã khao mang, tinh lào cai",A470,Tôn Thất Hiệp,21309001,Xã Khao Mang,205,Tỉnh Lào Cai,abbr,A470,Tôn Thất Hiệp,21309001,Xã Khao Mang,205,Tỉnh Lào Cai,True,True,True,beam_search
+"bácái,xãquỳnhanh,tinhnghệệan",A015,Bác Ái,40317083,Xã Quỳnh Anh,403,Tỉnh Nghệ An,abbr|typo|no-space,A015,Bác Ái,40317083,Xã Quỳnh Anh,403,Tỉnh Nghệ An,True,True,True,beam_search
+"duong ằng tất, xã hưng hà, ttinh hưng yên",A090,Đằng Tất,11505073,Xã Hưng Hà,109,Tỉnh Hưng Yên,abbr|typo,,,11505073,Xã Hưng Hà,109,Tỉnh Hưng Yên,False,True,True,beam_search
+"lê quang kim, xã ph ậ ttích, tinh bắc ninh",A210,Lê Quang Kim,22307089,Xã Phật Tích,223,Tỉnh Bắc Ninh,typo,A210,Lê Quang Kim,22307089,Xã Phật Tích,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"xã ph ình gi àng, tinh đi ện bi ên",,,30119031,Xã Phình Giàng,301,Tỉnh Điện Biên,clean,,,30119031,Xã Phình Giàng,301,Tỉnh Điện Biên,True,True,True,beam_search
+"châuvăntiếp,xãnúangam,tinhđiệnbiên",A062,Châu Văn Tiếp,30117009,Xã Núa Ngam,301,Tỉnh Điện Biên,typo|tight-comma|no-space,A062,Châu Văn Tiếp,30117009,Xã Núa Ngam,301,Tỉnh Điện Biên,True,True,True,beam_search
+"yên duong ổ, ph ường hàm  rồng, tinh thanh hóa",A569,Yên Đổ,40101006,Phường Hàm Rồng,401,Tỉnh Thanh Hóa,typo,,,40101006,Phường Hàm Rồng,401,Tỉnh Thanh Hóa,False,True,True,beam_search
+"ba gia, xã bắc kh ánh vĩnh, tinhk h ánh hòa",A011,Ba Gia,51111033,Xã Bắc Khánh Vĩnh,511,Tỉnh Khánh Hòa,typo,A011,Ba Gia,51111033,Xã Bắc Khánh Vĩnh,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tr ần lực, ph ường bắc giang, tinh bắc ninh",A491,Trần Lực,22101051,Phường Bắc Giang,223,Tỉnh Bắc Ninh,clean,A491,Trần Lực,22101051,Phường Bắc Giang,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn hữu cảnh, xã qu ảng ch ính, tinh thanh hóa",A296,Nguyễn Hữu Cảnh,40149052,Xã Quảng Chính,401,Tỉnh Thanh Hóa,abbr,A296,Nguyễn Hữu Cảnh,40149052,Xã Quảng Chính,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"ông ích khi êm, xã th ường xu ân, tinh thanh óha",A363,Ông Ích Khiêm,40123161,Xã Thường Xuân,401,Tỉnh Thanh Hóa,typo,A363,Ông Ích Khiêm,40123161,Xã Thường Xuân,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"ngôgiatự,xãiahia,tinhgialai",A266,Ngô Gia Tự,60309133,Xã Ia Chia,603,Tỉnh Gia Lai,abbr|typo|no-space,A266,Ngô Gia Tự,60329103,Xã Ia Hiao,603,Tỉnh Gia Lai,True,False,True,beam_search
+"nguy ễn văn lạc, xã to à nlưu, tinh hà tĩnh",A349,Nguyễn Văn Lạc,40513027,Xã Toàn Lưu,405,Tỉnh Hà Tĩnh,abbr|typo,A349,Nguyễn Văn Lạc,40513027,Xã Toàn Lưu,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"đo àn th ị đi ểm,xã ph úc sơn,t h ành ph ố hà nội",A104,Đoàn Thị Điểm,10145071,Xã Phúc Sơn,101,Thành phố Hà Nội,abbr|typo|tight-comma,A104,Đoàn Thị Điểm,10145071,Xã Phúc Sơn,101,Thành phố Hà Nội,True,True,True,beam_search
+"hươnglộ2,phườngvũngtàu,thanhphohồchíminh",A143,Hương Lộ 2,71701001,Phường Vũng Tàu,701,Tp Hồ Chí Minh,typo|no-space,A143,Hương Lộ 2,71701001,Phường Vũng Tàu,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"lý th ái tổ,xã hưng ph ú,tinh hưng yên",A241,Lý Thái Tổ,11515062,Xã Hưng Phú,109,Tỉnh Hưng Yên,typo|tight-comma,A241,Lý Thái Tổ,11515062,Xã Hưng Phú,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"tr ần minh quy ền,xã mư ờng kh ương,tinnh lào cai",A493,Trần Minh Quyền,20505087,Xã Mường Khương,205,Tỉnh Lào Cai,typo|tight-comma,A493,Trần Minh Quyền,20505087,Xã Mường Khương,205,Tỉnh Lào Cai,True,True,True,beam_search
+"phan văn duong ạt, ph ường tây hồ, t ành ph ố hà nội",A394,Phan Văn Đạt,10103028,Phường Tây Hồ,101,Thành phố Hà Nội,abbr|typo,,,10103028,Phường Tây Hồ,101,Thành phố Hà Nội,False,True,True,beam_search
+"đo àn c bửu, xã rạch ki ến, tinh tây ninh",A102,Đoàn C.Bửu,80125041,Xã Rạch Kiến,709,Tỉnh Tây Ninh,abbr,A102,Đoàn C.Bửu,80125041,Xã Rạch Kiến,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"xã vĩnh công, tinh tây ninh",,,80121057,Xã Vĩnh Công,709,Tỉnh Tây Ninh,clean,,,80121057,Xã Vĩnh Công,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tam d ảo,ph ường d ô vinh,tinh kh ánh hòa",A427,Tam Đảo,70501046,Phường Đô Vinh,511,Tỉnh Khánh Hòa,abbr|tight-comma,A427,Tam Đảo,70501046,Phường Đô Vinh,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tân ti ến,ph ường ho à bnìh,thanh pho hải ph òng",A445,Tân Tiến,10311003,Phường Hoà Bình,103,Tp Hải Phòng,typo|tight-comma,A445,Tân Tiến,,,103,Tp Hải Phòng,True,False,True,beam_search
+"nugy ễn bỉnh khi êm, xã tam hợp, tinh ngh ệ an",A277,Nguyễn Bỉnh Khiêm,40311075,Xã Tam Hợp,403,Tỉnh Nghệ An,abbr|typo,,,40311075,Xã Tam Hợp,403,Tỉnh Nghệ An,False,True,True,beam_search
+"th ành côngg, xã kr ông pắc, tinh duong ắk lắk",A452,Thành Công,60519036,Xã Krông Pắc,605,Tỉnh Đắk Lắk,typo,A452,Thành Công,60519036,Xã Krông Pắc,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tr ần đi ện, xã tô múa,, tinh sơn la",A481,Trần Điện,30323014,Xã Tô Múa,303,Tỉnh Sơn La,abbr|typo,A481,Trần Điện,30323014,Xã Tô Múa,303,Tỉnh Sơn La,True,True,True,beam_search
+"nguy ễn hữu cầu, xã lóng sập, tin sơn la",A297,Nguyễn Hữu Cầu,30319010,Xã Lóng Sập,303,Tỉnh Sơn La,abbr|typo,A297,Nguyễn Hữu Cầu,30319010,Xã Lóng Sập,303,Tỉnh Sơn La,True,True,True,beam_search
+"chùaphậtán,xãthịnhminh,tinhphúthọ",A068,Chùa Phật Án,30501144,Xã Thịnh Minh,217,Tỉnh Phú Thọ,abbr|typo|no-space,A068,Chùa Phật Án,30501144,Xã Thịnh Minh,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"hu ỳnh mẫn d ạt, xã vĩnh th ịnh, tp hải ph òng",A175,Huỳnh Mẫn Đạt,10321046,Xã Vĩnh Thịnh,103,Tp Hải Phòng,abbr,A175,Huỳnh Mẫn Đạt,10321046,Xã Vĩnh Thịnh,103,Tp Hải Phòng,True,True,True,beam_search
+"ngôthờinhiệm,xããtriệuphong,tinhquảngtrị",A270,Ngô Thời Nhiệm,40911068,Xã Triệu Phong,409,Tỉnh Quảng Trị,abbr|typo|no-space,A270,Ngô Thời Nhiệm,40911068,Xã Triệu Phong,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"xóm ciủ,xã ân hảo,tinh gia lai",A563,Xóm Củi,50707046,Xã Ân Hảo,603,Tỉnh Gia Lai,abbr|typo|tight-comma,A562,Xóm Chiếu,50707046,Xã Ân Hảo,603,Tỉnh Gia Lai,False,True,True,beam_search
+"qu ốc lộ 1a, xã phong hi ệp, tinh cà mau",A415,Quốc Lộ 1A,82109060,Xã Phong Hiệp,823,Tỉnh Cà Mau,clean,A415,Quốc Lộ 1A,82109060,Xã Phong Hiệp,823,Tỉnh Cà Mau,True,True,True,beam_search
+"rạch cầu  ch ông, xã ho àng cư ơng, tinh ph ú th ọ",A418,Rạch Cầu Chông,21709020,Xã Hoàng Cương,217,Tỉnh Phú Thọ,abbr|typo,A418,Rạch Cầu Chông,21709020,Xã Hoàng Cương,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tânq u ý, xã pờ tó, tinh gia lai",A437,Tân Quý,60320104,Xã Pờ Tó,603,Tỉnh Gia Lai,typo,A437,Tân Quý,60320104,Xã Pờ Tó,603,Tỉnh Gia Lai,True,True,True,beam_search
+"mạc văn,xã th ượng hà,ttinh lào cai",A250,Mạc Văn,20515063,Xã Thượng Hà,205,Tỉnh Lào Cai,abbr|typo|tight-comma,A250,Mạc Văn,20515063,Xã Thượng Hà,205,Tỉnh Lào Cai,True,True,True,beam_search
+"hẻm 158,xã ia hr ú,tinh gia lai",A136,Hẻm 158,60331081,Xã Ia Hrú,603,Tỉnh Gia Lai,abbr|tight-comma,A136,Hẻm 158,60331081,Xã Ia Hrú,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tr ần kh ánh dư,ph ường longt r ường,thanh pho hồ ch í minh",A489,Trần Khánh Dư,70145136,Phường Long Trường,701,Tp Hồ Chí Minh,typo|tight-comma,A489,Trần Khánh Dư,70145136,Phường Long Trường,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"vạn ki ếp,xã cam lộ, tinh qu ảng tr ị",A545,Vạn Kiếp,40909066,Xã Cam Lộ,409,Tỉnh Quảng Trị,abbr|typo|tight-comma,A545,Vạn Kiếp,40909066,Xã Cam Lộ,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"d. ặng dung, xã d. àm thu ỷ, tinh cao  bằng",A088,Đặng Dung,20311051,Xã Đàm Thuỷ,203,Tỉnh Cao Bằng,abbr|typo,A088,Đặng Dung,20311051,Xã Đàm Thuỷ,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"kh ải hưng, xã dư ơng qu ỳ,, tinh lào cai",A189,Khải Hưng,20519071,Xã Dương Quỳ,205,Tỉnh Lào Cai,abbr|typo,A189,Khải Hưng,20519071,Xã Dương Quỳ,205,Tỉnh Lào Cai,True,True,True,beam_search
+"nguy ễn oanh, ph ường tam ph ước, tinh duong ồng nai",A308,Nguyễn Oanh,71301089,Phường Tam Phước,713,Tỉnh Đồng Nai,abbr,A308,Nguyễn Oanh,71301089,Phường Tam Phước,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tựcườnng,xãhátmôn,thànhphốhànội",A539,Tự Cường,10131092,Xã Hát Môn,101,Thành phố Hà Nội,typo|no-space,A539,Tự Cường,10131092,Xã Hát Môn,101,Thành phố Hà Nội,True,True,True,beam_search
+"nguy ễn phi khanh, ph ường bình cơ, tp hồ ch í minh",A310,Nguyễn Phi Khanh,71105041,Phường Bình Cơ,701,Tp Hồ Chí Minh,abbr,A310,Nguyễn Phi Khanh,71105041,Phường Bình Cơ,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"ph ường hạnh th ông, thanh pho hồ ch í minh",,,70125109,Phường Hạnh Thông,701,Tp Hồ Chí Minh,abbr,A134,Hạnh Thông,70125109,Phường Hạnh Thông,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"tân hòa duong ông, xã vĩnh hưng, tinh ph ú th ọ",A433,Tân Hòa Đông,21907086,Xã Vĩnh Hưng,217,Tỉnh Phú Thọ,clean,A551,Vĩnh Hưng,21907086,Xã Vĩnh Hưng,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"gi ải ph óng,xã qu ốc aoi,th ành ph ố hà nội",A119,Giải Phóng,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,abbr|typo|tight-comma,A119,Giải Phóng,10139098,Xã Quốc Oai,101,Thành phố Hà Nội,True,True,True,beam_search
+"bùi huy bích, xã nam xang, tinh ninh bình",A040,Bùi Huy Bích,11107043,Xã Nam Xang,117,Tỉnh Ninh Bình,abbr,A040,Bùi Huy Bích,11107043,Xã Nam Xang,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"xã th  ái bình, tinh lạng sơn",,,20919043,Xã Thái Bình,209,Tỉnh Lạng Sơn,typo,,,20919043,Xã Thái Bình,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"mạc thi ên tích, ph ường yaun pa, tinh gia lai",A248,Mạc Thiên Tích,60321098,Phường Ayun Pa,603,Tỉnh Gia Lai,abbr|typo,A248,Mạc Thiên Tích,60321098,Phường Ayun Pa,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tôn th ất thuy ết,x ãth ạch bình,tinh thanh hóa",A472,Tôn Thất Thuyết,40119143,Xã Thạch Bình,401,Tỉnh Thanh Hóa,abbr|typo|tight-comma,A472,Tôn Thất Thuyết,40119143,Xã Thạch Bình,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"phanhuyích,xãdânhóa,tinhquảngtrị",A385,Phan Huy Ích,40705008,Xã Dân Hóa,409,Tỉnh Quảng Trị,abbr|no-space,A385,Phan Huy Ích,40705008,Xã Dân Hóa,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"nguy ễn văn bảo, xã tùng lộ, tinh hà tĩnh",A341,Nguyễn Văn Bảo,40511035,Xã Tùng Lộc,405,Tỉnh Hà Tĩnh,typo,A341,Nguyễn Văn Bảo,40511035,Xã Tùng Lộc,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"tân hòa duong ông, xã xu ân lập, tinh thanh hóa",A433,Tân Hòa Đông,40137079,Xã Xuân Lập,401,Tỉnh Thanh Hóa,abbr,A432,Tân Hóa,40137079,Xã Xuân Lập,401,Tỉnh Thanh Hóa,False,True,True,beam_search
+"lê lai, ph ường mộc sơn, tinh sơn al",A206,Lê Lai,30319006,Phường Mộc Sơn,303,Tỉnh Sơn La,typo,A206,Lê Lai,30319006,Phường Mộc Sơn,303,Tỉnh Sơn La,True,True,True,beam_search
+"ph ùng hưng, ph ườngg ph ú thu ận, tp hồ ch í minh",A409,Phùng Hưng,70113081,Phường Phú Thuận,701,Tp Hồ Chí Minh,abbr|typo,A409,Phùng Hưng,,,701,Tp Hồ Chí Minh,True,False,True,beam_search
+"vư ờn lài, xã c duong ô, th ành ph ố hà nội",A560,Vườn Lài,10151082,Xã Cổ Đô,101,Thành phố Hà Nội,abbr|typo,A560,Vườn Lài,,,101,Thành phố Hà Nội,True,False,True,beam_search
+"mạc th ị bư ởi, xã vĩnh xu ân, tinh vĩn hlong",A249,Mạc Thị Bưởi,80911023,Xã Vĩnh Xuân,809,Tỉnh Vĩnh Long,abbr|typo,A249,Mạc Thị Bưởi,80911023,Xã Vĩnh Xuân,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"đao nguy ên ph ổ, xã tân ph ú d. ông, tinh d. ồng th áp",A087,Đao Nguyên Phổ,80719057,Xã Tân Phú Đông,803,Tỉnh Đồng Tháp,abbr,A087,Đao Nguyên Phổ,80719057,Xã Tân Phú Đông,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"lãnhbinhthăng,xãsongkhủa,tinhsơnla",A198,Lãnh Binh Thăng,30323013,Xã Song Khủa,303,Tỉnh Sơn La,abbr|typo|no-space,A198,Lãnh Binh Thăng,30323013,Xã Song Khủa,303,Tỉnh Sơn La,True,True,True,beam_search
+"gò công, ph ường h âu duong ốc, tinh an giang",A121,Gò Công,80503005,Phường Châu Đốc,805,Tỉnh An Giang,abbr|typo,A121,Gò Công,,,805,Tỉnh An Giang,True,False,True,beam_search
+"bình long, ph ường hòa thu ận tinh vĩnh long",A032,Bình Long,81701039,Phường Hòa Thuận,809,Tỉnh Vĩnh Long,abbr|typo,A032,Bình Long,81701039,Phường Hòa Thuận,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"duong ống đa,xã duong ồng ti ến,tinh hà tĩnh",A110,Đống Đa,40501023,Xã Đồng Tiến,405,Tỉnh Hà Tĩnh,abbr|tight-comma,,,,,405,Tỉnh Hà Tĩnh,False,False,True,beam_search
+"ph ạm văn hai, xã lư ơngg th ế tr ân, tinh cà mau",A378,Phạm Văn Hai,82309036,Xã Lương Thế Trân,823,Tỉnh Cà Mau,abbr|typo,A378,Phạm Văn Hai,,,823,Tỉnh Cà Mau,True,False,True,beam_search
+"nguy ễn văn ngih, xã song kh ủa, tinh sơn la",A352,Nguyễn Văn Nghi,30323013,Xã Song Khủa,303,Tỉnh Sơn La,abbr|typo,A352,Nguyễn Văn Nghi,30323013,Xã Song Khủa,303,Tỉnh Sơn La,True,True,True,beam_search
+"bà tri ệu, xã pù nhi, tinhthanh hóa",A021,Bà Triệu,40107095,Xã Pù Nhi,401,Tỉnh Thanh Hóa,typo,A021,Bà Triệu,40107095,Xã Pù Nhi,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nguy ễn hồng, xã cam hồng, ttinh qu ảng tr ị",A272,Nguyễn Hồng,40713036,Xã Cam Hồng,409,Tỉnh Quảng Trị,typo,A272,Nguyễn Hồng,40713036,Xã Cam Hồng,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"lê tung,ph ường th ườgn lạc,tinh dg ồng th áp",A221,Lê Tung,80307064,Phường Thường Lạc,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A221,Lê Tung,,,,,True,False,False,beam_search
+"nguy ễn th ị ngh ĩa,xã tân hà lâm hà,tinhl âm duong ồng",A324,Nguyễn Thị Nghĩa,70311024,Xã Tân Hà - Lâm Hà,703,Tỉnh Lâm Đồng,typo|tight-comma,A324,Nguyễn Thị Nghĩa,70311024,Xã Tân Hà - Lâm Hà,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"phan ng ữ, xã dg. ại dg. ồng, tinh ph ú th  ọ",A389,Phan Ngữ,30515119,Xã Đại Đồng,217,Tỉnh Phú Thọ,abbr|typo,A389,Phan Ngữ,,,217,Tỉnh Phú Thọ,True,False,True,beam_search
+"chumạnhtrinh,xãấlpvò,tinhdồngtháp",A066,Chu Mạnh Trinh,80317094,Xã Lấp Vò,803,Tỉnh Đồng Tháp,abbr|typo|no-space,A066,Chu Mạnh Trinh,80317094,Xã Lấp Vò,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"tr ường chinh, ph ường mỹ ng ãi, tinh dg. ồng thá p",A527,Trường Chinh,80301090,Phường Mỹ Ngãi,803,Tỉnh Đồng Tháp,abbr|typo,A527,Trường Chinh,80301090,Phường Mỹ Ngãi,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"nguy ễn ng ọ cph ượng, ph ường ho àng mai, th ành ph ố hà nội",A304,Nguyễn Ngọc Phượng,10108016,Phường Hoàng Mai,101,Thành phố Hà Nội,typo,A304,Nguyễn Ngọc Phượng,10108016,Phường Hoàng Mai,101,Thành phố Hà Nội,True,True,True,beam_search
+"ph ường son gli ễu, tinh bắc ninh",,,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,abbr|typo,,,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"lý th ường ki ệt, xã bờ y, tih qu ảng ng ãi",A242,Lý Thường Kiệt,60105075,Xã Bờ Y,505,Tỉnh Quảng Ngãi,abbr|typo,A242,Lý Thường Kiệt,60105075,Xã Bờ Y,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"an tôn, ph ường vi ệt ho à, thanh pho hải ph òng",A005,An Tôn,10701053,Phường Việt Hoà,103,Tp Hải Phòng,abbr,A005,An Tôn,10701053,Phường Việt Hoà,103,Tp Hải Phòng,True,True,True,beam_search
+"đinh ti ên ho àng, ph ường ph úc yêên, tinh ph ú th ọ",A100,Đinh Tiên Hoàng,21902101,Phường Phúc Yên,217,Tỉnh Phú Thọ,abbr|typo,A100,Đinh Tiên Hoàng,21902101,Phường Phúc Yên,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tôn th ất hti ệp,xã ch ợ vàm,tinh an giang",A471,Tôn Thất Thiệp,80509020,Xã Chợ Vàm,805,Tỉnh An Giang,abbr|typo|tight-comma,A470,Tôn Thất Hiệp,80509020,Xã Chợ Vàm,805,Tỉnh An Giang,False,True,True,beam_search
+"tr ần qu ốc to ản,xã ph ớc hà,tinh kh ánh hòa",A502,Trần Quốc Toản,70513052,Xã Phước Hà,511,Tỉnh Khánh Hòa,typo|tight-comma,A502,Trần Quốc Toản,70513052,Xã Phước Hà,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tú xư ơng, ph ường sông công, tinhh th ái nguy ên",A533,Tú Xương,21503034,Phường Sông Công,215,Tỉnh Thái Nguyên,typo,A126,Hải Nguyên,21503034,Phường Sông Công,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"ho àng di ệu, xã ph ú mỹ, tinh cà mau",A151,Hoàng Diệu,82308035,Xã Phú Mỹ,823,Tỉnh Cà Mau,abbr,A151,Hoàng Diệu,82308035,Xã Phú Mỹ,823,Tỉnh Cà Mau,True,True,True,beam_search
+"xã ti ên duong ồng, tinh ngh ệ an",,,40319094,Xã Tiên Đồng,403,Tỉnh Nghệ An,clean,,,,,403,Tỉnh Nghệ An,True,False,True,beam_search
+"nguyễncôngttrứ,xãquảngyên,tinhthanhhóa",A281,Nguyễn Công Trứ,40149047,Xã Quảng Yên,401,Tỉnh Thanh Hóa,abbr|typo|no-space,A281,Nguyễn Công Trứ,40149047,Xã Quảng Yên,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"ph ường kh ánh hậu, tinhh tây ninh",,,80101060,Phường Khánh Hậu,709,Tỉnh Tây Ninh,abbr|typo,,,80101060,Phường Khánh Hậu,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"lý th áái tổ, ph ường duong ông tri ều, tinh qu ảng ninh",A241,Lý Thái Tổ,22521002,Phường Đông Triều,225,Tỉnh Quảng Ninh,typo,A241,Lý Thái Tổ,,,225,Tỉnh Quảng Ninh,True,False,True,beam_search
+"xã la êêê, thanh pho duong à nẵng",,,50313079,Xã La Êê,501,Tp Đà Nẵng,abbr|typo,,,50313079,Xã La Êê,501,Tp Đà Nẵng,True,True,True,beam_search
+"bình ti ên, xã nguy ên bình, tinh cao  bằng",A037,Bình Tiên,20313022,Xã Nguyên Bình,203,Tỉnh Cao Bằng,typo,A037,Bình Tiên,20313022,Xã Nguyên Bình,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"nguy ễn duong ình chi ểu, xã tam nông, tinh ph  th ọ",A288,Nguyễn Đình Chiểu,21717041,Xã Tam Nông,217,Tỉnh Phú Thọ,typo,A284,Nguyễn Du,80309069,Xã Tam Nông,803,Tỉnh Đồng Tháp,False,False,False,beam_search
+"xã yên cư ờng, tinh ninh bnìh",,,11307060,Xã Yên Cường,117,Tỉnh Ninh Bình,abbr|typo,,,20111075,Xã Yên Cường,211,Tỉnh Tuyên Quang,True,False,False,beam_search
+"quaangtrung,xãbíchhào,tinhnghệan",A413,Quang Trung,40331104,Xã Bích Hào,403,Tỉnh Nghệ An,abbr|typo|tight-comma|no-space,A413,Quang Trung,40331104,Xã Bích Hào,403,Tỉnh Nghệ An,True,True,True,beam_search
+"ỳ lan, xã th ạch xu ân, tinh hà ttĩnh",A567,Ỳ Lan,40513030,Xã Thạch Xuân,405,Tỉnh Hà Tĩnh,abbr|typo,A567,Ỳ Lan,40513030,Xã Thạch Xuân,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"tinh lộ 34, xã yên trug, tinh ngh ệ an",A465,Tỉnh Lộ 34,40337031,Xã Yên Trung,403,Tỉnh Nghệ An,typo,A465,Tỉnh Lộ 34,40337031,Xã Yên Trung,403,Tỉnh Nghệ An,True,True,True,beam_search
+"nguy ễn công tr ứ, xã vinh lộc, th ành h ố hu ế",A281,Nguyễn Công Trứ,41113026,Xã Vinh Lộc,411,Thành phố Huế,abbr|typo,A281,Nguyễn Công Trứ,82103047,Xã Vĩnh Lộc,823,Tỉnh Cà Mau,True,False,False,beam_search
+"hu ỳnh th úc kh áng,xã .d ức an,tinh lâm d. ồng",A180,Huỳnh Thúc Kháng,60609111,Xã Đức An,703,Tỉnh Lâm Đồng,abbr|typo|tight-comma,A180,Huỳnh Thúc Kháng,60609111,Xã Đức An,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"nguy ễn cửu vân, xã sông ray, tinh duong ồng nai",A283,Nguyễn Cửu Vân,71311032,Xã Sông Ray,713,Tỉnh Đồng Nai,clean,A283,Nguyễn Cửu Vân,71311032,Xã Sông Ray,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"hu ỳnh th úc kh áng,xã ph ước ảhi,thanh pho hồ ch í minh",A180,Huỳnh Thúc Kháng,71712023,Xã Phước Hải,701,Tp Hồ Chí Minh,typo|tight-comma,A180,Huỳnh Thúc Kháng,71712023,Xã Phước Hải,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"nguy ễn ng ọc tịh, xã d. ồng d. ăng, tinh lạng sơn",A307,Nguyễn Ngọc Tịnh,20913058,Xã Đồng Đăng,209,Tỉnh Lạng Sơn,abbr|typo,A110,Đống Đa,20913058,Xã Đồng Đăng,209,Tỉnh Lạng Sơn,False,True,True,beam_search
+"xã tuy ph ưcớ bắc, tinh gia lai",,,50719036,Xã Tuy Phước Bắc,603,Tỉnh Gia Lai,abbr|typo,A070,Cô Bắc,50719036,Xã Tuy Phước Bắc,603,Tỉnh Gia Lai,False,True,True,beam_search
+"tuy lý vư ơng,xã sông kôn,thanh po duong à nẵng",A531,Tuy Lý Vương,50305081,Xã Sông Kôn,501,Tp Đà Nẵng,typo|tight-comma,A531,Tuy Lý Vương,50305081,Xã Sông Kôn,501,Tp Đà Nẵng,True,True,True,beam_search
+"tr ương công duong ịnh,xã kr ôngá ,tinh duong ắk lắk",A521,Trương Công Định,60517050,Xã Krông Á,605,Tỉnh Đắk Lắk,abbr|typo|tight-comma,,,60517050,Xã Krông Á,605,Tỉnh Đắk Lắk,False,True,True,beam_search
+"hẻm hư ơng lộ 14, ph ường yênn gh ĩa, th ành ph ố hà nội",A138,Hẻm Hương Lộ 14,10127045,Phường Yên Nghĩa,101,Thành phố Hà Nội,abbr|typo,A138,Hẻm Hương Lộ 14,10127045,Phường Yên Nghĩa,101,Thành phố Hà Nội,True,True,True,beam_search
+"hồ xu ân hư ơng, xã long hưng, tinh hng yên",A165,Hồ Xuân Hương,11505080,Xã Long Hưng,109,Tỉnh Hưng Yên,abbr|typo,A165,Hồ Xuân Hương,81907083,Xã Long Hưng,815,Tp Cần Thơ,True,False,False,beam_search
+"tân sinh, xã nam duong à, tih lâm duong ồng",A440,Tân Sinh,60605106,Xã Nam Đà,703,Tỉnh Lâm Đồng,abbr|typo,A440,Tân Sinh,22107015,Xã Nam Dương,223,Tỉnh Bắc Ninh,True,False,False,beam_search
+"xã ia o, tinh gia lai",,,60309134,Xã Ia O,603,Tỉnh Gia Lai,abbr,,,60309134,Xã Ia O,603,Tỉnh Gia Lai,True,True,True,beam_search
+"trầnxuântuân,xãthạnhphước,tinhtâyninh",A517,Trần Xuân Tuân,80111018,Xã Thạnh Phước,709,Tỉnh Tây Ninh,tight-comma|no-space,A517,Trần Xuân Tuân,80111018,Xã Thạnh Phước,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tây th ạnh,xã th ành bìhn th ọ,tinh ngh ệ an",A447,Tây Thạnh,40327006,Xã Thành Bình Thọ,403,Tỉnh Nghệ An,typo|tight-comma,A447,Tây Thạnh,,,403,Tỉnh Nghệ An,True,False,True,beam_search
+"bànhv ăn tr ân, xã bảo lâm 2, tinh lâm duong ồng",A028,Bành Văn Trân,70313038,Xã Bảo Lâm 2,703,Tỉnh Lâm Đồng,abbr|typo,A028,Bành Văn Trân,70313038,Xã Bảo Lâm 2,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"tr ần lực, ph ường sa pa, tinh lào cai",A491,Trần Lực,20513079,Phường Sa Pa,205,Tỉnh Lào Cai,clean,A491,Trần Lực,20513079,Phường Sa Pa,205,Tỉnh Lào Cai,True,True,True,beam_search
+"cao duoong ạt, xã duong ăk kôi, tinh qu ảng ng ãi",A049,Cao Đạt,60108087,Xã Đăk Kôi,505,Tỉnh Quảng Ngãi,typo,,,,,505,Tỉnh Quảng Ngãi,False,False,True,beam_search
+"lê văn sĩ,xã mư ờng khi êng,tinh sơn la",A226,Lê Văn Sĩ,30307024,Xã Mường Khiêng,303,Tỉnh Sơn La,abbr|tight-comma,A226,Lê Văn Sĩ,30307024,Xã Mường Khiêng,303,Tỉnh Sơn La,True,True,True,beam_search
+"tuylývương,xãkỳhoa,tinhhàtĩnh",A531,Tuy Lý Vương,40519007,Xã Kỳ Hoa,405,Tỉnh Hà Tĩnh,abbr|typo|no-space,A531,Tuy Lý Vương,40519007,Xã Kỳ Hoa,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"phanphútiên,phườnghoàinhơnbắc,tinhgialai",A390,Phan Phú Tiên,50705018,Phường Hoài Nhơn Bắc,603,Tỉnh Gia Lai,typo|no-space,A390,Phan Phú Tiên,50705018,Phường Hoài Nhơn Bắc,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tr ần duong ình xu, xã xu ân qu ế, tinh duuong ồng nai",A482,Trần Đình Xu,71311029,Xã Xuân Quế,713,Tỉnh Đồng Nai,typo,,,71311029,Xã Xuân Quế,713,Tỉnh Đồng Nai,False,True,True,beam_search
+"xã yên tr ường, tinh thanh hóa",,,40135066,Xã Yên Trường,401,Tỉnh Thanh Hóa,clean,,,40135066,Xã Yên Trường,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"sông d. áy, ph ường tân phong, tinh lai ch âu",A419,Sông Đáy,30202013,Phường Tân Phong,302,Tỉnh Lai Châu,abbr,A419,Sông Đáy,30202013,Phường Tân Phong,302,Tỉnh Lai Châu,True,True,True,beam_search
+"bà hom,xã  vĩnh tr ụ,tinh ninh bình",A017,Bà Hom,11107045,Xã Vĩnh Trụ,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A017,Bà Hom,11107045,Xã Vĩnh Trụ,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"hẻm hư ơng lộ 14, xã hồng vũ, tinh hưng yên",A138,Hẻm Hương Lộ 14,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,clean,A138,Hẻm Hương Lộ 14,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"dư ơng tử giang, xã bình hi ệp, tinh tây ninh",A083,Dương Tử Giang,80129009,Xã Bình Hiệp,709,Tỉnh Tây Ninh,abbr,A083,Dương Tử Giang,80129009,Xã Bình Hiệp,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"bãy sậy,xã ph ú hựu,tnih duong ồng th áp",A025,Bãy Sậy,80321100,Xã Phú Hựu,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A025,Bãy Sậy,81605051,Xã Phú Hữu,815,Tp Cần Thơ,True,False,False,beam_search
+"lư ơng nh ữ học,  xã tân ph ú duong ông, tinh duong ồng th áp",A235,Lương Nhữ Học,80719057,Xã Tân Phú Đông,803,Tỉnh Đồng Tháp,abbr|typo,A235,Lương Nhữ Học,,,,,True,False,False,beam_search
+"tự lập,xã hư ơng sơn,tinh hà tnĩh",A537,Tự Lập,40509051,Xã Hương Sơn,405,Tỉnh Hà Tĩnh,typo|tight-comma,A537,Tự Lập,10145072,Xã Hương Sơn,101,Thành phố Hà Nội,True,False,False,beam_search
+"nguy ễn văn lu ôgn, xã cu ôr d ăng, tinh d ắk lắk",A351,Nguyễn Văn Luông,60513021,Xã Cuôr Đăng,605,Tỉnh Đắk Lắk,abbr|typo,,,60513021,Xã Cuôr Đăng,605,Tỉnh Đắk Lắk,False,True,True,beam_search
+"tôn th ất thuy ết, xã hải hậu, tihn ninh bình",A472,Tôn Thất Thuyết,11319076,Xã Hải Hậu,117,Tỉnh Ninh Bình,abbr|typo,A472,Tôn Thất Thuyết,11319076,Xã Hải Hậu,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"tr ần văn đang,pph ường tân ch âu,tinh an giang",A511,Trần Văn Đang,80507015,Phường Tân Châu,805,Tỉnh An Giang,abbr|typo|tight-comma,A511,Trần Văn Đang,80507015,Phường Tân Châu,805,Tỉnh An Giang,True,True,True,beam_search
+"ng ô tất tố, xã cát ti ên, tinh lâm d ồng",A269,Ngô Tất Tố,70317048,Xã Cát Tiên,703,Tỉnh Lâm Đồng,abbr,A269,Ngô Tất Tố,70317048,Xã Cát Tiên,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"bình duong ông, ph ường ho àài nh ơn bắc, tinh gia lai",A030,Bình Đông,50705018,Phường Hoài Nhơn Bắc,603,Tỉnh Gia Lai,typo,A192,Kinh Dương Vương,,,603,Tỉnh Gia Lai,False,False,True,beam_search
+"hu ỳnh th úc kh áng, xã cư m’ta, tinh d ắk lắk",A180,Huỳnh Thúc Kháng,60517049,Xã Cư M’ta,605,Tỉnh Đắk Lắk,abbr,A180,Huỳnh Thúc Kháng,60517049,Xã Cư M’ta,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"nguy ễn ng ọc nh ật, xã ng ọk réo, tinh qu ản ng ãi",A306,Nguyễn Ngọc Nhật,60111066,Xã Ngọk Réo,505,Tỉnh Quảng Ngãi,abbr|typo,A306,Nguyễn Ngọc Nhật,60111066,Xã Ngọk Réo,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"nguy ễn văn bảo, xã ph ước hà, tinh kh ánh hòa",A341,Nguyễn Văn Bảo,70513052,Xã Phước Hà,511,Tỉnh Khánh Hòa,abbr,A341,Nguyễn Văn Bảo,70513052,Xã Phước Hà,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tr ần kế xư ơng, ph ường hà  huy tập, tinh hà tĩnh",A488,Trần Kế Xương,40501021,Phường Hà Huy Tập,405,Tỉnh Hà Tĩnh,typo,A488,Trần Kế Xương,40501021,Phường Hà Huy Tập,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"tr ần văn ki ểểu, xã bình ph ước, tinh vĩnh long",A512,Trần Văn Kiểu,80905004,Xã Bình Phước,809,Tỉnh Vĩnh Long,typo,A033,Bình Phú,80905004,Xã Bình Phước,809,Tỉnh Vĩnh Long,False,True,True,beam_search
+"nguy ễn thi ện thu ật, xã duong ịnh qu án, tinh duong ồng nai",A329,Nguyễn Thiện Thuật,71305041,Xã Định Quán,713,Tỉnh Đồng Nai,abbr,A329,Nguyễn Thiện Thuật,,,,,True,False,False,beam_search
+"tháiănlung,xãphúcát,thànhphốhànội",A450,Thái Văn Lung,10139101,Xã Phú Cát,101,Thành phố Hà Nội,typo|no-space,A450,Thái Văn Lung,10139101,Xã Phú Cát,101,Thành phố Hà Nội,True,True,True,beam_search
+"ch ấn hưn, xã an hữu, tinh duong ồng th áp",A063,Chấn Hưng,80713016,Xã An Hữu,803,Tỉnh Đồng Tháp,abbr|typo,A063,Chấn Hưng,80713016,Xã An Hữu,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"tân ưng,xã ph úc sơn,th ành ph ố hà nội",A435,Tân Hưng,10145071,Xã Phúc Sơn,101,Thành phố Hà Nội,abbr|typo|tight-comma,A435,Tân Hưng,10145071,Xã Phúc Sơn,101,Thành phố Hà Nội,True,True,True,beam_search
+"duong ông du, xã bảo thh ạnh, tinh vĩnh long",A107,Đông Du,81113105,Xã Bảo Thạnh,809,Tỉnh Vĩnh Long,typo,,,81113105,Xã Bảo Thạnh,809,Tỉnh Vĩnh Long,False,True,True,beam_search
+"nguyễnvănthu,phườngcửaông,tinhquảngninh",A354,Nguyễn Văn Thu,22503029,Phường Cửa Ông,225,Tỉnh Quảng Ninh,abbr|no-space,A354,Nguyễn Văn Thu,22503029,Phường Cửa Ông,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"nh ật le,ph ường sa hu ỳnh,tinh qu ảng n ãi",A357,Nhật Le,50523010,Phường Sa Huỳnh,505,Tỉnh Quảng Ngãi,abbr|typo|tight-comma,A357,Nhật Le,50523010,Phường Sa Huỳnh,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"nguy ễn d. ình ch ính,xã ia lốp,tinh  d. ắk lắk",A289,Nguyễn Đình Chính,60505014,Xã Ia Lốp,605,Tỉnh Đắk Lắk,abbr|typo|tight-comma,A289,Nguyễn Đình Chính,60505014,Xã Ia Lốp,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"xã ph ú th ọ,tinh d. ồng tháp",,,80309070,Xã Phú Thọ,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A407,Phú Thọ,80309070,Xã Phú Thọ,803,Tỉnh Đồng Tháp,False,True,True,beam_search
+"tinhlộ15,xãthuậnnam,tinhkhánhhòa",A464,Tỉnh Lộ 15,70513050,Xã Thuận Nam,511,Tỉnh Khánh Hòa,no-space,A464,Tỉnh Lộ 15,70513050,Xã Thuận Nam,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"ph ổ quang,xã nậm hàng,tinh laich âu",A402,Phổ Quang,30213028,Xã Nậm Hàng,302,Tỉnh Lai Châu,abbr|typo|tight-comma,A402,Phổ Quang,30213028,Xã Nậm Hàng,302,Tỉnh Lai Châu,True,True,True,beam_search
+"phườnglongtuyền,t.pcầnthơ",,,81521007,Phường Long Tuyền,815,Tp Cần Thơ,abbr|typo|no-space,,,81521007,Phường Long Tuyền,815,Tp Cần Thơ,True,True,True,beam_search
+"nguy ễn an ninh, ph ường vĩnh tr ạch ,tinh cà mau",A273,Nguyễn An Ninh,82101041,Phường Vĩnh Trạch,823,Tỉnh Cà Mau,abbr|typo,A273,Nguyễn An Ninh,82101041,Phường Vĩnh Trạch,823,Tỉnh Cà Mau,True,True,True,beam_search
+"mã lò, xã bba sao, tinh duong ồng th áp",A245,Mã Lò,80315085,Xã Ba Sao,803,Tỉnh Đồng Tháp,abbr|typo,A245,Mã Lò,80315085,Xã Ba Sao,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"đo àn th ị đi ểm, xã duong ông ph ú, tinh bắc nnh",A104,Đoàn Thị Điểm,22115022,Xã Đông Phú,223,Tỉnh Bắc Ninh,abbr|typo,A104,Đoàn Thị Điểm,,,,,True,False,False,beam_search
+"phanhuyích,xãquảnguyên,tinhcaobằng",A385,Phan Huy Ích,20317044,Xã Quảng Uyên,203,Tỉnh Cao Bằng,abbr|no-space,A385,Phan Huy Ích,20317044,Xã Quảng Uyên,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"ph ạm hồng th ái,xã ho à tr í,tinh kh ánh hòa",A368,Phạm Hồng Thái,51105017,Xã Hoà Trí,511,Tỉnh Khánh Hòa,abbr|tight-comma,A368,Phạm Hồng Thái,51105017,Xã Hoà Trí,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tuylývươngxãtânhồng,tinhdgồngtháp",A531,Tuy Lý Vương,80305058,Xã Tân Hồng,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma|no-space,A531,Tuy Lý Vương,80305058,Xã Tân Hồng,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"xã ch âu th ành, tinh tây ninh",,,70909092,Xã Châu Thành,709,Tỉnh Tây Ninh,clean,,,70909092,Xã Châu Thành,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"ký con, ph ường song lli ễu, tinh bắc ninh",A193,Ký Con,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,abbr|typo,A193,Ký Con,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn th ái học,xã duong ồng lư ơng,tinh thanh hóa",A317,Nguyễn Thái Học,40117116,Xã Đồng Lương,401,Tỉnh Thanh Hóa,abbr|tight-comma,A317,Nguyễn Thái Học,,,401,Tỉnh Thanh Hóa,True,False,True,beam_search
+"phan chu trinh, xã p hú mỡ, tinh duong ắk lắk",A381,Phan Chu Trinh,50903100,Xã Phú Mỡ,605,Tỉnh Đắk Lắk,typo,A381,Phan Chu Trinh,50903100,Xã Phú Mỡ,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"gi ải ph óng, xã dg. ức nh àn, tinh ph úú th ọ",A119,Giải Phóng,30503108,Xã Đức Nhàn,217,Tỉnh Phú Thọ,abbr|typo,A119,Giải Phóng,,,,,True,False,False,beam_search
+"nuy ễn kh ắc nhu, xã xu ân vi ên, tinh ph ú th ọ",A298,Nguyễn Khắc Nhu,21715064,Xã Xuân Viên,217,Tỉnh Phú Thọ,typo,A407,Phú Thọ,21715064,Xã Xuân Viên,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"cây tr àm, xã song lộc, tinh vĩnh long",A055,Cây Tràm,81705045,Xã Song Lộc,809,Tỉnh Vĩnh Long,clean,A055,Cây Tràm,81705045,Xã Song Lộc,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"cầu xéo,xã duong ức an,tinh lâm duong ồng",A058,Cầu Xéo,60609111,Xã Đức An,703,Tỉnh Lâm Đồng,abbr|tight-comma,A058,Cầu Xéo,,,,,True,False,False,beam_search
+"nơ trang long,x ãsơn kim 1,tinh hà tĩnh",A361,Nơ Trang Long,40509068,Xã Sơn Kim 1,405,Tỉnh Hà Tĩnh,typo|tight-comma,A361,Nơ Trang Long,40509068,Xã Sơn Kim 1,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"kh ánh hộ,i ph ường bình ph ước,tinh d. ồng nai",A188,Khánh Hội,70711078,Phường Bình Phước,713,Tỉnh Đồng Nai,abbr|typo|tight-comma,A188,Khánh Hội,70711078,Phường Bình Phước,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tr ần kế xư ơng, xã hồng  vũ, tinh hưng yên",A488,Trần Kế Xương,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,abbr|typo,A488,Trần Kế Xương,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"tự lập, xã vĩnh vvi ễn, t.p cần th ơ",A537,Tự Lập,81611040,Xã Vĩnh Viễn,815,Tp Cần Thơ,abbr|typo,A537,Tự Lập,81611040,Xã Vĩnh Viễn,815,Tp Cần Thơ,True,True,True,beam_search
+"nguy ễn th ị gnh ĩa, xã tr ịnh tư ờng, tinh lào cai",A324,Nguyễn Thị Nghĩa,20507059,Xã Trịnh Tường,205,Tỉnh Lào Cai,typo,A320,Nguyễn Thi,20507059,Xã Trịnh Tường,205,Tỉnh Lào Cai,False,True,True,beam_search
+"hiệpnhất,xãcờđỏ,tpcầnthơ",A146,Hiệp Nhất,81527024,Xã Cờ Đỏ,815,Tp Cần Thơ,abbr|no-space,A146,Hiệp Nhất,81527024,Xã Cờ Đỏ,815,Tp Cần Thơ,True,True,True,beam_search
+"tânthành,xãphúhoà,tinhduongồngnai",A443,Tân Thành,71305043,Xã Phú Hoà,713,Tỉnh Đồng Nai,abbr|typo|no-space,A443,Tân Thành,80521052,Xã Phú Hoà,805,Tỉnh An Giang,True,False,False,beam_search
+"ph ước hưng,xã ia mơ,tinh giia lai",A411,Phước Hưng,60317129,Xã Ia Mơ,603,Tỉnh Gia Lai,abbr|typo|tight-comma,A411,Phước Hưng,60317129,Xã Ia Mơ,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xã qu ảng tín, tinh lâm dg nồg",,,60611120,Xã Quảng Tín,703,Tỉnh Lâm Đồng,abbr|typo,,,60611120,Xã Quảng Tín,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"ph ó duong ức ch íính,ph ường th ành vinh,tinh ngh ệ an",A401,Phó Đức Chính,40301117,Phường Thành Vinh,403,Tỉnh Nghệ An,typo|tight-comma,,,40301117,Phường Thành Vinh,403,Tỉnh Nghệ An,False,True,True,beam_search
+"xãannông,tinhthanhhóa",,,40147088,Xã An Nông,401,Tỉnh Thanh Hóa,typo|no-space,,,40147088,Xã An Nông,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"hảinguyên,xãquânchu,tinhtháinguyên",A126,Hải Nguyên,21513015,Xã Quân Chu,215,Tỉnh Thái Nguyên,abbr|typo|no-space,A126,Hải Nguyên,21513015,Xã Quân Chu,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"mai xu ân th ượng, xã mihn th ạnh, thanh pho hồ ch í minh",A254,Mai Xuân Thượng,71113059,Xã Minh Thạnh,701,Tp Hồ Chí Minh,abbr|typo,A254,Mai Xuân Thượng,71113059,Xã Minh Thạnh,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tân qu ý, xã ba vì, th ành ph ố hà nội",A437,Tân Quý,10151085,Xã Ba Vì,101,Thành phố Hà Nội,abbr,A437,Tân Quý,10151085,Xã Ba Vì,101,Thành phố Hà Nội,True,True,True,beam_search
+"âu dư ơng lân, xã nguy ễn bỉnh khi êm, thanh pho hải ph òng",A007,Âu Dương Lân,10321042,Xã Nguyễn Bỉnh Khiêm,103,Tp Hải Phòng,abbr,A277,Nguyễn Bỉnh Khiêm,10321042,Xã Nguyễn Bỉnh Khiêm,103,Tp Hải Phòng,False,True,True,beam_search
+"tôn d. ức th ắng, xã tân tr ịnh, tinh tuy ên quang",A468,Tôn Đức Thắng,20118109,Xã Tân Trịnh,211,Tỉnh Tuyên Quang,abbr,A468,Tôn Đức Thắng,20118109,Xã Tân Trịnh,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"hòa bình,xã văn lang, tinh th ái nguy ên",A148,Hòa Bình,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,typo|tight-comma,A148,Hòa Bình,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"xã bằnng vân, tinh th ái nguy ên",,,20705064,Xã Bằng Vân,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,20705064,Xã Bằng Vân,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"nguy ễnvăn lạc,xã mư ờng lu ân,tinh đi ện bi ên",A349,Nguyễn Văn Lạc,30119029,Xã Mường Luân,301,Tỉnh Điện Biên,abbr|typo|tight-comma,A349,Nguyễn Văn Lạc,30119029,Xã Mường Luân,301,Tỉnh Điện Biên,True,True,True,beam_search
+"ph ường ho à kh ánh,thanh hpo duong à nẵng",,,50109008,Phường Hoà Khánh,501,Tp Đà Nẵng,typo|tight-comma,,,50109008,Phường Hoà Khánh,501,Tp Đà Nẵng,True,True,True,beam_search
+"nguyễn lâm, xã côn lôn, tinh tuy ên quang",A303,Nguyễn Lâm,21103005,Xã Côn Lôn,211,Tỉnh Tuyên Quang,typo,A303,Nguyễn Lâm,21103005,Xã Côn Lôn,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"nguyễntrungngạn,xãdgạihải,t.pccầnthơ",A338,Nguyễn Trung Ngạn,81903077,Xã Đại Hải,815,Tp Cần Thơ,abbr|typo|no-space,A338,Nguyễn Trung Ngạn,81903077,Xã Đại Hải,815,Tp Cần Thơ,True,True,True,beam_search
+"pasteur,xã thanh an,thanh pho hồ ch í minh",A365,Pasteur,71113062,Xã Thanh An,701,Tp Hồ Chí Minh,tight-comma,A365,Pasteur,71113062,Xã Thanh An,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"tr ường sơn, xã ch ợ  mới, tinh th ái nguy ên",A529,Trường Sơn,20713090,Xã Chợ Mới,215,Tỉnh Thái Nguyên,typo,A529,Trường Sơn,20713090,Xã Chợ Mới,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"th ích qu ảng duong ức,p ường quan tri ều,tinh th ái nguy ên",A456,Thích Quảng Đức,21501006,Phường Quan Triều,215,Tỉnh Thái Nguyên,abbr|typo|tight-comma,A126,Hải Nguyên,21501006,Phường Quan Triều,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"xã minh khai, tih cao bằng",,,20321035,Xã Minh Khai,203,Tỉnh Cao Bằng,abbr|typo,,,20321035,Xã Minh Khai,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"ph ạm ng ọc th ạch, xã tuy ên quang, tinh âm dg ồng",A370,Phạm Ngọc Thạch,71501059,Xã Tuyên Quang,703,Tỉnh Lâm Đồng,abbr|typo,A370,Phạm Ngọc Thạch,71501059,Xã Tuyên Quang,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"cao văn lầu, xã yên kh ánhh, tinh ninh bình",A051,Cao Văn Lầu,11713015,Xã Yên Khánh,117,Tỉnh Ninh Bình,abbr|typo,A051,Cao Văn Lầu,11713015,Xã Yên Khánh,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn cửu vân, xã trung kh ánh vĩnh, tinh kh ánh hòa",A283,Nguyễn Cửu Vân,51111034,Xã Trung Khánh Vĩnh,511,Tỉnh Khánh Hòa,abbr,A283,Nguyễn Cửu Vân,51111034,Xã Trung Khánh Vĩnh,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"lư ơng dg ịnh của,xã tây th ụy anh,tinh hưng yên",A232,Lương Định Của,11507055,Xã Tây Thụy Anh,109,Tỉnh Hưng Yên,abbr|tight-comma,A232,Lương Định Của,11507055,Xã Tây Thụy Anh,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"phúthọ,phườnglàocai,tinhlàocai",A407,Phú Thọ,20501054,Phường Lào Cai,205,Tỉnh Lào Cai,abbr|no-space,A407,Phú Thọ,20501054,Phường Lào Cai,205,Tỉnh Lào Cai,True,True,True,beam_search
+"lê quang duong ịnh, xã xu ân tr ường, tinh aco bằng",A209,Lê Quang Định,20303015,Xã Xuân Trường,203,Tỉnh Cao Bằng,abbr|typo,,,11313072,Xã Xuân Trường,117,Tỉnh Ninh Bình,False,False,False,beam_search
+"nam kỳ kh ởi ngh ĩa,xã th ọ bình,tinh thanh hóa",A258,Nam Kỳ Khởi Nghĩa,40147084,Xã Thọ Bình,401,Tỉnh Thanh Hóa,tight-comma,A258,Nam Kỳ Khởi Nghĩa,40147084,Xã Thọ Bình,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"tự quy ết, xã mỹ an, tinh tây ninh",A538,Tự Quyết,80119022,Xã Mỹ An,709,Tỉnh Tây Ninh,abbr,A538,Tự Quyết,80119022,Xã Mỹ An,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"ch ùaph ật án, xã kim tân, tinh thanh hóa",A068,Chùa Phật Án,40119140,Xã Kim Tân,401,Tỉnh Thanh Hóa,abbr|typo,A068,Chùa Phật Án,40119140,Xã Kim Tân,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"quang hi ền, ph ường  dg. ồng văn, tinh ninh bình",A412,Quang Hiền,11103113,Phường Đồng Văn,117,Tỉnh Ninh Bình,abbr|typo,A412,Quang Hiền,11103113,Phường Đồng Văn,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"maithịlựu,xãbuônduongôn,tinhduongắklắk",A252,Mai Thị Lựu,60511017,Xã Buôn Đôn,605,Tỉnh Đắk Lắk,abbr|no-space,A252,Mai Thị Lựu,,,,,True,False,False,beam_search
+"lò gốm xã ch ợ vàm, tinh an giang",A229,Lò Gốm,80509020,Xã Chợ Vàm,805,Tỉnh An Giang,abbr|typo,A229,Lò Gốm,,,805,Tỉnh An Giang,True,False,True,beam_search
+"tr ương d. ịnh,ph ường th ảo nguy ên,tinh sơn la",A522,Trương Định,30319008,Phường Thảo Nguyên,303,Tỉnh Sơn La,abbr|tight-comma,A522,Trương Định,30319008,Phường Thảo Nguyên,303,Tỉnh Sơn La,True,True,True,beam_search
+"nguy ễn oanh xã ch âu phong, tinh an giang",A308,Nguyễn Oanh,80507013,Xã Châu Phong,805,Tỉnh An Giang,abbr|typo,A308,Nguyễn Oanh,,,805,Tỉnh An Giang,True,False,True,beam_search
+"tự do, xã ch âu th ành, tinh vĩnh long",A536,Tự Do,81705046,Xã Châu Thành,809,Tỉnh Vĩnh Long,clean,A536,Tự Do,81705046,Xã Châu Thành,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"tr ần qung kh ải,xã bình giang,tinh ninh bình",A500,Trần Quang Khải,11111035,Xã Bình Giang,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A031,Bình Giã,11111035,Xã Bình Giang,117,Tỉnh Ninh Bình,False,True,True,beam_search
+"bà ký, xã đo àn kết, tnih lạng sơn",A019,Bà Ký,20903002,Xã Đoàn Kết,209,Tỉnh Lạng Sơn,abbr|typo,A019,Bà Ký,20903002,Xã Đoàn Kết,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"bùi minh tr ực, xã ea hiao, tinh udong ắk lắk",A042,Bùi Minh Trực,60503031,Xã Ea Hiao,605,Tỉnh Đắk Lắk,abbr|typo,A042,Bùi Minh Trực,60503031,Xã Ea Hiao,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tôn th ất tùng,, xã công sơn, tinh lạng sơn",A473,Tôn Thất Tùng,20913060,Xã Công Sơn,209,Tỉnh Lạng Sơn,abbr|typo,A473,Tôn Thất Tùng,20913060,Xã Công Sơn,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"lý tự tr ọng, ph ường cử alò, tinh ngh ệ an",A243,Lý Tự Trọng,40301121,Phường Cửa Lò,403,Tỉnh Nghệ An,abbr|typo,A243,Lý Tự Trọng,40301121,Phường Cửa Lò,403,Tỉnh Nghệ An,True,True,True,beam_search
+"lão tử, xã quang bình, tinh tuy ênn quang",A199,Lão Tử,20118108,Xã Quang Bình,211,Tỉnh Tuyên Quang,abbr|typo,A199,Lão Tử,20118108,Xã Quang Bình,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"lê văn linh,x ã ninh sơn, tinh kh ánh hòa",A223,Lê Văn Linh,70503059,Xã Ninh Sơn,511,Tỉnh Khánh Hòa,abbr|typo,A223,Lê Văn Linh,70503059,Xã Ninh Sơn,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"26 th áng 3, xã tr ường văn, tinh thanh hóa",A124,26 Tháng 3,40151056,Xã Trường Văn,401,Tỉnh Thanh Hóa,abbr,A124,26 Tháng 3,40151056,Xã Trường Văn,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"nguyễnduongìnhchi,xãmườngảng,tinhđiệnbiên",A287,Nguyễn Đình Chi,30121042,Xã Mường Ảng,301,Tỉnh Điện Biên,abbr|no-space,A284,Nguyễn Du,30121042,Xã Mường Ảng,301,Tỉnh Điện Biên,False,True,True,beam_search
+"kh ải hưng xã đi ện bàn tây, thanh pho duong à nẵng",A189,Khải Hưng,50309063,Xã Điện Bàn Tây,501,Tp Đà Nẵng,typo,A189,Khải Hưng,,,,,True,False,False,beam_search
+"ph ạm th úc duy ên,xã tây hòa,tinh . ắk lắk",A374,Phạm Thúc Duyên,50912087,Xã Tây Hòa,605,Tỉnh Đắk Lắk,abbr|typo|tight-comma,A374,Phạm Thúc Duyên,50912087,Xã Tây Hòa,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"bình long, ph ườờng hải dư ơng, tp hải ph òng",A032,Bình Long,10701051,Phường Hải Dương,103,Tp Hải Phòng,abbr|typo,A032,Bình Long,10701051,Phường Hải Dương,103,Tp Hải Phòng,True,True,True,beam_search
+"hi ệp hòòa, xã cái nư ớc, tinh cà mau",A147,Hiệp Hòa,82309039,Xã Cái Nước,823,Tỉnh Cà Mau,abbr|typo,A147,Hiệp Hòa,82309039,Xã Cái Nước,823,Tỉnh Cà Mau,True,True,True,beam_search
+"lê th ị bcạh cát, xã tr ường xu ân, tinh lâm duong ồng",A216,Lê Thị Bạch Cát,60609113,Xã Trường Xuân,703,Tỉnh Lâm Đồng,typo,A216,Lê Thị Bạch Cát,80313082,Xã Trường Xuân,803,Tỉnh Đồng Tháp,True,False,False,beam_search
+"đoàncbửu,xãquỳnhphụ,tinhưngyên",A102,Đoàn C.Bửu,11503064,Xã Quỳnh Phụ,109,Tỉnh Hưng Yên,typo|tight-comma|no-space,A102,Đoàn C.Bửu,11503064,Xã Quỳnh Phụ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"ph ường duong ạo th ạnh, tinh duong ồng th áp",,,80701002,Phường Đạo Thạnh,803,Tỉnh Đồng Tháp,clean,,,,,,,True,False,False,beam_search
+"3 th áng 2, xã kh ánhthi ện, tinh ninh bình",A013,3 Tháng 2,11713017,Xã Khánh Thiện,117,Tỉnh Ninh Bình,abbr|typo,A013,3 Tháng 2,11713017,Xã Khánh Thiện,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"xã yên tr ạch, tinh th ái nnguy ên",,,21509039,Xã Yên Trạch,215,Tỉnh Thái Nguyên,typo,,,21509039,Xã Yên Trạch,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"lò si êu,ph ường th ủ dầu một,tp hồ ch í minh",A230,Lò Siêu,71101038,Phường Thủ Dầu Một,701,Tp Hồ Chí Minh,abbr|tight-comma,A230,Lò Siêu,71101038,Phường Thủ Dầu Một,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"ph ú gi áo, xã ph ú d ình, tinh th ái nguy nê",A403,Phú Giáo,21505045,Xã Phú Đình,215,Tỉnh Thái Nguyên,abbr|typo,A403,Phú Giáo,21505045,Xã Phú Đình,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"sông thao, xã hồ ht ị kỷ, tinh cà mau",A421,Sông Thao,82303027,Xã Hồ Thị Kỷ,823,Tỉnh Cà Mau,typo,A421,Sông Thao,82303027,Xã Hồ Thị Kỷ,823,Tỉnh Cà Mau,True,True,True,beam_search
+"ph ạm dg. ình hổ, xã văn lang ,tinh th ái nguy ên",A367,Phạm Đình Hổ,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,abbr|typo,A126,Hải Nguyên,20709081,Xã Văn Lang,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"nguy ễn th ị di ệu, xã bảo lạc, tinh cao ằbng",A321,Nguyễn Thị Diệu,20303011,Xã Bảo Lạc,203,Tỉnh Cao Bằng,typo,A321,Nguyễn Thị Diệu,20303011,Xã Bảo Lạc,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"xã hòn ngh ệ, tinnh an giang",,,81303094,Xã Hòn Nghệ,805,Tỉnh An Giang,abbr|typo,,,81303094,Xã Hòn Nghệ,805,Tỉnh An Giang,True,True,True,beam_search
+"phan huy ch ú, xã thi ệu ti ến, tinh thanh hóa",A384,Phan Huy Chú,40141062,Xã Thiệu Tiến,401,Tỉnh Thanh Hóa,clean,A384,Phan Huy Chú,40141062,Xã Thiệu Tiến,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"qu ốc lộ 13, xã bình phú, tinh gia lai",A416,Quốc Lộ 13,50715039,Xã Bình Phú,603,Tỉnh Gia Lai,abbr|typo,A416,Quốc Lộ 13,50715039,Xã Bình Phú,603,Tỉnh Gia Lai,True,True,True,beam_search
+"sôngthao,xãdugi,tinhtuyênquang",A421,Sông Thao,20107068,Xã Du Già,211,Tỉnh Tuyên Quang,abbr|typo|no-space,A421,Sông Thao,20107068,Xã Du Già,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"nguy ễn an ninh, xãngh ĩa dg àn, tinh ngh ệ an",A273,Nguyễn An Ninh,40313051,Xã Nghĩa Đàn,403,Tỉnh Nghệ An,abbr|typo,A273,Nguyễn An Ninh,,,403,Tỉnh Nghệ An,True,False,True,beam_search
+"ph ường thu ận an, tp hồ ch í mminh",,,71107031,Phường Thuận An,701,Tp Hồ Chí Minh,abbr|typo,,,41109001,Phường Thuận An,411,Thành phố Huế,True,False,False,beam_search
+"tr ần kế xư ơng, xã tân an, tp hải ph òng",A488,Trần Kế Xương,10723104,Xã Tân An,103,Tp Hải Phòng,abbr,A488,Trần Kế Xương,10723104,Xã Tân An,103,Tp Hải Phòng,True,True,True,beam_search
+"xã phong doanh, tinh ninhh bình",,,11307064,Xã Phong Doanh,117,Tỉnh Ninh Bình,abbr|typo,,,11307064,Xã Phong Doanh,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"đinh công tr áng,xã yên th ủy,tinh ph ú th ọ",A098,Đinh Công Tráng,30519141,Xã Yên Thủy,217,Tỉnh Phú Thọ,abbr|tight-comma,A098,Đinh Công Tráng,30519141,Xã Yên Thủy,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"nguy ễn th ượng hi ền, xã hư ơng cần, tin ph ú th ọ",A332,Nguyễn Thượng Hiền,21719052,Xã Hương Cần,217,Tỉnh Phú Thọ,abbr|typo,A332,Nguyễn Thượng Hiền,21719052,Xã Hương Cần,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"mã lò, ph ườn bình lộc, tinh duong ồng nai",A245,Mã Lò,71302024,Phường Bình Lộc,713,Tỉnh Đồng Nai,typo,A245,Mã Lò,71302024,Phường Bình Lộc,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"ch ợ lớn, xã th ần lĩnh, tinh ngh ệ an",A065,Chợ Lớn,40333062,Xã Thần Lĩnh,403,Tỉnh Nghệ An,abbr,A065,Chợ Lớn,40333062,Xã Thần Lĩnh,403,Tỉnh Nghệ An,True,True,True,beam_search
+"tuy lý vư ơng, xã tân hưng, tinh cà mau",A531,Tuy Lý Vương,82309037,Xã Tân Hưng,823,Tỉnh Cà Mau,clean,A531,Tuy Lý Vương,82309037,Xã Tân Hưng,823,Tỉnh Cà Mau,True,True,True,beam_search
+"xã ttr ường xu ân, tinh duong ồng th áp",,,80313082,Xã Trường Xuân,803,Tỉnh Đồng Tháp,typo,,,,,,,True,False,False,beam_search
+"hoàngsa,ãxgào,tinhgialai",A155,Hoàng Sa,60301064,Xã Gào,603,Tỉnh Gia Lai,abbr|typo|no-space,A155,Hoàng Sa,60301064,Xã Gào,603,Tỉnh Gia Lai,True,True,True,beam_search
+"nguy ễn phi khanh,xã cô nminh,tinh th ái nguy ên",A310,Nguyễn Phi Khanh,20709085,Xã Côn Minh,215,Tỉnh Thái Nguyên,abbr|typo|tight-comma,A310,Nguyễn Phi Khanh,20709085,Xã Côn Minh,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"xã mư ờng pồn, tinhh đi ện bi ên",,,30111025,Xã Mường Pồn,301,Tỉnh Điện Biên,abbr|typo,,,30111025,Xã Mường Pồn,301,Tỉnh Điện Biên,True,True,True,beam_search
+"lý vvăn ph ức, ph ường tứ minh, t.p hải ph òng",A244,Lý Văn Phức,10717058,Phường Tứ Minh,103,Tp Hải Phòng,abbr|typo,A244,Lý Văn Phức,10717058,Phường Tứ Minh,103,Tp Hải Phòng,True,True,True,beam_search
+"nh ật tảo, xã chiề ng sơ, tinh sơn la",A358,Nhật Tảo,30315066,Xã Chiềng Sơ,303,Tỉnh Sơn La,abbr|typo,A358,Nhật Tảo,30315066,Xã Chiềng Sơ,303,Tỉnh Sơn La,True,True,True,beam_search
+"hồxuânhương,phườngtăngnhơnphú,thanhphohồchíminh",A165,Hồ Xuân Hương,70145133,Phường Tăng Nhơn Phú,701,Tp Hồ Chí Minh,abbr|tight-comma|no-space,A165,Hồ Xuân Hương,70145133,Phường Tăng Nhơn Phú,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"hải th ượn lãn ông, ph ường an ph ú, tinh gia lai",A127,Hải Thượng Lãn Ông,60301062,Phường An Phú,603,Tỉnh Gia Lai,abbr|typo,A127,Hải Thượng Lãn Ông,60301062,Phường An Phú,603,Tỉnh Gia Lai,True,True,True,beam_search
+"lập hưng, ph ường an hội  duong ông, thanh pho hồ ch í minh",A200,Lập Hưng,70125112,Phường An Hội Đông,701,Tp Hồ Chí Minh,typo,A200,Lập Hưng,,,701,Tp Hồ Chí Minh,True,False,True,beam_search
+"trầnmaininh,xãtằnglỏong,tinhlàocai",A492,Trần Mai Ninh,20511049,Xã Tằng Lỏong,205,Tỉnh Lào Cai,abbr|no-space,A492,Trần Mai Ninh,20511049,Xã Tằng Lỏong,205,Tỉnh Lào Cai,True,True,True,beam_search
+"ba gia, xã ki ên mộc, tinh lạng sơn",A011,Ba Gia,20919042,Xã Kiên Mộc,209,Tỉnh Lạng Sơn,abbr,A011,Ba Gia,20919042,Xã Kiên Mộc,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"cao th ắng, xã vĩnh ho à, tp hải ph òng",A050,Cao Thắng,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,abbr,A050,Cao Thắng,10321045,Xã Vĩnh Hoà,103,Tp Hải Phòng,True,True,True,beam_search
+"hai bà tr ưng, ph ường xóm chi ếu, thanh pho hồ ch í minh",A123,Hai Bà Trưng,70107070,Phường Xóm Chiếu,701,Tp Hồ Chí Minh,clean,A123,Hai Bà Trưng,70107070,Phường Xóm Chiếu,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"cống qu ỳnh xã nh ơn ph ú, tinh vĩnh long",A073,Cống Quỳnh,80905003,Xã Nhơn Phú,809,Tỉnh Vĩnh Long,abbr|typo,A073,Cống Quỳnh,,,809,Tỉnh Vĩnh Long,True,False,True,beam_search
+"bành  văn tr ân, xã tân quan, tinh duong ồng nai",A028,Bành Văn Trân,70713054,Xã Tân Quan,713,Tỉnh Đồng Nai,abbr|typo,A028,Bành Văn Trân,70713054,Xã Tân Quan,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"nguyễnkhắcnhu,phườngvĩnhhưng,thànhphốhànội",A298,Nguyễn Khắc Nhu,10108017,Phường Vĩnh Hưng,101,Thành phố Hà Nội,abbr|typo|no-space,A298,Nguyễn Khắc Nhu,10108017,Phường Vĩnh Hưng,101,Thành phố Hà Nội,True,True,True,beam_search
+"ngôquyền,xãtuyphướcbắc,tinhgialai",A268,Ngô Quyền,50719036,Xã Tuy Phước Bắc,603,Tỉnh Gia Lai,abbr|no-space,A268,Ngô Quyền,50719036,Xã Tuy Phước Bắc,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xã ng ọk tụ,  tinh qu ảng ng ãi",,,60107068,Xã Ngọk Tụ,505,Tỉnh Quảng Ngãi,abbr|typo,,,60107068,Xã Ngọk Tụ,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"lê công ki ều, ph ường dg. ăk bla, tinh qu ảng ng ãi",A201,Lê Công Kiều,60101059,Phường Đăk BLa,505,Tỉnh Quảng Ngãi,abbr,A201,Lê Công Kiều,60101059,Phường Đăk BLa,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"nguy ễn bi ểu, ph ườngg vi ệt ho à, thanh pho hải ph òng",A276,Nguyễn Biểu,10701053,Phường Việt Hoà,103,Tp Hải Phòng,typo,A276,Nguyễn Biểu,,,103,Tp Hải Phòng,True,False,True,beam_search
+"ph ường tân mai, tihn ngh ệ an",,,40339028,Phường Tân Mai,403,Tỉnh Nghệ An,abbr|typo,,,40339028,Phường Tân Mai,403,Tỉnh Nghệ An,True,True,True,beam_search
+"xãminhthạnh,thanhphohồchíminh",,,71113059,Xã Minh Thạnh,701,Tp Hồ Chí Minh,abbr|typo|no-space,,,71113059,Xã Minh Thạnh,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"xãtiểucần,,tinhvĩnhlong",,,81709056,Xã Tiểu Cần,809,Tỉnh Vĩnh Long,abbr|typo|no-space,,,81709056,Xã Tiểu Cần,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"hu ỳnh văn bánh, ph ường ch ánh hi ệp, tp hồ ch  minh",A182,Huỳnh Văn Bánh,71101037,Phường Chánh Hiệp,701,Tp Hồ Chí Minh,abbr|typo,A182,Huỳnh Văn Bánh,71101037,Phường Chánh Hiệp,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"phạmnngũlão,xãpùnhi,tinhthanhhóa",A371,Phạm Ngũ Lão,40107095,Xã Pù Nhi,401,Tỉnh Thanh Hóa,abbr|typo|no-space,A371,Phạm Ngũ Lão,40107095,Xã Pù Nhi,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"xã phhong quang, tinh th ái nguy ên",,,20701078,Xã Phong Quang,215,Tỉnh Thái Nguyên,typo,A126,Hải Nguyên,20701078,Xã Phong Quang,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"mê lin,h xã krong, tinh gia lai",A255,Mê Linh,60303135,Xã Krong,603,Tỉnh Gia Lai,abbr|typo,A255,Mê Linh,60303135,Xã Krong,603,Tỉnh Gia Lai,True,True,True,beam_search
+"vân dduong ồn,ph ường ho ài nh ơn,tinh gia lai",A548,Vân Đồn,50705013,Phường Hoài Nhơn,603,Tỉnh Gia Lai,abbr|typo|tight-comma,,,50705013,Phường Hoài Nhơn,603,Tỉnh Gia Lai,False,True,True,beam_search
+"xã thi ệu hóa, tinh thaanh hóa",,,40141060,Xã Thiệu Hóa,401,Tỉnh Thanh Hóa,abbr|typo,,,40141060,Xã Thiệu Hóa,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"bình ph ú, xã th ượng minh, tinh th ái nguy ên",A033,Bình Phú,20703061,Xã Thượng Minh,215,Tỉnh Thái Nguyên,clean,A033,Bình Phú,20703061,Xã Thượng Minh,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"nguy ễn ch í thanh, xã na rì, tinh th ái nguy ên",A280,Nguyễn Chí Thanh,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,abbr,A280,Nguyễn Chí Thanh,20709083,Xã Na Rì,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"tùngthiệnvương,xãtânphúduonggông,tinhduongồngtháp",A534,Tùng Thiện Vương,80719057,Xã Tân Phú Đông,803,Tỉnh Đồng Tháp,abbr|typo|no-space,A534,Tùng Thiện Vương,,,,,True,False,False,beam_search
+"ho àng ng ọc ph ách, xã cúc ph ương, tinh ninh bình",A154,Hoàng Ngọc Phách,11705011,Xã Cúc Phương,117,Tỉnh Ninh Bình,abbr,A154,Hoàng Ngọc Phách,11705011,Xã Cúc Phương,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn hồng d ào,ph ường xu ân ph ương,th ành ph ố hà nộội",A292,Nguyễn Hồng Đào,10155036,Phường Xuân Phương,101,Thành phố Hà Nội,abbr|typo|tight-comma,A292,Nguyễn Hồng Đào,10155036,Phường Xuân Phương,101,Thành phố Hà Nội,True,True,True,beam_search
+"hu nh tấn ph át,ph ường sa hu ỳnh,tinh qu ảng ng ãi",A177,Huỳnh Tấn Phát,50523010,Phường Sa Huỳnh,505,Tỉnh Quảng Ngãi,abbr|typo|tight-comma,A177,Huỳnh Tấn Phát,50523010,Phường Sa Huỳnh,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"vạn tư ởng, ph ường móng cái 1, tinh qu ảng ninh",A546,Vạn Tưởng,22509049,Phường Móng Cái 1,225,Tỉnh Quảng Ninh,abbr,A546,Vạn Tưởng,22509049,Phường Móng Cái 1,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"bình d. ông, xã cát ti ên 3, tinh lâm d. ồng",A030,Bình Đông,70317050,Xã Cát Tiên 3,703,Tỉnh Lâm Đồng,abbr,A030,Bình Đông,70317050,Xã Cát Tiên 3,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"tăng bạt hổ,xã hữu khu ônng,tinh ngh ệ an",A429,Tăng Bạt Hổ,40315114,Xã Hữu Khuông,403,Tỉnh Nghệ An,abbr|typo|tight-comma,A429,Tăng Bạt Hổ,40315114,Xã Hữu Khuông,403,Tỉnh Nghệ An,True,True,True,beam_search
+"ph ổ quangg, xã đak pơ, tinh gia lai",A402,Phổ Quang,60327085,Xã Đak Pơ,603,Tỉnh Gia Lai,abbr|typo,A402,Phổ Quang,60327085,Xã Đak Pơ,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tântiến,xãtrườngthành,tpcầnthơ",A445,Tân Tiến,81531023,Xã Trường Thành,815,Tp Cần Thơ,abbr|tight-comma|no-space,A445,Tân Tiến,81531023,Xã Trường Thành,815,Tp Cần Thơ,True,True,True,beam_search
+"tr n minh quy ền, xã tam ng ãi, tinh vĩnh long",A493,Trần Minh Quyền,81707053,Xã Tam Ngãi,809,Tỉnh Vĩnh Long,abbr|typo,A493,Trần Minh Quyền,81707053,Xã Tam Ngãi,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"th áp mư ời, xã qu ân chu, tinh th ái nguy ên",A451,Tháp Mười,21513015,Xã Quân Chu,215,Tỉnh Thái Nguyên,clean,A451,Tháp Mười,21513015,Xã Quân Chu,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"nguy ễn văn linh, ph ường quy nh ơn bắc, tinh gia llai",A350,Nguyễn Văn Linh,50701005,Phường Quy Nhơn Bắc,603,Tỉnh Gia Lai,abbr|typo,A350,Nguyễn Văn Linh,50701005,Phường Quy Nhơn Bắc,603,Tỉnh Gia Lai,True,True,True,beam_search
+"ph ường minh ph ụng, thanh pho hồch í minh",,,70121090,Phường Minh Phụng,701,Tp Hồ Chí Minh,abbr|typo,A257,Minh Phụng,70121090,Phường Minh Phụng,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"ph ường song li ễu, tin hbắc ninh",,,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,abbr|typo,,,22309071,Phường Song Liễu,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"xã hồng vũ, ttinh hưng yên",,,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,abbr|typo,,,11513096,Xã Hồng Vũ,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"kinh dư ơng vư ơg, xã cư prao, tinh duong ắk lắk",A192,Kinh Dương Vương,60517051,Xã Cư Prao,605,Tỉnh Đắk Lắk,typo,A192,Kinh Dương Vương,60517051,Xã Cư Prao,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"tr ần kế xư ơng,xã giao hưng,tinh ninh  bình",A488,Trần Kế Xương,11315088,Xã Giao Hưng,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A488,Trần Kế Xương,11315088,Xã Giao Hưng,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"tr ương vĩnh ký,xã ph ước năng,thnh pho duong à nẵng",A526,Trương Vĩnh Ký,50323091,Xã Phước Năng,501,Tp Đà Nẵng,typo|tight-comma,A526,Trương Vĩnh Ký,50323091,Xã Phước Năng,501,Tp Đà Nẵng,True,True,True,beam_search
+"nguy ễn tr ọng tuy ển,xã mư ờngg kh ương,tinh lào cai",A336,Nguyễn Trọng Tuyển,20505087,Xã Mường Khương,205,Tỉnh Lào Cai,typo|tight-comma,A336,Nguyễn Trọng Tuyển,20505087,Xã Mường Khương,205,Tỉnh Lào Cai,True,True,True,beam_search
+"nguy ễn th ông,xã thung ani,tinh ph ú th ọ",A330,Nguyễn Thông,30510105,Xã Thung Nai,217,Tỉnh Phú Thọ,abbr|typo|tight-comma,A330,Nguyễn Thông,30510105,Xã Thung Nai,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"tr ần quang kh ải, xã ph úc lộc, th ành p ố hà nội",A500,Trần Quang Khải,10131091,Xã Phúc Lộc,101,Thành phố Hà Nội,abbr|typo,A500,Trần Quang Khải,10131091,Xã Phúc Lộc,101,Thành phố Hà Nội,True,True,True,beam_search
+"chi ến th ắng, xã thanh hà, thanh pho hải ph òng",A064,Chiến Thắng,10707078,Xã Thanh Hà,103,Tp Hải Phòng,clean,A064,Chiến Thắng,10707078,Xã Thanh Hà,103,Tp Hải Phòng,True,True,True,beam_search
+"nguyễnngọcnhật,xãtràcôn,tinhvĩnhlong",A306,Nguyễn Ngọc Nhật,80911022,Xã Trà Côn,809,Tỉnh Vĩnh Long,typo|no-space,A306,Nguyễn Ngọc Nhật,80911022,Xã Trà Côn,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"nguy ễn th ần hi ến, xã đam rông 3, tinh lâm duoong ồng",A319,Nguyễn Thần Hiến,70323028,Xã Đam Rông 3,703,Tỉnh Lâm Đồng,abbr|typo,A319,Nguyễn Thần Hiến,70323028,Xã Đam Rông 3,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"hạnh th ông, xã sơn hải, tinh ắc ninh",A134,Hạnh Thông,22107011,Xã Sơn Hải,223,Tỉnh Bắc Ninh,abbr|typo,A134,Hạnh Thông,81303093,Xã Sơn Hải,805,Tỉnh An Giang,True,False,False,beam_search
+"phan th úúc duy ện, xã sơn d. ộng, tinh bắc ninh",A392,Phan Thúc Duyện,22113002,Xã Sơn Động,223,Tỉnh Bắc Ninh,abbr|typo,A392,Phan Thúc Duyện,22113002,Xã Sơn Động,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"nguy ễn cảnh ch ân, xã duong ắk sk, tinh lâm duong ồng",A278,Nguyễn Cảnh Chân,60607105,Xã Đắk Sắk,703,Tỉnh Lâm Đồng,abbr|typo,A278,Nguyễn Cảnh Chân,,,,,True,False,False,beam_search
+"lập hưng, xã bá th ước, tinh thanh hóa",A200,Lập Hưng,40113123,Xã Bá Thước,401,Tỉnh Thanh Hóa,clean,A200,Lập Hưng,40113123,Xã Bá Thước,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"hi ền ư ơng,ph ường nguy ễn d. ại năng,thanh pho hải ph òng",A145,Hiền Vương,10709067,Phường Nguyễn Đại Năng,103,Tp Hải Phòng,abbr|typo|tight-comma,A145,Hiền Vương,10709067,Phường Nguyễn Đại Năng,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn duong ình ch ính,xã hoa qu nâ,tinh ngh ệ an",A289,Nguyễn Đình Chính,40331102,Xã Hoa Quân,403,Tỉnh Nghệ An,abbr|typo|tight-comma,A284,Nguyễn Du,40331102,Xã Hoa Quân,403,Tỉnh Nghệ An,False,True,True,beam_search
+"nguy ễn văn lu ông,xã tây tr à, tinh qu ảng ng ãi",A351,Nguyễn Văn Luông,50507034,Xã Tây Trà,505,Tỉnh Quảng Ngãi,abbr|typo,A351,Nguyễn Văn Luông,50507034,Xã Tây Trà,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"tạ uy ên, xã tân ph ,ú tinh ngh ệ an",A426,Tạ Uyên,40319089,Xã Tân Phú,403,Tỉnh Nghệ An,abbr|typo,A426,Tạ Uyên,40319089,Xã Tân Phú,403,Tỉnh Nghệ An,True,True,True,beam_search
+"duong ỗ ng ọc th ạnh, xãduong ông tr ạch, tinh qu ảng tr ị",A117,Đỗ Ngọc Thạnh,40709027,Xã Đông Trạch,409,Tỉnh Quảng Trị,abbr|typo,,,,,409,Tỉnh Quảng Trị,False,False,True,beam_search
+"xóm củi, xã duogn ồng lư ơng, tinh thanh hóa",A563,Xóm Củi,40117116,Xã Đồng Lương,401,Tỉnh Thanh Hóa,abbr|typo,A563,Xóm Củi,,,401,Tỉnh Thanh Hóa,True,False,True,beam_search
+"nguy ễn th ờ trung,xã bình kh ê,tinh gia lai",A331,Nguyễn Thời Trung,50715038,Xã Bình Khê,603,Tỉnh Gia Lai,typo|tight-comma,A331,Nguyễn Thời Trung,50715038,Xã Bình Khê,603,Tỉnh Gia Lai,True,True,True,beam_search
+"phan tây hồ, xã tân th ạnh, tinh duong ồng th áp",A391,Phan Tây Hồ,80311075,Xã Tân Thạnh,803,Tỉnh Đồng Tháp,clean,A391,Phan Tây Hồ,70905083,Xã Tân Thành,709,Tỉnh Tây Ninh,True,False,False,beam_search
+"th áp mư ời, xã kr ông năng ,tinh dg ắk lắk",A451,Tháp Mười,60507032,Xã Krông Năng,605,Tỉnh Đắk Lắk,abbr|typo,A451,Tháp Mười,60507032,Xã Krông Năng,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"phan văn hân, xã cáin gang, tinh vĩnh long",A395,Phan Văn Hân,80909029,Xã Cái Ngang,809,Tỉnh Vĩnh Long,abbr|typo,A395,Phan Văn Hân,80909029,Xã Cái Ngang,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"yên d. ổ, xã bàu  hàm, tinh d. ồng nai",A569,Yên Đổ,71308019,Xã Bàu Hàm,713,Tỉnh Đồng Nai,abbr|typo,A569,Yên Đổ,71308019,Xã Bàu Hàm,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"hu ỳnh văn ch ính,p hường vi ệt ho à,tp hải ph òng",A183,Huỳnh Văn Chính,10701053,Phường Việt Hoà,103,Tp Hải Phòng,abbr|typo|tight-comma,A183,Huỳnh Văn Chính,10701053,Phường Việt Hoà,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn kim, xã ph ù ninh, tinh ph ú th ọ",A302,Nguyễn Kim,21711013,Xã Phù Ninh,217,Tỉnh Phú Thọ,clean,A302,Nguyễn Kim,21711013,Xã Phù Ninh,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"nguy ễn công tr ứ, xã li ên hư ơng, tinh lâm duong ồng",A281,Nguyễn Công Trứ,71503062,Xã Liên Hương,703,Tỉnh Lâm Đồng,abbr,A281,Nguyễn Công Trứ,71503062,Xã Liên Hương,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"xãc át ti ến, tinh gia lai",,,50713022,Xã Cát Tiến,603,Tỉnh Gia Lai,abbr|typo,,,50713022,Xã Cát Tiến,603,Tỉnh Gia Lai,True,True,True,beam_search
+"chu văn an,xã trr ạm tấu,tinh lào cai",A067,Chu Văn An,21317005,Xã Trạm Tấu,205,Tỉnh Lào Cai,typo|tight-comma,A067,Chu Văn An,21317005,Xã Trạm Tấu,205,Tỉnh Lào Cai,True,True,True,beam_search
+"tr ịnh ho ài duong ức, xã dong ạ tẻh 3, tinh lâm duong ồng",A519,Trịnh Hoài Đức,70317047,Xã Đạ Tẻh 3,703,Tỉnh Lâm Đồng,abbr|typo,,,,,,,False,False,False,beam_search
+"tr ần hòa,xã hải quang,tinh nin hbình",A484,Trần Hòa,11319081,Xã Hải Quang,117,Tỉnh Ninh Bình,abbr|typo|tight-comma,A484,Trần Hòa,11319081,Xã Hải Quang,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"lê lợi, xã tri ệu vi ệt vư ơng, tinh hưng yên",A207,Lê Lợi,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,abbr,A207,Lê Lợi,10905025,Xã Triệu Việt Vương,109,Tỉnh Hưng Yên,True,True,True,beam_search
+"xã thi ên hp ủ, tinh thanh hóa",,,40109101,Xã Thiên Phủ,401,Tỉnh Thanh Hóa,abbr|typo,,,40109101,Xã Thiên Phủ,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"tr ần quang di ệu,xã đo àn kết,tinh lạng sơn",A499,Trần Quang Diệu,20903002,Xã Đoàn Kết,209,Tỉnh Lạng Sơn,abbr|typo|tight-comma,A499,Trần Quang Diệu,20903002,Xã Đoàn Kết,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"tân th ành,xã chi ềng hoa,tinh sơn la",A443,Tân Thành,30305032,Xã Chiềng Hoa,303,Tỉnh Sơn La,abbr|tight-comma,A443,Tân Thành,30305032,Xã Chiềng Hoa,303,Tỉnh Sơn La,True,True,True,beam_search
+"d ề th ám,xã ho ̉a lự,u tp cần th ơ",A095,Đề Thám,81601033,Xã Hỏa Lựu,815,Tp Cần Thơ,abbr|typo|tight-comma,A095,Đề Thám,81601033,Xã Hỏa Lựu,815,Tp Cần Thơ,True,True,True,beam_search
+"hưng sơn, xxã krong, tinh gia lai",A142,Hưng Sơn,60303135,Xã Krong,603,Tỉnh Gia Lai,abbr|typo,A142,Hưng Sơn,60303135,Xã Krong,603,Tỉnh Gia Lai,True,True,True,beam_search
+"nguy ễn th ị trangg, xã lâm thao, tinh bắc ninh",A328,Nguyễn Thị Trang,22311096,Xã Lâm Thao,223,Tỉnh Bắc Ninh,typo,A328,Nguyễn Thị Trang,22311096,Xã Lâm Thao,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"tr ường sa, xã ki ều ph ú, th ành ph ố hà nội",A528,Trường Sa,10139100,Xã Kiều Phú,101,Thành phố Hà Nội,abbr,A528,Trường Sa,10139100,Xã Kiều Phú,101,Thành phố Hà Nội,True,True,True,beam_search
+"phan tôn, xã b uôn duong ôn, tinh duong ắk lắk",A393,Phan Tôn,60511017,Xã Buôn Đôn,605,Tỉnh Đắk Lắk,typo,A393,Phan Tôn,,,,,True,False,False,beam_search
+"hưngphú,xãamúsung,tinhlàoci",A185,Hưng Phú,20507058,Xã A Mú Sung,205,Tỉnh Lào Cai,typo|no-space,A185,Hưng Phú,20507058,Xã A Mú Sung,205,Tỉnh Lào Cai,True,True,True,beam_search
+"nguy ễn duy, xã tân quang, tih tuy ên quang",A285,Nguyễn Duy,20119096,Xã Tân Quang,211,Tỉnh Tuyên Quang,abbr|typo,A285,Nguyễn Duy,20119096,Xã Tân Quang,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"xã tây ph ương, th ành ph ố hà ội",,,10135095,Xã Tây Phương,101,Thành phố Hà Nội,abbr|typo,,,10135095,Xã Tây Phương,101,Thành phố Hà Nội,True,True,True,beam_search
+"lêquýduongôn,xãnậmkè,tinhđiệnbiên",A213,Lê Quý Đôn,30104040,Xã Nậm Kè,301,Tỉnh Điện Biên,abbr|no-space,,,30104040,Xã Nậm Kè,301,Tỉnh Điện Biên,False,True,True,beam_search
+"nguy ễn th ượng hi ền,ph ưng phong dinh,th ành ph ố hu ế",A332,Nguyễn Thượng Hiền,41103018,Phường Phong Dinh,411,Thành phố Huế,abbr|typo|tight-comma,A332,Nguyễn Thượng Hiền,41103018,Phường Phong Dinh,411,Thành phố Huế,True,True,True,beam_search
+"phan văn tr ị, xã hợp th ành, tinh th i nguy ên",A397,Phan Văn Trị,21509040,Xã Hợp Thành,215,Tỉnh Thái Nguyên,typo,A397,Phan Văn Trị,21509040,Xã Hợp Thành,215,Tỉnh Thái Nguyên,True,True,True,beam_search
+"30 th áng 4,xã uong ông hưng,tinh hưng yên",A012,30 Tháng 4,11509081,Xã Đông Hưng,109,Tỉnh Hưng Yên,typo|tight-comma,A012,30 Tháng 4,,,109,Tỉnh Hưng Yên,True,False,True,beam_search
+"nguy ễn văn dg. ừng,xã ph ú thi ện,tinh gia lai",A347,Nguyễn Văn Đừng,60329101,Xã Phú Thiện,603,Tỉnh Gia Lai,abbr|tight-comma,A347,Nguyễn Văn Đừng,60329101,Xã Phú Thiện,603,Tỉnh Gia Lai,True,True,True,beam_search
+"dg. ống đa, xã ph úú long, tinh ninh bình",A110,Đống Đa,11705012,Xã Phú Long,117,Tỉnh Ninh Bình,abbr|typo,A110,Đống Đa,11705012,Xã Phú Long,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"lý nam duong ế,xã duong ồng ph ú,tinh duong ồng nai",A240,Lý Nam Đế,70701082,Xã Đồng Phú,713,Tỉnh Đồng Nai,abbr|tight-comma,,,,,,,False,False,False,beam_search
+"tôn th ất thi ệp, xã trung ch ính, tinh ắbc ninh",A471,Tôn Thất Thiệp,22311097,Xã Trung Chính,223,Tỉnh Bắc Ninh,typo,A471,Tôn Thất Thiệp,22311097,Xã Trung Chính,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"lêvănnhưu,xãbếnlức,tinhtâyninh",A222,Lê Văn Hưu,80117038,Xã Bến Lức,709,Tỉnh Tây Ninh,typo|no-space,A222,Lê Văn Hưu,80117038,Xã Bến Lức,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"bình qu ới, xxã cam lâm, tinh kh ánh hòa",A034,Bình Quới,51117029,Xã Cam Lâm,511,Tỉnh Khánh Hòa,abbr|typo,A034,Bình Quới,51117029,Xã Cam Lâm,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"xã duong ạ ing ãi, thanh pho cần th ơ",,,81905069,Xã Đại Ngãi,815,Tp Cần Thơ,typo,,,,,815,Tp Cần Thơ,True,False,True,beam_search
+"xã vĩnh hả,i tp cần th ơ",,,81913086,Xã Vĩnh Hải,815,Tp Cần Thơ,abbr|typo|tight-comma,,,81913086,Xã Vĩnh Hải,815,Tp Cần Thơ,True,True,True,beam_search
+"tinh lộ14, xã anh sơn, tinh ngh ệ an",A463,Tỉnh Lộ 14,40327001,Xã Anh Sơn,403,Tỉnh Nghệ An,typo,A463,Tỉnh Lộ 14,40327001,Xã Anh Sơn,403,Tỉnh Nghệ An,True,True,True,beam_search
+"hàm tử, xã bbình gi ã, t.p hồ ch í minh",A131,Hàm Tử,71705014,Xã Bình Giã,701,Tp Hồ Chí Minh,abbr|typo,A031,Bình Giã,71705014,Xã Bình Giã,701,Tp Hồ Chí Minh,False,True,True,beam_search
+"nguy ễn phi khanh, xã nậm nèn, tinh đđi ện bi ên",A310,Nguyễn Phi Khanh,30111024,Xã Nậm Nèn,301,Tỉnh Điện Biên,abbr|typo,A310,Nguyễn Phi Khanh,30111024,Xã Nậm Nèn,301,Tỉnh Điện Biên,True,True,True,beam_search
+"trầncaovân,phườngxuânhòa,tinhphúthọ",A479,Trần Cao Vân,21902102,Phường Xuân Hòa,217,Tỉnh Phú Thọ,abbr|typo|no-space,A479,Trần Cao Vân,21902102,Phường Xuân Hòa,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"bùiminhtrực,xãyênchâu,tnhsơnla",A042,Bùi Minh Trực,30317046,Xã Yên Châu,303,Tỉnh Sơn La,abbr|typo|tight-comma|no-space,A042,Bùi Minh Trực,30317046,Xã Yên Châu,303,Tỉnh Sơn La,True,True,True,beam_search
+"duong ô th ành,xã nh ôn mai,tinh ngh ệ an",A106,Đô Thành,40315115,Xã Nhôn Mai,403,Tỉnh Nghệ An,abbr|tight-comma,,,40315115,Xã Nhôn Mai,403,Tỉnh Nghệ An,False,True,True,beam_search
+"tân hưng, xã giao bình, tinh ninh bình",A435,Tân Hưng,11315089,Xã Giao Bình,117,Tỉnh Ninh Bình,clean,A435,Tân Hưng,11315089,Xã Giao Bình,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"tinh lộ 14, xã thanh mi ện, tp ảhi ph òng",A463,Tỉnh Lộ 14,10721106,Xã Thanh Miện,103,Tp Hải Phòng,abbr|typo,A463,Tỉnh Lộ 14,10721106,Xã Thanh Miện,103,Tp Hải Phòng,True,True,True,beam_search
+"ph ạm duong ôn, xã hải lựu, tinh ph út h ọ",A366,Phạm Đôn,21915069,Xã Hải Lựu,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,21915069,Xã Hải Lựu,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"tinh lộ 15, ph ường nha trang, tinh kh ánh hòa",A464,Tỉnh Lộ 15,51101001,Phường Nha Trang,511,Tỉnh Khánh Hòa,abbr,A464,Tỉnh Lộ 15,51101001,Phường Nha Trang,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"tân hòa d ông, xã bạch x, tinh tuy ên quang",A433,Tân Hòa Đông,21107021,Xã Bạch Xa,211,Tỉnh Tuyên Quang,abbr,A433,Tân Hòa Đông,21107021,Xã Bạch Xa,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"30 th áng 4,xã ngh ĩa duong ô,,tinh lào cai",A012,30 Tháng 4,20515062,Xã Nghĩa Đô,205,Tỉnh Lào Cai,abbr|typo|tight-comma,A012,30 Tháng 4,,,205,Tỉnh Lào Cai,True,False,True,beam_search
+"tôn th ất thuy ết, xã long qu ảng, th ành h ố hu ế",A472,Tôn Thất Thuyết,41113031,Xã Long Quảng,411,Thành phố Huế,abbr|typo,A472,Tôn Thất Thuyết,41113031,Xã Long Quảng,411,Thành phố Huế,True,True,True,beam_search
+"nguy ễn th ị di ệu,p hường vi ệt yên,tinh bắc ninh",A321,Nguyễn Thị Diệu,22117047,Phường Việt Yên,223,Tỉnh Bắc Ninh,abbr|typo|tight-comma,A321,Nguyễn Thị Diệu,22117047,Phường Việt Yên,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"dg ộc lập,xã tân ph ước hnưg,tp cần th ơ",A116,Độc Lập,81608057,Xã Tân Phước Hưng,815,Tp Cần Thơ,abbr|typo|tight-comma,A439,Tân Phước,81608057,Xã Tân Phước Hưng,815,Tp Cần Thơ,False,True,True,beam_search
+"tr ần nguy ên hãn, xã tân hội,, tinh an giang",A495,Trần Nguyên Hãn,81307078,Xã Tân Hội,805,Tỉnh An Giang,typo,A495,Trần Nguyên Hãn,81307078,Xã Tân Hội,805,Tỉnh An Giang,True,True,True,beam_search
+"lê dg. ại hành, xã ch ấn t hịnh, tinh lào cai",A203,Lê Đại Hành,21315015,Xã Chấn Thịnh,205,Tỉnh Lào Cai,abbr|typo,A203,Lê Đại Hành,21315015,Xã Chấn Thịnh,205,Tỉnh Lào Cai,True,True,True,beam_search
+"hậu giang, xã hưng  long, thanh pho hồ ch í minh",A135,Hậu Giang,70139146,Xã Hưng Long,701,Tp Hồ Chí Minh,typo,A135,Hậu Giang,70139146,Xã Hưng Long,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"duong ịa duuong ạo, ph ường ho à cư ờng, thanh pho duong à nẵng",A101,Địa Đạo,50101002,Phường Hoà Cường,501,Tp Đà Nẵng,typo,,,50101002,Phường Hoà Cường,501,Tp Đà Nẵng,False,True,True,beam_search
+"ho àng văn t ụ,xã lấp vò,tinh duong ồng th áp",A156,Hoàng Văn Thụ,80317094,Xã Lấp Vò,803,Tỉnh Đồng Tháp,abbr|typo|tight-comma,A156,Hoàng Văn Thụ,80317094,Xã Lấp Vò,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"tônthấtthuyết,xãyênbài,thànnhphốhànội",A472,Tôn Thất Thuyết,10151086,Xã Yên Bài,101,Thành phố Hà Nội,abbr|typo|no-space,A472,Tôn Thất Thuyết,10151086,Xã Yên Bài,101,Thành phố Hà Nội,True,True,True,beam_search
+"hùng vư ơng,xã tịnh kh ê,tinh qu ảng ng ãi",A184,Hùng Vương,50501001,Xã Tịnh Khê,505,Tỉnh Quảng Ngãi,abbr|tight-comma,A184,Hùng Vương,50501001,Xã Tịnh Khê,505,Tỉnh Quảng Ngãi,True,True,True,beam_search
+"tứ hải,xã mư ờng ch ọng,tinh ngh ệ an",A535,Tứ Hải,40311079,Xã Mường Chọng,403,Tỉnh Nghệ An,abbr|tight-comma,A535,Tứ Hải,40311079,Xã Mường Chọng,403,Tỉnh Nghệ An,True,True,True,beam_search
+"xãhiệphoà,tinhbắcninh",,,22109043,Xã Hiệp Hoà,223,Tỉnh Bắc Ninh,abbr|typo|no-space,A147,Hiệp Hòa,22109043,Xã Hiệp Hoà,223,Tỉnh Bắc Ninh,False,True,True,beam_search
+"tự quy ết, xã d ức an, tinhh lâm d ồng",A538,Tự Quyết,60609111,Xã Đức An,703,Tỉnh Lâm Đồng,abbr|typo,A538,Tự Quyết,60609111,Xã Đức An,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"cao th ắng, xã giiao bình, tinh ninh bình",A050,Cao Thắng,11315089,Xã Giao Bình,117,Tỉnh Ninh Bình,abbr|typo,A050,Cao Thắng,11315089,Xã Giao Bình,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"nguy ễn th ị ngh ĩa, xã quy ết th ắng, tthanh pho hải ph òng",A324,Nguyễn Thị Nghĩa,10319035,Xã Quyết Thắng,103,Tp Hải Phòng,typo,A324,Nguyễn Thị Nghĩa,10319035,Xã Quyết Thắng,103,Tp Hải Phòng,True,True,True,beam_search
+"nguy ễn văn nhi,xã lệ ninh,tinh qu ảng tr ị",A352,Nguyễn Văn Nghi,40713040,Xã Lệ Ninh,409,Tỉnh Quảng Trị,abbr|typo|tight-comma,A352,Nguyễn Văn Nghi,40713040,Xã Lệ Ninh,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"tổng lung,xã tân an hội, t.p hồ ch í minh",A474,Tổng Lung,70135152,Xã Tân An Hội,701,Tp Hồ Chí Minh,abbr|typo,A474,Tổng Lung,70135152,Xã Tân An Hội,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"nguy ễn g ọc ph ượng, ph ường gia lộc, tinh tây ninh",A304,Nguyễn Ngọc Phượng,70915070,Phường Gia Lộc,709,Tỉnh Tây Ninh,abbr|typo,,,70915070,Phường Gia Lộc,709,Tỉnh Tây Ninh,False,True,True,beam_search
+"xã tr àng dg ịnh, tinh lạng sơn",,,20903004,Xã Tràng Định,209,Tỉnh Lạng Sơn,abbr,,,20903004,Xã Tràng Định,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"phankếbình,xãphùcát,tinhgialai",A386,Phan Kế Bình,50713019,Xã Phù Cát,603,Tỉnh Gia Lai,no-space,A386,Phan Kế Bình,50713019,Xã Phù Cát,603,Tỉnh Gia Lai,True,True,True,beam_search
+"tr ần qu ốc th ảo,xã vnh ho àng,tinh qu ảng tr ị",A501,Trần Quốc Thảo,40905047,Xã Vĩnh Hoàng,409,Tỉnh Quảng Trị,typo|tight-comma,A501,Trần Quốc Thảo,40905047,Xã Vĩnh Hoàng,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"phan th úc duy ện, ph ường uông bí, tinh qu ảng ninh",A392,Phan Thúc Duyện,22505008,Phường Uông Bí,225,Tỉnh Quảng Ninh,abbr,A392,Phan Thúc Duyện,22505008,Phường Uông Bí,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"kh ánh hội, xã hưng ũv, tinh lạng sơn",A188,Khánh Hội,20909017,Xã Hưng Vũ,209,Tỉnh Lạng Sơn,abbr|typo,A188,Khánh Hội,20909017,Xã Hưng Vũ,209,Tỉnh Lạng Sơn,True,True,True,beam_search
+"tr ần bình tr ọng,xã bình lục,tinh ninh bình",A478,Trần Bình Trọng,11111032,Xã Bình Lục,117,Tỉnh Ninh Bình,tight-comma,A478,Trần Bình Trọng,11111032,Xã Bình Lục,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"dg ồ sơn, phh ường an ph ú, tinh gia lai",A111,Đồ Sơn,60301062,Phường An Phú,603,Tỉnh Gia Lai,abbr|typo,A111,Đồ Sơn,60301062,Phường An Phú,603,Tỉnh Gia Lai,True,True,True,beam_search
+"ba vì, xã mư ờng nh é, tinh đi ện bi ên",A014,Ba Vì,30104037,Xã Mường Nhé,301,Tỉnh Điện Biên,abbr,A014,Ba Vì,30104037,Xã Mường Nhé,301,Tỉnh Điện Biên,True,True,True,beam_search
+"xã th ạch an, tinh aco bằng",,,20321038,Xã Thạch An,203,Tỉnh Cao Bằng,typo,,,20321038,Xã Thạch An,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"lê lai,ph ường mão đi ền,tinh bắc ninh",A206,Lê Lai,22309068,Phường Mão Điền,223,Tỉnh Bắc Ninh,abbr|tight-comma,A206,Lê Lai,22309068,Phường Mão Điền,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"xã qu ý lư ơng, tinh thanh óa",,,40113128,Xã Quý Lương,401,Tỉnh Thanh Hóa,abbr|typo,,,40113128,Xã Quý Lương,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"trầnbìnhtrọng,xãtânphưc2,tinhduongồngtháp",A478,Trần Bình Trọng,80705030,Xã Tân Phước 2,803,Tỉnh Đồng Tháp,typo|no-space,A478,Trần Bình Trọng,80705030,Xã Tân Phước 2,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"nguy ễn văn bảo, xã sró, tinh gia lai",A341,Nguyễn Văn Bảo,60313095,Xã SRó,603,Tỉnh Gia Lai,clean,A341,Nguyễn Văn Bảo,60313095,Xã SRó,603,Tỉnh Gia Lai,True,True,True,beam_search
+"xã qu ỳ hợp, tinh ngh ệ an",,,40311074,Xã Quỳ Hợp,403,Tỉnh Nghệ An,abbr,,,40311074,Xã Quỳ Hợp,403,Tỉnh Nghệ An,True,True,True,beam_search
+"hưngphú,xãtriệulộc,tinhthanhhóa",A185,Hưng Phú,40139027,Xã Triệu Lộc,401,Tỉnh Thanh Hóa,no-space,A185,Hưng Phú,40139027,Xã Triệu Lộc,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"ch ùa ph ật án, ph ường an tịnh, tinh tây ninh",A068,Chùa Phật Án,70917068,Phường An Tịnh,709,Tỉnh Tây Ninh,clean,A068,Chùa Phật Án,70917068,Phường An Tịnh,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"hư ơng lộ 22, xã iaa grai, tinh gia lai",A144,Hương Lộ 22,60309121,Xã Ia Grai,603,Tỉnh Gia Lai,typo,A144,Hương Lộ 22,60309121,Xã Ia Grai,603,Tỉnh Gia Lai,True,True,True,beam_search
+"phạmduongôn,xãanninh,tinhtâyninh",A366,Phạm Đôn,80115028,Xã An Ninh,709,Tỉnh Tây Ninh,abbr|no-space,,,80115028,Xã An Ninh,709,Tỉnh Tây Ninh,False,True,True,beam_search
+"ph ạm duong ôn, xã an ninh, thanh pho cần th ơ",A366,Phạm Đôn,81915079,Xã An Ninh,815,Tp Cần Thơ,clean,,,81915079,Xã An Ninh,815,Tp Cần Thơ,False,True,True,beam_search
+"tây th ạnh,xã ng ọc sơ,tinh ph ú th ọ",A447,Tây Thạnh,30515120,Xã Ngọc Sơn,217,Tỉnh Phú Thọ,abbr|typo|tight-comma,A447,Tây Thạnh,30515120,Xã Ngọc Sơn,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"lý nam dg ế,ph ường kim li ên ,th ành ph ố hà nội",A240,Lý Nam Đế,10109010,Phường Kim Liên,101,Thành phố Hà Nội,abbr|typo|tight-comma,A240,Lý Nam Đế,10109010,Phường Kim Liên,101,Thành phố Hà Nội,True,True,True,beam_search
+"hẻm âu cơ, xã tu vũ, tinh ph ú th ọ",A137,Hẻm Âu Cơ,21723047,Xã Tu Vũ,217,Tỉnh Phú Thọ,clean,A137,Hẻm Âu Cơ,21723047,Xã Tu Vũ,217,Tỉnh Phú Thọ,True,True,True,beam_search
+"ho àng di ệu, xã mihn hợp, tinh ngh ệ an",A151,Hoàng Diệu,40311080,Xã Minh Hợp,403,Tỉnh Nghệ An,abbr|typo,A151,Hoàng Diệu,40311080,Xã Minh Hợp,403,Tỉnh Nghệ An,True,True,True,beam_search
+"hòa hảo, xã bu hàm, tinh duong ồng nai",A149,Hòa Hảo,71308019,Xã Bàu Hàm,713,Tỉnh Đồng Nai,abbr|typo,A149,Hòa Hảo,71308019,Xã Bàu Hàm,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"xãã duong ông hưng, tinh hưng yên",,,11509081,Xã Đông Hưng,109,Tỉnh Hưng Yên,abbr|typo,,,,,109,Tỉnh Hưng Yên,True,False,True,beam_search
+"ph ùng  kh ắc khoan, ph ường vân sơn, tinh sơn la",A410,Phùng Khắc Khoan,30319007,Phường Vân Sơn,303,Tỉnh Sơn La,abbr|typo,A410,Phùng Khắc Khoan,30319007,Phường Vân Sơn,303,Tỉnh Sơn La,True,True,True,beam_search
+"tân hòa duong ông, ph ường hu ận an, th ành ph ố hu ế",A433,Tân Hòa Đông,41109001,Phường Thuận An,411,Thành phố Huế,abbr|typo,A432,Tân Hóa,41109001,Phường Thuận An,411,Thành phố Huế,False,True,True,beam_search
+"xã ph ú lộc, tanh pho cần th ơ",,,81911094,Xã Phú Lộc,815,Tp Cần Thơ,typo,,,81911094,Xã Phú Lộc,815,Tp Cần Thơ,True,True,True,beam_search
+"lư ơng ng ọc quy ến, ph ường dduong ông sơn, tinh thanh hóa",A234,Lương Ngọc Quyến,40101004,Phường Đông Sơn,401,Tỉnh Thanh Hóa,abbr|typo,A234,Lương Ngọc Quyến,,,401,Tỉnh Thanh Hóa,True,False,True,beam_search
+"ph ó cơ đi ều, ph ườngtân hưng, thanh pho hải ph òng",A400,Phó Cơ Điều,10701056,Phường Tân Hưng,103,Tp Hải Phòng,abbr|typo,A400,Phó Cơ Điều,10701056,Phường Tân Hưng,103,Tp Hải Phòng,True,True,True,beam_search
+"ho àng vi ệt, xã bnh ph ú, tinh vĩnh long",A157,Hoàng Việt,81703044,Xã Bình Phú,809,Tỉnh Vĩnh Long,abbr|typo,A157,Hoàng Việt,81703044,Xã Bình Phú,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"bạch duong ằng,xã th ạnh ph ú,thaanh pho cần th ơ",A022,Bạch Đằng,81527026,Xã Thạnh Phú,815,Tp Cần Thơ,typo|tight-comma,,,81527026,Xã Thạnh Phú,815,Tp Cần Thơ,False,True,True,beam_search
+"nguy ễn  th ái bình, xã mai ph ụ, tinh hà tĩnh",A316,Nguyễn Thái Bình,40513033,Xã Mai Phụ,405,Tỉnh Hà Tĩnh,abbr|typo,A316,Nguyễn Thái Bình,40513033,Xã Mai Phụ,405,Tỉnh Hà Tĩnh,True,True,True,beam_search
+"cần giu ộc,ph ường an nh ơn d. ông,tinnh gia lai",A057,Cần Giuộc,50717008,Phường An Nhơn Đông,603,Tỉnh Gia Lai,abbr|typo|tight-comma,A057,Cần Giuộc,50717008,Phường An Nhơn Đông,603,Tỉnh Gia Lai,True,True,True,beam_search
+"cách mạn gth áng tám, xã đi ền lư, tinh thanh hóa",A053,Cách Mạng Tháng Tám,40113126,Xã Điền Lư,401,Tỉnh Thanh Hóa,abbr|typo,A053,Cách Mạng Tháng Tám,40113126,Xã Điền Lư,401,Tỉnh Thanh Hóa,True,True,True,beam_search
+"tr à kh úc, ph ường bình tr ị dg. ông, t.p hồ ch í minh",A476,Trà Khúc,70134102,Phường Bình Trị Đông,701,Tp Hồ Chí Minh,abbr,A476,Trà Khúc,,,701,Tp Hồ Chí Minh,True,False,True,beam_search
+"hiề n vư ơng,xã tân ph ú,tinh d. ồng nai",A145,Hiền Vương,71303046,Xã Tân Phú,713,Tỉnh Đồng Nai,abbr|typo|tight-comma,A145,Hiền Vương,71303046,Xã Tân Phú,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"pasteur,x ãtây ninh ho à,tinh kh ánh hòa",A365,Pasteur,51105016,Xã Tây Ninh Hoà,511,Tỉnh Khánh Hòa,abbr|typo|tight-comma,A365,Pasteur,51105016,Xã Tây Ninh Hoà,511,Tỉnh Khánh Hòa,True,True,True,beam_search
+"duong ằng tất, ph ường long kh ánh, tinh duon gồng nai",A090,Đằng Tất,71302027,Phường Long Khánh,713,Tỉnh Đồng Nai,typo,,,71302027,Phường Long Khánh,713,Tỉnh Đồng Nai,False,True,True,beam_search
+"nguyễnvăncừ,xãchâuhò,atinhvĩnhlong",A345,Nguyễn Văn Cừ,81109116,Xã Châu Hòa,809,Tỉnh Vĩnh Long,abbr|typo|no-space,A345,Nguyễn Văn Cừ,81109116,Xã Châu Hòa,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"ph ùng hưng, xã nam duong ông hưng, tinh hưng  yên",A409,Phùng Hưng,11509084,Xã Nam Đông Hưng,109,Tỉnh Hưng Yên,abbr|typo,A409,Phùng Hưng,,,109,Tỉnh Hưng Yên,True,False,True,beam_search
+"nguyễnngọchnật,phườngmỹthượng,thànhphốhuế",A306,Nguyễn Ngọc Nhật,41109003,Phường Mỹ Thượng,411,Thành phố Huế,abbr|typo|no-space,A306,Nguyễn Ngọc Nhật,41109003,Phường Mỹ Thượng,411,Thành phố Huế,True,True,True,beam_search
+"ch âu th ới, xã tân kh ánh trung,t inh d. ồng th áp",A060,Châu Thới,80317093,Xã Tân Khánh Trung,803,Tỉnh Đồng Tháp,abbr|typo,A060,Châu Thới,80317093,Xã Tân Khánh Trung,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"bàu cát, xã tr ần ph ú, th ành ph ố hà nội",A029,Bàu Cát,10153076,Xã Trần Phú,101,Thành phố Hà Nội,abbr,A498,Trần Phú,10153076,Xã Trần Phú,101,Thành phố Hà Nội,False,True,True,beam_search
+"xã hàà dg ông, t.p hải ph òng",,,10707082,Xã Hà Đông,103,Tp Hải Phòng,abbr|typo,,,10707082,Xã Hà Đông,103,Tp Hải Phòng,True,True,True,beam_search
+"giảiphóng,xãbìnhliêu,tinhquảngninh",A119,Giải Phóng,22507045,Xã Bình Liêu,225,Tỉnh Quảng Ninh,abbr|no-space,A119,Giải Phóng,22507045,Xã Bình Liêu,225,Tỉnh Quảng Ninh,True,True,True,beam_search
+"xã tr ại cau,tinh th ái nguy ên",,,21511030,Xã Trại Cau,215,Tỉnh Thái Nguyên,abbr|tight-comma,A126,Hải Nguyên,21511030,Xã Trại Cau,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"xã th ủ  th ừa, tinh tây ninh",,,80119021,Xã Thủ Thừa,709,Tỉnh Tây Ninh,abbr|typo,,,80119021,Xã Thủ Thừa,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"tr ần th ành, xã qu ỳn lưu, tinh ninh bình",A507,Trần Thành,11705014,Xã Quỳnh Lưu,117,Tỉnh Ninh Bình,abbr|typo,A507,Trần Thành,11705014,Xã Quỳnh Lưu,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"xã vi ệt  lâm,tinh tuy ên quang",,,20115093,Xã Việt Lâm,211,Tỉnh Tuyên Quang,abbr|typo|tight-comma,,,20115093,Xã Việt Lâm,211,Tỉnh Tuyên Quang,True,True,True,beam_search
+"nguy ễn th ị th ập, ph ường mộc sơn, tinh sơơn la",A327,Nguyễn Thị Thập,30319006,Phường Mộc Sơn,303,Tỉnh Sơn La,abbr|typo,A327,Nguyễn Thị Thập,30319006,Phường Mộc Sơn,303,Tỉnh Sơn La,True,True,True,beam_search
+"tôn th ất hi ệp, ph ường ngh ĩa lộ, inh lào cai",A470,Tôn Thất Hiệp,21303008,Phường Nghĩa Lộ,205,Tỉnh Lào Cai,abbr|typo,A470,Tôn Thất Hiệp,21303008,Phường Nghĩa Lộ,205,Tỉnh Lào Cai,True,True,True,beam_search
+"nguy ễn th ị trang, xã duong ồng ê, tinh qu ảng tr ị",A328,Nguyễn Thị Trang,40703015,Xã Đồng Lê,409,Tỉnh Quảng Trị,typo,A328,Nguyễn Thị Trang,,,409,Tỉnh Quảng Trị,True,False,True,beam_search
+"quốclộ22,phườngbắcgiagn,tinhbắcninh",A417,Quốc Lộ 22,22101051,Phường Bắc Giang,223,Tỉnh Bắc Ninh,abbr|typo|no-space,A417,Quốc Lộ 22,22101051,Phường Bắc Giang,223,Tỉnh Bắc Ninh,True,True,True,beam_search
+"bình ph ú, xãh ư ơng xu ân, tinh hà tĩnh",A033,Bình Phú,40517067,Xã Hương Xuân,405,Tỉnh Hà Tĩnh,abbr|typo,A033,Bình Phú,,,405,Tỉnh Hà Tĩnh,True,False,True,beam_search
+"nh ật tảo, xã gia hội, tnh lào cai",A358,Nhật Tảo,21315012,Xã Gia Hội,205,Tỉnh Lào Cai,abbr|typo,A358,Nhật Tảo,21315012,Xã Gia Hội,205,Tỉnh Lào Cai,True,True,True,beam_search
+"trầnhuyliệu,xãmỹquí,tinhdg.ồngtháp",A485,Trần Huy Liệu,80313080,Xã Mỹ Quí,803,Tỉnh Đồng Tháp,abbr|typo|no-space,A485,Trần Huy Liệu,80313080,Xã Mỹ Quí,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"xãealy,ttinhdgắklắk",,,50913095,Xã Ea Ly,605,Tỉnh Đắk Lắk,abbr|typo|no-space,,,50913095,Xã Ea Ly,605,Tỉnh Đắk Lắk,True,True,True,beam_search
+"bavì,xãninhgia,tinhllâmd.ồng",A014,Ba Vì,70309121,Xã Ninh Gia,703,Tỉnh Lâm Đồng,abbr|typo|tight-comma|no-space,A014,Ba Vì,70309121,Xã Ninh Gia,703,Tỉnh Lâm Đồng,True,True,True,beam_search
+"nguyễncửuvân,phườnlongbình,tinhduongồngnai",A283,Nguyễn Cửu Vân,71301004,Phường Long Bình,713,Tỉnh Đồng Nai,abbr|typo|no-space,A283,Nguyễn Cửu Vân,71301004,Phường Long Bình,713,Tỉnh Đồng Nai,True,True,True,beam_search
+"tứ hải, ph ường duy t iên, tinh ninh bình",A535,Tứ Hải,11103111,Phường Duy Tiên,117,Tỉnh Ninh Bình,abbr|typo,A535,Tứ Hải,11103111,Phường Duy Tiên,117,Tỉnh Ninh Bình,True,True,True,beam_search
+"duong ô th ành, xã cẩm gi àng, tinh thái nguy ên",A106,Đô Thành,20711075,Xã Cẩm Giàng,215,Tỉnh Thái Nguyên,typo,A126,Hải Nguyên,20711075,Xã Cẩm Giàng,215,Tỉnh Thái Nguyên,False,True,True,beam_search
+"qu ốc lộ 1a, xã an hữu, tinh duong ồng h áp",A415,Quốc Lộ 1A,80713016,Xã An Hữu,803,Tỉnh Đồng Tháp,abbr|typo,A415,Quốc Lộ 1A,80713016,Xã An Hữu,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"bửulong,xãtnâhộcơ,tinhduongồngtháp",A045,Bửu Long,80305060,Xã Tân Hộ Cơ,803,Tỉnh Đồng Tháp,typo|no-space,A045,Bửu Long,80305060,Xã Tân Hộ Cơ,803,Tỉnh Đồng Tháp,True,True,True,beam_search
+"sôngduongáy,xãhtiệuhóa,tinhthanhhóa",A419,Sông Đáy,40141060,Xã Thiệu Hóa,401,Tỉnh Thanh Hóa,abbr|typo|no-space,,,40141060,Xã Thiệu Hóa,401,Tỉnh Thanh Hóa,False,True,True,beam_search
+"hẻm lạc long qu ân, ph ường duong ông ninh ho à, tinh kh ánh hòa",A139,Hẻm Lạc Long Quân,51105013,Phường Đông Ninh Hoà,511,Tỉnh Khánh Hòa,clean,A139,Hẻm Lạc Long Quân,,,511,Tỉnh Khánh Hòa,True,False,True,beam_search
+"nguy ễn cảnh ch nâ,xã kh ánh bình,tinh cà mau",A278,Nguyễn Cảnh Chân,82307019,Xã Khánh Bình,823,Tỉnh Cà Mau,abbr|typo|tight-comma,A278,Nguyễn Cảnh Chân,82307019,Xã Khánh Bình,823,Tỉnh Cà Mau,True,True,True,beam_search
+"cao bá nh ạ, xã ai băng, tinh gia lai",A048,Cao Bá Nhạ,60325113,Xã Ia Băng,603,Tỉnh Gia Lai,typo,A048,Cao Bá Nhạ,60325113,Xã Ia Băng,603,Tỉnh Gia Lai,True,True,True,beam_search
+"nguy ễn hu ệ, xã tân ch âu, tinh tây ninh",A293,Nguyễn Huệ,70905080,Xã Tân Châu,709,Tỉnh Tây Ninh,abbr,A293,Nguyễn Huệ,70905080,Xã Tân Châu,709,Tỉnh Tây Ninh,True,True,True,beam_search
+"phan li êm, xã tà rụt, tinh qu ảng t ị",A388,Phan Liêm,40917062,Xã Tà Rụt,409,Tỉnh Quảng Trị,abbr|typo,A388,Phan Liêm,40917062,Xã Tà Rụt,409,Tỉnh Quảng Trị,True,True,True,beam_search
+"tiềngiang,xãcátngạn,tinhnghệan",A462,Tiền Giang,40331098,Xã Cát Ngạn,403,Tỉnh Nghệ An,abbr|typo|tight-comma|no-space,A462,Tiền Giang,40331098,Xã Cát Ngạn,403,Tỉnh Nghệ An,True,True,True,beam_search
+"xóm dg. ất,xã hàm giang,tinh vĩn long",A564,Xóm Đất,81713065,Xã Hàm Giang,809,Tỉnh Vĩnh Long,abbr|typo|tight-comma,A564,Xóm Đất,81713065,Xã Hàm Giang,809,Tỉnh Vĩnh Long,True,True,True,beam_search
+"ho àng ng ọc ph ách, xã mư ờng ch à, tinh đi ện bi ên",A154,Hoàng Ngọc Phách,30123032,Xã Mường Chà,301,Tỉnh Điện Biên,abbr,A154,Hoàng Ngọc Phách,30123032,Xã Mường Chà,301,Tỉnh Điện Biên,True,True,True,beam_search
+"ch ương dư ơng, xã tam mỹ, tp d à nẵng",A069,Chương Dương,50325018,Xã Tam Mỹ,501,Tp Đà Nẵng,abbr,A069,Chương Dương,50325018,Xã Tam Mỹ,501,Tp Đà Nẵng,True,True,True,beam_search
+"xã sơn lư ơng, tin hph ú th ọ",,,21715063,Xã Sơn Lương,217,Tỉnh Phú Thọ,abbr|typo,A407,Phú Thọ,21715063,Xã Sơn Lương,217,Tỉnh Phú Thọ,False,True,True,beam_search
+"nguy ễn th ượng hi ền, xã thanh an, thanh pho hồ ch íí minh",A332,Nguyễn Thượng Hiền,71113062,Xã Thanh An,701,Tp Hồ Chí Minh,abbr|typo,A332,Nguyễn Thượng Hiền,71113062,Xã Thanh An,701,Tp Hồ Chí Minh,True,True,True,beam_search
+"lêduongìnhcẩn,xãvịthủy,thanhphocầnthơ",A204,Lê Đình Cẩn,81609036,Xã Vị Thủy,815,Tp Cần Thơ,abbr|no-space,,,81609036,Xã Vị Thủy,815,Tp Cần Thơ,False,True,True,beam_search
+"ph ướ chưng, ph ường vân sơn, tinh sơn la",A411,Phước Hưng,30319007,Phường Vân Sơn,303,Tỉnh Sơn La,abbr|typo,A411,Phước Hưng,30319007,Phường Vân Sơn,303,Tỉnh Sơn La,True,True,True,beam_search
+"xã tây giang, tp dduong à nẵng",,,50304085,Xã Tây Giang,501,Tp Đà Nẵng,abbr|typo,,,50304085,Xã Tây Giang,501,Tp Đà Nẵng,True,True,True,beam_search
+"bình ph ú, xã tr ùng h ánh, tinh cao bằng",A033,Bình Phú,20311050,Xã Trùng Khánh,203,Tỉnh Cao Bằng,abbr|typo,A033,Bình Phú,20311050,Xã Trùng Khánh,203,Tỉnh Cao Bằng,True,True,True,beam_search
+"xã duong ức qunag, tinh hà tĩnh",,,40507047,Xã Đức Quang,405,Tỉnh Hà Tĩnh,abbr|typo,,,,,405,Tỉnh Hà Tĩnh,True,False,True,beam_search
